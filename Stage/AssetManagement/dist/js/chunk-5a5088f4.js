@@ -513,7 +513,7 @@ var myLib_common = __webpack_require__("240d");
             max: 250
           },
           config: {
-            option_request_url: "https://newcrmapi.talygen.com/api/Common" + '/Common/GetDDLData?moduleName=CRM&type=COUNTRIES',
+            option_request_url: "https://newcrmapi.talygen.com/api" + '/Common/GetDDLData?moduleName=CRM&type=COUNTRIES',
             token: this.GetUserInfo.Token,
             onChange: this.onChangeDropdown
           }

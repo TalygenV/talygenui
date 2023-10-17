@@ -1911,7 +1911,7 @@ var DataService = __webpack_require__("1115");
       });
     },
     redirectLink: function (params) {
-      var envLink = Object({"NODE_ENV":"production","VUE_APP_API_URL":"https://newcrmapi.talygen.com/api/asset","VUE_APP_COMMON_API":"https://newcrmapi.talygen.com/api/Common","VUE_APP_CURRENT_SITE_ROOT_URL":"https://stagespa.talygen.com","VUE_APP_DEFAULT_APP_URL":"http://stage.talygen.com","VUE_APP_FULL_MENU_APP_REDIRECTION":"true","VUE_APP_NODE_ENV":"staging","BASE_URL":"/"});
+      var envLink = Object({"NODE_ENV":"production","VUE_APP_API_URL":"https://newcrmapi.talygen.com/api/asset","VUE_APP_COMMON_API":"https://newcrmapi.talygen.com/api","VUE_APP_CURRENT_SITE_ROOT_URL":"https://stagespa.talygen.com","VUE_APP_DEFAULT_APP_URL":"http://stage.talygen.com","VUE_APP_FULL_MENU_APP_REDIRECTION":"true","VUE_APP_NODE_ENV":"staging","BASE_URL":"/"});
       if (params == "General") {
         window.open(envLink.VITE_General);
         return false;
