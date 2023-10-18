@@ -5,7 +5,7 @@
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=257693e8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=500d0950&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -465,11 +465,11 @@ var render = function render() {
   }, [_vm._v("*")])]), _c('Field', {
     staticClass: "d-flex",
     attrs: {
-      "name": "ItemName",
+      "name": "Item Name",
       "rules": {
         'required': true
       },
-      "label": "ItemName"
+      "label": "Item Name"
     },
     scopedSlots: _vm._u([{
       key: "default",
@@ -495,7 +495,7 @@ var render = function render() {
           },
           attrs: {
             "id": "txtAssetItems",
-            "name": "ItemName",
+            "name": "Item Name",
             "placeholder": "Enter Product Name",
             "type": "text"
           },
@@ -512,7 +512,7 @@ var render = function render() {
         }), errors[0] ? _c('span', {
           staticClass: "invalid-feedback d-block",
           attrs: {
-            "name": "ItemName"
+            "name": "Item Name"
           }
         }, [_vm._v(_vm._s(errors[0]))]) : _vm._e(), _c('div', {
           staticClass: "unique_dynamicdatalist"
@@ -551,7 +551,7 @@ var render = function render() {
           staticClass: "dropdown-toggle float-right"
         })])];
       }
-    }], null, false, 1108830261)
+    }], null, false, 2000878517)
   })], 1)]) : _vm._e(), _c('div', {
     staticClass: "col-sm-8 col-md-8 col-lg-3 float-left pl-md-0 mt-0 mt-md-4 mt-sm-4 pr-0"
   }, [_c('div', {
@@ -604,7 +604,8 @@ var render = function render() {
       "LocationValue": _vm.TreeValue,
       "AssetData": _vm.AssetData,
       "FetchData": _vm.FetchData,
-      "ClosePopup": _vm.ClosePopup
+      "ClosePopup": _vm.ClosePopup,
+      "IsProduct": _vm.IsProduct
     }
   }) : _vm._e()], 1)])], 1)])])])]);
 };
@@ -625,7 +626,7 @@ var staticRenderFns = [function () {
   }), _vm._v("User Guide")]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=257693e8&
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=500d0950&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -633,13 +634,15 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=template&id=323984f8&
-var AddRelationListingvue_type_template_id_323984f8_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=template&id=271da2b0&
+var AddRelationListingvue_type_template_id_271da2b0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('section', [_c('div', {
     staticClass: "col-12 listing tblassestgroupinfo px-0"
   }, [_c('div', {
+    staticClass: "col-0 productNote"
+  }, [_vm.IsProduct == 'ProductName' ? _c('small', [_vm._v(_vm._s(_vm.$t('NoteUniqueItems')))]) : _vm._e(), _vm.IsProduct == 'Product' ? _c('small', [_vm._v(_vm._s(_vm.$t('UniqueItems')))]) : _vm._e()]), _c('div', {
     staticClass: "table-responsive"
   }, [_c('table', {
     staticClass: "table table-bordered dt-responsive nowrap mt-0",
@@ -814,7 +817,7 @@ var AddRelationListingvue_type_template_id_323984f8_render = function render() {
     staticClass: "fa fa-close pr-2"
   }), _vm._v(_vm._s(_vm.$t('Cancel')))])])])]);
 };
-var AddRelationListingvue_type_template_id_323984f8_staticRenderFns = [function () {
+var AddRelationListingvue_type_template_id_271da2b0_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('span', {
@@ -826,7 +829,7 @@ var AddRelationListingvue_type_template_id_323984f8_staticRenderFns = [function 
   }, [_vm._v("No")])]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/AddRelationListing.vue?vue&type=template&id=323984f8&
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationListing.vue?vue&type=template&id=271da2b0&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=script&lang=js&
 
@@ -862,6 +865,9 @@ var AddRelationListingvue_type_template_id_323984f8_staticRenderFns = [function 
     },
     AssetData: {
       type: Array
+    },
+    IsProduct: {
+      type: String
     }
   },
   data() {
@@ -880,6 +886,7 @@ var AddRelationListingvue_type_template_id_323984f8_staticRenderFns = [function 
     };
   },
   created: function () {
+    debugger;
     this.NoRecordLength = this.ProductData.length;
     this.UniqueItemData1 = this.UniqueData;
   },
@@ -1042,8 +1049,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_AddRelationListingvue_type_script_lang_js_,
-  AddRelationListingvue_type_template_id_323984f8_render,
-  AddRelationListingvue_type_template_id_323984f8_staticRenderFns,
+  AddRelationListingvue_type_template_id_271da2b0_render,
+  AddRelationListingvue_type_template_id_271da2b0_staticRenderFns,
   false,
   null,
   null,
@@ -1100,7 +1107,8 @@ var vue_treeselect = __webpack_require__("542c");
       UniqueData: [],
       filterRecodes: [],
       SuniqueItemData: [],
-      showProductDropdown: false
+      showProductDropdown: false,
+      IsProduct: 'ProductName'
     };
   },
   created: function () {
@@ -1110,10 +1118,12 @@ var vue_treeselect = __webpack_require__("542c");
   },
   methods: {
     searchByProduct: function (val) {
+      debugger;
       var vm = this;
       this.SearchByBarcode = false;
       if (val == 'barcode') {
         vm.isdata = false;
+        vm.searchResult = false;
         vm.SearchByBarcode = true;
         vm.CheckedCheckBox = 'SearchProductName';
         vm.BarcodeSelected = 'BarCodeSearch';
@@ -1121,17 +1131,21 @@ var vue_treeselect = __webpack_require__("542c");
       } else {
         vm.isdata = true;
         vm.SearchByBarcode = false;
+        vm.searchResult = false;
         vm.CheckedCheckBox = 'SearchProducts';
         vm.BarcodeSelected = 'ProductSearch';
         vm.ProductData = [];
       }
-      this.ClearhdnIdsOnChange();
+      //this.ClearhdnIdsOnChange();
     },
+
     ClearhdnIdsOnChange: function () {
+      debugger;
       var vm = this;
       vm.txtBarcode = '';
       vm.ProductData = [];
       vm.LocationValueForBarCode = '', vm.TreeValue = null, vm.assetUniqueItem = '';
+      vm.searchByProduct('barcode');
     },
     itemDDLShowHide: function () {
       this.IsDDLShowHide = !this.IsDDLShowHide;
@@ -1389,7 +1403,7 @@ var AddRelationPopup_component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=7e6ad8ba&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=3c2e0a2b&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1446,7 +1460,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=7e6ad8ba&
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=3c2e0a2b&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1628,7 +1642,7 @@ var AddRelationPopup = __webpack_require__("f9bd");
       debugger;
       var vm = this;
       vm.isLoading = true;
-      var params = `pageSize=${vm.PageSize}&pageNumber=${vm.PageNumber}&sortBy=${vm.SortBy}&sortExp=${this.SortExp}&${vm.searchCondition}`;
+      var params = `pageSize=${vm.PageSize}&pageNumber=${vm.PageNumber}&sortBy=${vm.SortBy}&sortExp=${this.SortExp}&search=${vm.searchCondition}`;
       DataService["a" /* default */].NewAssetRequisitionListing(params).then(response => {
         debugger;
         if (response.data != null) {

@@ -5,7 +5,7 @@
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/AttachmentsTab.vue?vue&type=template&id=85a42fb6&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/AttachmentsTab.vue?vue&type=template&id=0376474a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -290,7 +290,7 @@ var render = function render() {
           attrs: {
             "title": data.row.Action
           }
-        }, [_c('label', [_vm._v(_vm._s(_vm.$options.filters.formatDateTimeMMDDYY(data.row.TERMS_CONDITION_STARTS_AT)))])])] : _vm._e(), data.column.COLUMN_NAME == 'SERIAL_NUMBER' ? [_c('span', {
+        }, [_c('label', [_vm._v(_vm._s(_vm.$options.filters.formatDateTimeMMDDYYY(data.row.TERMS_CONDITION_STARTS_AT)))])])] : _vm._e(), data.column.COLUMN_NAME == 'SERIAL_NUMBER' ? [_c('span', {
           staticClass: "text-dark",
           attrs: {
             "title": data.row.SERIAL_NUMBER
@@ -313,7 +313,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/AttachmentsTab.vue?vue&type=template&id=85a42fb6&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/AttachmentsTab.vue?vue&type=template&id=0376474a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -366,11 +366,14 @@ var DataService = __webpack_require__("1115");
         }
       }, {
         "COLUMN_NAME": "TERMS_CONDITION_STARTS_AT",
-        "DATA_TYPE": "date",
+        "DATA_TYPE": "Date",
         "SORTABLE": false,
         "VISIBLE": true,
         "DISPLAY_NAME": this.$t('TermConditionStartDate'),
-        "DISPLAY_ORDER": 5
+        "DISPLAY_ORDER": 5,
+        settings: {
+          isInSlot: true
+        }
       }, {
         "COLUMN_NAME": "Action",
         "DATA_TYPE": "text",
@@ -717,7 +720,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/DeployProducts.vue?vue&type=template&id=318d6932&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/DeployProducts.vue?vue&type=template&id=4088c596&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -842,7 +845,7 @@ var render = function render() {
         }, [_c('span', {}, [_vm._v(_vm._s(data.row.DEPLOYEMENT_TYPE == 1 ? 'Product' : 'Inventory'))])])] : _vm._e(), data.column.COLUMN_NAME == 'ORDER_DATE' ? [_c('span', {
           staticClass: "text-dark",
           attrs: {
-            "title": data.row.ORDER_DATE
+            "title": _vm.$options.filters.formatDateTime(data.row.ORDER_DATE)
           }
         }, [_c('span', {}, [_vm._v(" " + _vm._s(_vm.$options.filters.formatDateTime(data.row.ORDER_DATE)))])])] : _vm._e(), data.column.COLUMN_NAME == 'QUANTITY' ? [_c('span', {
           staticClass: "text-dark",
@@ -883,10 +886,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/DeployProducts.vue?vue&type=template&id=318d6932&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/DeployProducts.vue?vue&type=template&id=4088c596&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=376d7ec4&
-var AddDeployProductpopvue_type_template_id_376d7ec4_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=2499eaa8&
+var AddDeployProductpopvue_type_template_id_2499eaa8_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -994,7 +997,7 @@ var AddDeployProductpopvue_type_template_id_376d7ec4_render = function render() 
       staticClass: "text-overflow-dynamic-container"
     }, [_vm._v(_vm._s(item.RefPurchaseOrder))])]), _c('td', [_c('span', {
       staticClass: "text-overflow-dynamic-container"
-    }, [_vm._v(" " + _vm._s(_vm.$options.filters.formatDateTime(item.OrderDate)) + " ")])]), _c('td', [_c('span', {
+    }, [_vm._v(" " + _vm._s(_vm.$options.filters.formatDateTime(item.OrderDaTe)) + " ")])]), _c('td', [_c('span', {
       staticClass: "text-overflow-dynamic-container"
     }, [_vm._v(_vm._s(item.InvoiceNumber))])]), _c('td', [_c('span', {
       staticClass: "text-overflow-dynamic-container"
@@ -1070,9 +1073,9 @@ var AddDeployProductpopvue_type_template_id_376d7ec4_render = function render() 
     staticClass: "fa fa-close pr-2"
   }), _c('span', [_vm._v(_vm._s(_vm.$t('Cancel')))])])])])]) : _vm._e()])])])]);
 };
-var AddDeployProductpopvue_type_template_id_376d7ec4_staticRenderFns = [];
+var AddDeployProductpopvue_type_template_id_2499eaa8_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=376d7ec4&
+// CONCATENATED MODULE: ./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=2499eaa8&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1591,8 +1594,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_AddDeployProductpopvue_type_script_lang_js_,
-  AddDeployProductpopvue_type_template_id_376d7ec4_render,
-  AddDeployProductpopvue_type_template_id_376d7ec4_staticRenderFns,
+  AddDeployProductpopvue_type_template_id_2499eaa8_render,
+  AddDeployProductpopvue_type_template_id_2499eaa8_staticRenderFns,
   false,
   null,
   null,

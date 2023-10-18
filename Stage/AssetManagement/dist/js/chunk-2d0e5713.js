@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/DepreciationList.vue?vue&type=template&id=c4382c68&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/DepreciationList.vue?vue&type=template&id=10064cfc&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,7 +44,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/Asset/DepreciationList.vue?vue&type=template&id=c4382c68&
+// CONCATENATED MODULE: ./src/views/Asset/DepreciationList.vue?vue&type=template&id=10064cfc&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -73,7 +73,7 @@ let leftsearchSchema = [{
   isSearch: false,
   value: ""
 }, {
-  fieldName: 'ProductType',
+  fieldName: 'Product Type',
   fieldType: "ddl-check",
   fieldIcon: "fa-server",
   paramName: "ProductTypeId",
@@ -88,10 +88,10 @@ let leftsearchSchema = [{
   paramName: "LocationId",
   fieldSearchConditionName: [''],
   isSearch: false,
-  value: "",
+  value: null,
   listOptions: []
 }, {
-  fieldName: 'DepreciationDate',
+  fieldName: 'Depreciation Date',
   fieldType: "ddl-check",
   fieldIcon: "fa-server",
   paramName: "DepreciationDate ",
@@ -124,15 +124,15 @@ async function bindleftCommonSearchdropdown(instance, modulename, filtername) {
       vm.leftSearchFields[2].listOptions = LocationData;
     });
   }
-  if (filtername == "ProductType") {
-    var params = `langCode=en&statusType=AssetManagement&hasglobal=true`;
-    DataService["a" /* default */].GetStatusList(params).then(function (response) {
-      if (filtername == "ProductType") {
+  if (filtername == "Product Type") {
+    var params = `type=ITEMCODE&issueTo=&locationId=`;
+    DataService["a" /* default */].GetAssetTypeCustom(params).then(function (response) {
+      if (filtername == "Product Type") {
         let obj2 = {};
         JSON.parse(response.data).forEach(item => {
           obj2 = {
-            name: item.STATUS,
-            value: `${item.STATUS_ID}`
+            name: item.ASSETTYPE,
+            value: `${item.ASSETID}`
           };
           ProductType.push(obj2);
         });
@@ -382,7 +382,7 @@ async function bindleftCommonSearchdropdown(instance, modulename, filtername) {
     var vm = this;
     vm.privilegeParams = `controller=Asset&action=`;
     await vm.CheckPrivilege();
-    DepreciationListSchema.bindleftCommonSearchdropdown(vm, "Asset", "ProductType");
+    DepreciationListSchema.bindleftCommonSearchdropdown(vm, "Asset", "Product Type");
     DepreciationListSchema.bindleftCommonSearchdropdown(vm, "Asset", "Location");
     DepreciationListSchema.bindleftCommonSearchdropdown(vm, "Asset", "DepreciationDate");
     vm.UserType = vm.GetUserInfo.UserType;

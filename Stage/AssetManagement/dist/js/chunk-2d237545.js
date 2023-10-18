@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ManageProducts.vue?vue&type=template&id=14a7528d&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ManageProducts.vue?vue&type=template&id=136fcd6a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -112,7 +112,12 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "tab-no"
-  }, [_vm._v("4")]), _vm._v(" " + _vm._s(_vm.$t('Attachments')) + " ")])])])])])]), _vm.IsShowDeployProducts ? _c('DeployProduct', {
+  }, [_vm._v("4")]), _vm._v(" " + _vm._s(_vm.$t('Attachments')) + " ")])])])])])]), _c('div', {
+    staticClass: "clearfix",
+    staticStyle: {
+      "clear": "both"
+    }
+  }), _vm.IsShowDeployProducts ? _c('DeployProduct', {
     attrs: {
       "CatID": _vm.CatID
     }
@@ -133,7 +138,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/ManageProducts.vue?vue&type=template&id=14a7528d&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/ManageProducts.vue?vue&type=template&id=136fcd6a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -141,8 +146,8 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./src/views/AssetCatalog/DeployProducts.vue + 9 modules
 var DeployProducts = __webpack_require__("41ac");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/CreateProducts.vue?vue&type=template&id=4a37a275&
-var CreateProductsvue_type_template_id_4a37a275_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/CreateProducts.vue?vue&type=template&id=7c234a4c&
+var CreateProductsvue_type_template_id_7c234a4c_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('section', [_c('loader', {
@@ -168,9 +173,9 @@ var CreateProductsvue_type_template_id_4a37a275_render = function render() {
     }
   }) : _vm._e()], 1)]), _vm.IsShowAddNamePopup ? _c('TagNamePopup') : _vm._e()], 1);
 };
-var CreateProductsvue_type_template_id_4a37a275_staticRenderFns = [];
+var CreateProductsvue_type_template_id_7c234a4c_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/CreateProducts.vue?vue&type=template&id=4a37a275&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/CreateProducts.vue?vue&type=template&id=7c234a4c&
 
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
@@ -305,6 +310,7 @@ var TagNamePopup = __webpack_require__("56f6");
               attachmentName: "",
               attachmentPath: ""
             }],
+            onClick: this.onClickSelectedFiles,
             onChange: this.setFile,
             showAddIcon: false,
             onAddButtonClick: this.AddFileMore,
@@ -416,6 +422,30 @@ var TagNamePopup = __webpack_require__("56f6");
     vm.DataLoaded = 1;
   },
   methods: {
+    onClickSelectedFiles: function (itm) {
+      debugger;
+      var vm = this;
+      vm.isLoading = true;
+      var attachmentFilePath = vm.AssetCatalogDataByID.ATTACHMENT_PATH.substring(69);
+      var fileType = vm.AssetCatalogDataByID.ATTACHMENT_PATH.split('.')[5];
+      var attachmentName = vm.AssetCatalogDataByID.ATTACHMENT_NAME;
+      var param = `filePath=${attachmentFilePath}`;
+      // var url = `?fileId=${item.RelatedInfoId}&filePath=${item.FilePath}&fileName=${item.AttachmentName}&FileType=${item.FileType}`;
+      DataService["a" /* default */].DownloadAttachment(param).then(response => {
+        if (response.data != null && response.status === 200) {
+          const byteData = response.data;
+          const fileURL = `data:${fileType};base64,${byteData}`;
+          var fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute('download', attachmentName);
+          document.body.appendChild(fileLink);
+          fileLink.click();
+          vm.isLoading = false;
+        } else {
+          vm.isLoading = false;
+        }
+      });
+    },
     btnNextClick() {
       debugger;
       var vm = this;
@@ -426,6 +456,7 @@ var TagNamePopup = __webpack_require__("56f6");
       vm.$parent.btnCancel();
     },
     setFile: function (e) {
+      debugger;
       var vm = this;
       for (let index = 0; index < e.target.files.length; index++) {
         const element = e.target.files[index];
@@ -524,7 +555,6 @@ var TagNamePopup = __webpack_require__("56f6");
       });
     },
     GetAssetCatalogById() {
-      debugger;
       debugger;
       var vm = this;
       vm.isLoading = true;
@@ -661,8 +691,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   AssetCatalog_CreateProductsvue_type_script_lang_js_,
-  CreateProductsvue_type_template_id_4a37a275_render,
-  CreateProductsvue_type_template_id_4a37a275_staticRenderFns,
+  CreateProductsvue_type_template_id_7c234a4c_render,
+  CreateProductsvue_type_template_id_7c234a4c_staticRenderFns,
   false,
   null,
   null,

@@ -256,8 +256,8 @@ async function bindleftCommonSearchdropdown(instance, modulename, filtername) {
   leftsearchSchema,
   bindleftCommonSearchdropdown
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ProductHistoryDetail.vue?vue&type=template&id=579fc2a0&
-var ProductHistoryDetailvue_type_template_id_579fc2a0_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ProductHistoryDetail.vue?vue&type=template&id=457748d6&
+var ProductHistoryDetailvue_type_template_id_457748d6_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -303,7 +303,7 @@ var ProductHistoryDetailvue_type_template_id_579fc2a0_render = function render()
       "ModuleName": "Asset",
       "SubModuleCode": "Asset",
       "IdentityColumn": "ASSET_CATALOGUE_ID",
-      "HeaderText": "Asset Management",
+      "HeaderText": _vm.$t('AssetManagement'),
       "widgets": _vm.widgets,
       "ListData": _vm.ProductHistoryData,
       "HeaderData": _vm.Headers,
@@ -322,9 +322,9 @@ var ProductHistoryDetailvue_type_template_id_579fc2a0_render = function render()
     }
   })], 1)])])])])], 1);
 };
-var ProductHistoryDetailvue_type_template_id_579fc2a0_staticRenderFns = [];
+var ProductHistoryDetailvue_type_template_id_457748d6_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/ProductHistoryDetail.vue?vue&type=template&id=579fc2a0&
+// CONCATENATED MODULE: ./src/components/Modal/ProductHistoryDetail.vue?vue&type=template&id=457748d6&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ProductHistoryDetail.vue?vue&type=script&lang=js&
 
@@ -443,8 +443,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_ProductHistoryDetailvue_type_script_lang_js_,
-  ProductHistoryDetailvue_type_template_id_579fc2a0_render,
-  ProductHistoryDetailvue_type_template_id_579fc2a0_staticRenderFns,
+  ProductHistoryDetailvue_type_template_id_457748d6_render,
+  ProductHistoryDetailvue_type_template_id_457748d6_staticRenderFns,
   false,
   null,
   null,

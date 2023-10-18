@@ -1685,8 +1685,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var SearchItems = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ListOfProduct.vue?vue&type=template&id=250dbed0&
-var ListOfProductvue_type_template_id_250dbed0_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ListOfProduct.vue?vue&type=template&id=44c73b02&
+var ListOfProductvue_type_template_id_44c73b02_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1861,7 +1861,7 @@ var ListOfProductvue_type_template_id_250dbed0_render = function render() {
     }
   }) : _vm._e()], 1)]);
 };
-var ListOfProductvue_type_template_id_250dbed0_staticRenderFns = [function () {
+var ListOfProductvue_type_template_id_44c73b02_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('th', {
@@ -1888,7 +1888,7 @@ var ListOfProductvue_type_template_id_250dbed0_staticRenderFns = [function () {
   }, [_c('span', [_vm._v("N/A")])]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/ListOfProduct.vue?vue&type=template&id=250dbed0&
+// CONCATENATED MODULE: ./src/components/Modal/ListOfProduct.vue?vue&type=template&id=44c73b02&
 
 // EXTERNAL MODULE: ./src/components/Modal/RelatedProductPopup.vue + 4 modules
 var RelatedProductPopup = __webpack_require__("97c9");
@@ -1950,6 +1950,10 @@ var RelatedProductPopup = __webpack_require__("97c9");
         }
         return vm.ShowAlert(vm.$t("Item has been deleted Successfully "), "success", vm.$t("Alert"));
       });
+    },
+    CloseRelatedProductsPopup() {
+      var vm = this;
+      vm.isVisible = false;
     }
   }
 });
@@ -1965,8 +1969,8 @@ var RelatedProductPopup = __webpack_require__("97c9");
 
 var ListOfProduct_component = Object(componentNormalizer["a" /* default */])(
   Modal_ListOfProductvue_type_script_lang_js_,
-  ListOfProductvue_type_template_id_250dbed0_render,
-  ListOfProductvue_type_template_id_250dbed0_staticRenderFns,
+  ListOfProductvue_type_template_id_44c73b02_render,
+  ListOfProductvue_type_template_id_44c73b02_staticRenderFns,
   false,
   null,
   null,

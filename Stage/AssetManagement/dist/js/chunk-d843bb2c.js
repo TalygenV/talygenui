@@ -951,8 +951,8 @@ var Consume_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Consume = (Consume_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/TransferAssetPopUp.vue?vue&type=template&id=57532554&
-var TransferAssetPopUpvue_type_template_id_57532554_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fb182154-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/TransferAssetPopUp.vue?vue&type=template&id=819ba672&
+var TransferAssetPopUpvue_type_template_id_819ba672_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1031,7 +1031,6 @@ var TransferAssetPopUpvue_type_template_id_57532554_render = function render() {
     }
   }, [_vm._v(_vm._s(_vm.$t('DivideLeaveQuantity')))])])])]), _c('tbody', [_vm._l(_vm.TransferData, function (item, index) {
     return [_c('tr', {
-      key: index,
       staticClass: "insertedrow Records parentmain bg-gold"
     }, [_c('td', {
       staticClass: "text-center"
@@ -1127,7 +1126,7 @@ var TransferAssetPopUpvue_type_template_id_57532554_render = function render() {
     }
   }) : _vm._e()], 1)])])])], 1);
 };
-var TransferAssetPopUpvue_type_template_id_57532554_staticRenderFns = [function () {
+var TransferAssetPopUpvue_type_template_id_819ba672_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('th', {
@@ -1156,7 +1155,7 @@ var TransferAssetPopUpvue_type_template_id_57532554_staticRenderFns = [function 
   })]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/TransferAssetPopUp.vue?vue&type=template&id=57532554&
+// CONCATENATED MODULE: ./src/components/Modal/TransferAssetPopUp.vue?vue&type=template&id=819ba672&
 
 // EXTERNAL MODULE: ./node_modules/tg-controls_cli/dist/myLib.common.js
 var myLib_common = __webpack_require__("240d");
@@ -1188,7 +1187,7 @@ var myLib_common = __webpack_require__("240d");
           label: this.$t('Location'),
           name: "Location",
           value: null,
-          placeholder: "",
+          placeholder: "Select Location",
           config: {
             options: [],
             onChange: this.GetLocationWiseUsers
@@ -1237,6 +1236,7 @@ var myLib_common = __webpack_require__("240d");
   async created() {
     await this.GetLocationByCompanyId();
     await this.GetCompanyAssestCatalogsDetalis();
+    await this.GetLocationWiseUsers();
     this.DataLoaded = 1;
   },
   methods: {
@@ -1298,12 +1298,12 @@ var myLib_common = __webpack_require__("240d");
       retrunArray.children = finalChildArray;
       return retrunArray;
     },
-    GetLocationWiseUsers(evt) {
+    GetLocationWiseUsers: async function () {
       var vm = this;
-      var location = vm.FormSchema[0].Data[0].value;
+      var location = vm.FormSchema[0].Data[0].value == null ? 0 : vm.FormSchema[0].Data[0].value;
       debugger;
       var url = `locationId=${location}&moduleName=Asset`;
-      DataService["a" /* default */].GetLocationWiseUsers(url).then(response => {
+      await DataService["a" /* default */].GetLocationWiseUsers(url).then(response => {
         vm.UserData = response.data;
         vm.UserData.forEach((item, index) => {
           vm.FormSchema[0].Data[1].config.options.push({
@@ -1385,8 +1385,8 @@ var myLib_common = __webpack_require__("240d");
 
 var TransferAssetPopUp_component = Object(componentNormalizer["a" /* default */])(
   Modal_TransferAssetPopUpvue_type_script_lang_js_,
-  TransferAssetPopUpvue_type_template_id_57532554_render,
-  TransferAssetPopUpvue_type_template_id_57532554_staticRenderFns,
+  TransferAssetPopUpvue_type_template_id_819ba672_render,
+  TransferAssetPopUpvue_type_template_id_819ba672_staticRenderFns,
   false,
   null,
   null,
