@@ -101,7 +101,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
         };
         vm.leftSearchFields[1].listOptions.push(obj);
       });
-      return vm.LeadStatusList;
     }
   });
 }

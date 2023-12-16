@@ -159,7 +159,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
           vm.leftSearchFields[3].listOptions.push(obj);
           vm.leftSearchFields[4].listOptions.push(obj);
         });
-        return vm.LeadStatusList;
       }
     });
   }
@@ -174,7 +173,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
           };
           vm.leftSearchFields[2].listOptions.push(obj);
         });
-        return vm.LeadStatusList;
       }
     });
   }
@@ -190,7 +188,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
           };
           vm.leftSearchFields[1].listOptions.push(obj);
         });
-        return vm.LeadStatusList;
       }
     });
   }
