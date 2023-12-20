@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=68afacba
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=0e1dcab9
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit},scopedSlots:_vm._u([{key:"tgslot-Approval",fn:function(ref){
 var data = ref.data;
 return [_c('div',{staticClass:"input-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.fieldInfo.value),expression:"data.fieldInfo.value"}],staticClass:"form-control",attrs:{"maxlength":5,"step":"any"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.fieldInfo, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"selected":"","value":"0"}},[_vm._v("Select Approval Chain")]),_vm._l((_vm.ApprovalChainList),function(item){return _c('option',{domProps:{"value":item.APPROVAL_CHAIN_ID}},[_vm._v(_vm._s(item.APPROVAL_CHAIN_NAME))])})],2),_c('span',{staticClass:"input-group-append"},[_c('a',{staticClass:"input-group-text",attrs:{"id":"spnOutOF"},on:{"click":function($event){return _vm.ShowGroupPopup(data.fieldInfo.value)}}},[_c('i',{staticClass:"fa fa-eye"})])])])]}}])}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")]),(_vm.IsShowGroup)?_c('ApprovalGroup',{attrs:{"ApprovalchainId":_vm.ApprovalchainId,"ApprovalchainName":_vm.ApprovalchainName}}):_vm._e()],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=68afacba
+// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=0e1dcab9
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -355,6 +355,9 @@ var component = Object(componentNormalizer["a" /* default */])(
 //
 //
 //
+//
+//
+//
 
 
 
@@ -451,7 +454,7 @@ var component = Object(componentNormalizer["a" /* default */])(
           }
         }, {
           astype: "toggleField",
-          label: this.$t('Limited Duration'),
+          label: this.$t('LimitedDuration'),
           name: "Limited_Duration",
           value: 0,
           placeholder: "",
@@ -514,7 +517,7 @@ var component = Object(componentNormalizer["a" /* default */])(
         // },
         {
           astype: "MultiSelectField",
-          label: this.$t('Select Client'),
+          label: this.$t('SelectClient'),
           name: "Client",
           value: null,
           mode: "Select Client",
@@ -545,7 +548,7 @@ var component = Object(componentNormalizer["a" /* default */])(
           }
         }, {
           astype: "toggleField",
-          label: this.$t('Use Sequence'),
+          label: this.$t('UseSequence'),
           name: "Sequence",
           value: 0,
           placeholder: "",
@@ -630,8 +633,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 
   methods: {
     onSubmit: function (formfields) {
-      debugger;
-      // var approvaltype = formfields.Approvaltype == 1:
       if (formfields.Approvaltype == 1) {
         var approvaltype = "ApprovalChain";
       } else if (formfields.Approvaltype == 2) {
@@ -675,8 +676,8 @@ var component = Object(componentNormalizer["a" /* default */])(
       });
     },
     ManageRule: async function () {
-      debugger;
       var vm = this;
+      vm.isLoading = true;
       var url = `id=${this.$route.params.id}`;
       await DataService["a" /* default */].GetRuleById(url).then(async response => {
         var RuleData = JSON.parse(response.data);
@@ -746,6 +747,7 @@ var component = Object(componentNormalizer["a" /* default */])(
           this.FormSchema[0].Data[10].value = RuleData[0].USE_SEQUENCE;
           this.FormSchema[1].Data[0].value = RuleData[0].RULE_DESCRIPTION;
         }
+        vm.isLoading = false;
       });
     },
     GetProjectList: async function () {
@@ -768,7 +770,6 @@ var component = Object(componentNormalizer["a" /* default */])(
     },
 
     GetUserbyProject: async function (e, field) {
-      debugger;
       var vm = this;
       vm.FormSchema[0].Data[4].config.options = [];
       if (field == undefined) {
@@ -792,7 +793,6 @@ var component = Object(componentNormalizer["a" /* default */])(
       });
     },
     GetClientbyProject: async function (e, field) {
-      debugger;
       var vm = this;
       // vm.FormSchema[0].Data[5].config.options=[];
       var url = field != undefined ? `ProjectId=${field.value}` : `ProjectId=${e}`;
@@ -811,7 +811,6 @@ var component = Object(componentNormalizer["a" /* default */])(
     },
 
     GetUsers: async function () {
-      debugger;
       var vm = this;
       vm.FormSchema[0].Data[4].config.options = [];
       var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=APPROVALRULE&DepartmentIds`;
@@ -824,28 +823,15 @@ var component = Object(componentNormalizer["a" /* default */])(
               value: `${item.USER_ID}`
             });
           });
-          // return vm.LeadStatusList;
         }
       });
     },
-
     GetApprovalChain: async function () {
       var vm = this;
-      //var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=APPROVALRULE&DepartmentIds`;
       DataService["a" /* default */].GetApprovalChainsByCompanyId().then(response => {
         vm.ApprovalChainList = response.data;
-        // if (json != null) {
-        //     json.forEach(function (item, index) {
-        //         (vm.FormSchema)[0].Data[7].config.options.push({
-        //             name: `${item.APPROVAL_CHAIN_NAME}`,
-        //             value: `${item.APPROVAL_CHAIN_ID}`
-        //         })
-        //     })
-        //   return vm.LeadStatusList;
-        // }
       });
     },
-
     onCancel: function () {
       this.$router.push({
         name: 'ApprovalRule'
@@ -856,22 +842,13 @@ var component = Object(componentNormalizer["a" /* default */])(
       this.ApprovalchainId = foundElement.APPROVAL_CHAIN_ID;
       this.ApprovalchainName = foundElement.APPROVAL_CHAIN_NAME;
       this.IsShowGroup = true;
-      // DataService.CheckPrivilege(this.privilegeParams + 'AddRelationship').then((response)=>{                
-      //   if (response.data==true) {
-      //     this.IsShowGroup = true;
-      //   }else{
-      //     this.ShowAlert(this.$t('NotAuthorizedSection'), "failure",true, "Alert");
-      //   }
-      // });
     },
-
     CloseGroupPopup() {
       var vm = this;
       vm.IsShowGroup = false;
     },
     async GetLocation() {
       var vm = this;
-      //vm.isLoading = true;
       var params = `reqForm=`;
       await DataService["a" /* default */].GetLocationByCompanyId(params).then(response => {
         vm.LocationData = response.data;
@@ -929,6 +906,7 @@ var component = Object(componentNormalizer["a" /* default */])(
     },
     async OnDeploymentType(event, field) {
       var vm = this;
+      vm.isLoading = true;
       //field.value = event.target.getAttribute('data-value');
       if (field != undefined ? field.value == 2 : event == 2) {
         vm.FormSchema[0].Data[4].visibility = true;
@@ -995,26 +973,31 @@ var component = Object(componentNormalizer["a" /* default */])(
       //     vm.FormSchema[0].Data[2].config.value(item.value);
       // }
       //})
-    },
-
-    OnApprovalType(event, field) {
-      debugger;
-      var vm = this;
-      //     field.value = event.target.getAttribute('data-value');
-      if (field != undefined ? field.value == 1 : event == 1) {
-        vm.FormSchema[0].Data[7].visibility = true;
-        vm.FormSchema[0].Data[8].visibility = false;
-        vm.FormSchema[0].Data[5].config.options = [];
-      }
-      if (field != undefined ? field.value == 2 : event == 2) {
-        vm.FormSchema[0].Data[7].visibility = false;
-        vm.FormSchema[0].Data[8].visibility = true;
-      }
-      if (field != undefined ? field.value == 3 : event == 3) {
-        this.FormSchema[0].Data[7].visibility = true;
-        this.FormSchema[0].Data[8].visibility = true;
-      }
+      vm.isLoading = false;
+      vm.FormSchema[0].Data[8].config.options = [];
     }
+  },
+  OnApprovalType(event, field) {
+    debugger;
+    var vm = this;
+    vm.isLoading = true;
+    //     field.value = event.target.getAttribute('data-value');
+    if (field != undefined ? field.value == 1 : event == 1) {
+      vm.FormSchema[0].Data[7].visibility = true;
+      vm.FormSchema[0].Data[8].visibility = false;
+      vm.FormSchema[0].Data[5].config.options = [];
+      //vm.FormSchema[0].Data[5].config.options=[];
+    }
+
+    if (field != undefined ? field.value == 2 : event == 2) {
+      vm.FormSchema[0].Data[7].visibility = false;
+      vm.FormSchema[0].Data[8].visibility = true;
+    }
+    if (field != undefined ? field.value == 3 : event == 3) {
+      this.FormSchema[0].Data[7].visibility = true;
+      this.FormSchema[0].Data[8].visibility = true;
+    }
+    vm.isLoading = false;
   }
 });
 // CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=script&lang=js

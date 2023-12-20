@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=4fd06c5d
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=ecba1658
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('tg-list',{attrs:{"IsShowAction":false,"showCheckBox":true,"listType":[_vm.DetailListType],"ModuleName":"Approval","SubModuleCode":"Timer","IdentityColumn":"RULEID","HeaderText":_vm.$t('ApprovalRule'),"ListData":_vm.RuleData,"HeaderData":_vm.Headers,"widgets":_vm.widgets,"callbackfunction":_vm.FetchData,"HeaderButtons":_vm.listheaderbuttons,"TotalRecords":_vm.TotalRecords,"SearchFields":_vm.leftSearchFields,"RenderRowActionMethod":_vm.renderActions,"ListDataCallBackFunction":_vm.FetchData,"LegendArray":_vm.LegendArray,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"LeftsearchButtonClick":_vm.leftCommonSearch,"PagerButtonClick":_vm.pagerMethod,"HeaderButtonClick":_vm.commonHeaderButtonClick,"ActionButtonClick":_vm.actionButtonClick,"SortdataButtonClick":_vm.sortdata},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'STATUS')?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DrpdownUpdateStatus(data.row.STATUSID, data.row.RULEID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:_vm._e(),(data.column.COLUMN_NAME == 'RULENAME')?[(data.row.RULENAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.RULEID},on:{"click":function($event){return _vm.EditRule(data.row.RULEID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.RULENAME))])])]):_vm._e()]:_vm._e()]}}])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=4fd06c5d
+// CONCATENATED MODULE: ./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=ecba1658
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -253,6 +253,8 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
 /* harmony default export */ var ApprovalRuleListvue_type_script_lang_js = ({
   data() {
     return {
+      widgets: [],
+      LegendArray: [],
       CategorytList: [],
       isLoading: false,
       leftSearchFields: ApprovalRuleSchema.leftsearchSchema,
@@ -262,7 +264,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
         "DATA_TYPE": "text",
         "SORTABLE": false,
         "VISIBLE": true,
-        "DISPLAY_NAME": this.$t('Rule Name'),
+        "DISPLAY_NAME": this.$t('RuleName'),
         "DISPLAY_ORDER": 1,
         settings: {
           isInSlot: true
@@ -296,7 +298,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
         "DATA_TYPE": "text",
         "SORTABLE": false,
         "VISIBLE": true,
-        "DISPLAY_NAME": this.$t('Approval Chain'),
+        "DISPLAY_NAME": this.$t('ApprovalChain'),
         "DISPLAY_ORDER": 5
         // settings: {
         //     isInSlot: true,
@@ -357,7 +359,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
   methods: {
     async FetchData() {
       var vueObj = this;
-      var url = `${this.searchCondition}&ruleName=${this.ruleName}&moduleIds=${this.moduleIds}&approvalChainIds=${this.approvalChainIds}&userIds=${this.userIds}&approverIds=${this.approverIds}&statusIds=${this.statusIds}&sortBy=${this.sortBy}&sortExp=${this.sortExp}&pageSize=${this.PageSize}&pageNum=${this.PageNumber}&isPartial=${this.isPartial}`;
+      var url = `${vueObj.searchCondition}&ruleName=${vueObj.ruleName}&moduleIds=${vueObj.moduleIds}&approvalChainIds=${vueObj.approvalChainIds}&userIds=${vueObj.userIds}&approverIds=${vueObj.approverIds}&statusIds=${vueObj.statusIds}&sortBy=${vueObj.sortBy}&sortExp=${vueObj.sortExp}&pageSize=${vueObj.PageSize}&pageNum=${vueObj.PageNumber}&isPartial=${vueObj.isPartial}`;
       DataService["a" /* default */].ApprovalRuleListing(url).then(response => {
         if (response.data != null) {
           if (response.data.length > 0) {
@@ -388,7 +390,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
           vueObj.CheckBoxBootstrap();
         }, 100);
       });
-      vm.isLoading = false;
+      vueObj.isLoading = false;
     },
     EditRule: function (RULEID) {
       this.$router.push({
