@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76b4e4ac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=728b80c2
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=4fd06c5d
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('tg-list',{attrs:{"IsShowAction":false,"showCheckBox":true,"listType":[_vm.DetailListType],"ModuleName":"Approval","SubModuleCode":"Timer","IdentityColumn":"RULEID","HeaderText":_vm.$t('ApprovalRule'),"ListData":_vm.RuleData,"HeaderData":_vm.Headers,"widgets":_vm.widgets,"callbackfunction":_vm.FetchData,"HeaderButtons":_vm.listheaderbuttons,"TotalRecords":_vm.TotalRecords,"SearchFields":_vm.leftSearchFields,"RenderRowActionMethod":_vm.renderActions,"ListDataCallBackFunction":_vm.FetchData,"LegendArray":_vm.LegendArray,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"LeftsearchButtonClick":_vm.leftCommonSearch,"PagerButtonClick":_vm.pagerMethod,"HeaderButtonClick":_vm.commonHeaderButtonClick,"ActionButtonClick":_vm.actionButtonClick,"SortdataButtonClick":_vm.sortdata},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'STATUS')?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DrpdownUpdateStatus(data.row.STATUSID, data.row.RULEID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:_vm._e(),(data.column.COLUMN_NAME == 'RULENAME')?[(data.row.RULENAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.RULEID},on:{"click":function($event){return _vm.EditRule(data.row.RULEID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.RULENAME))])])]):_vm._e()]:_vm._e()]}}])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=728b80c2
+// CONCATENATED MODULE: ./src/views/ApprovalRule/ApprovalRuleList.vue?vue&type=template&id=4fd06c5d
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -146,37 +146,43 @@ let listActions = [{
 }];
 function bindleftCommonSearchdropdown(instance, modulename, filtername) {
   var vm = instance;
+  var TagData = [];
   if (filtername == "APPROVALRULE") {
+    let obj = {};
     var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=${filtername}&DepartmentIds`;
     DataService["a" /* default */].LoadUsersByCompanyId(url).then(response => {
       var json = response.data;
       if (json != null) {
         json.forEach(function (item, index) {
-          let obj = {
+          obj = {
             name: item.USERNAME,
             value: `${item.USER_ID}`
           };
-          vm.leftSearchFields[3].listOptions.push(obj);
-          vm.leftSearchFields[4].listOptions.push(obj);
+          TagData.push(obj);
         });
+        vm.leftSearchFields[3].listOptions = TagData;
+        vm.leftSearchFields[4].listOptions = TagData;
       }
     });
   }
   if (filtername == "ApprovalChain") {
+    let obj = {};
     DataService["a" /* default */].GetApprovalChainsByCompanyId().then(response => {
       var json = response.data;
       if (json != null) {
         json.forEach(function (item, index) {
-          let obj = {
+          obj = {
             name: item.APPROVAL_CHAIN_NAME,
             value: `${item.APPROVAL_CHAIN_ID}`
           };
-          vm.leftSearchFields[2].listOptions.push(obj);
+          TagData.push(obj);
         });
+        vm.leftSearchFields[2].listOptions = TagData;
       }
     });
   }
   if (filtername == "Module") {
+    let obj = {};
     var url = `userTypeID=1`;
     DataService["a" /* default */].GetApprovalTypes(url).then(response => {
       var json = response.data;
@@ -186,8 +192,9 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
             name: item.APPROVAL_TYPE_NAME,
             value: `${item.APPROVAL_TYPE_ID}`
           };
-          vm.leftSearchFields[1].listOptions.push(obj);
+          TagData.push(obj);
         });
+        vm.leftSearchFields[1].listOptions = TagData;
       }
     });
   }
@@ -357,7 +364,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
             vueObj.RuleData = response.data;
             vueObj.RuleData.forEach(row => {
               row.isCheckBoxDisabled = false;
-              if (row.UCOUNT > 0) {
+              if (row.UCOUNT == 0) {
                 row.isCheckBoxDisabled = false;
               } else {
                 row.isCheckBoxDisabled = true;
