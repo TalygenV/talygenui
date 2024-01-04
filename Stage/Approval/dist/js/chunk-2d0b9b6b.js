@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=0e1dcab9
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7de95e48-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=7447d8e4
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit},scopedSlots:_vm._u([{key:"tgslot-Approval",fn:function(ref){
 var data = ref.data;
 return [_c('div',{staticClass:"input-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.fieldInfo.value),expression:"data.fieldInfo.value"}],staticClass:"form-control",attrs:{"maxlength":5,"step":"any"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.fieldInfo, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"selected":"","value":"0"}},[_vm._v("Select Approval Chain")]),_vm._l((_vm.ApprovalChainList),function(item){return _c('option',{domProps:{"value":item.APPROVAL_CHAIN_ID}},[_vm._v(_vm._s(item.APPROVAL_CHAIN_NAME))])})],2),_c('span',{staticClass:"input-group-append"},[_c('a',{staticClass:"input-group-text",attrs:{"id":"spnOutOF"},on:{"click":function($event){return _vm.ShowGroupPopup(data.fieldInfo.value)}}},[_c('i',{staticClass:"fa fa-eye"})])])])]}}])}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")]),(_vm.IsShowGroup)?_c('ApprovalGroup',{attrs:{"ApprovalchainId":_vm.ApprovalchainId,"ApprovalchainName":_vm.ApprovalchainName}}):_vm._e()],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=0e1dcab9
+// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=7447d8e4
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -25,7 +25,7 @@ var DataService = __webpack_require__("1115");
 // EXTERNAL MODULE: ./node_modules/tg-controls_cli/dist/myLib.common.js
 var myLib_common = __webpack_require__("240d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=5b0b61a8
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7de95e48-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=5b0b61a8
 var ApprovalGroupPopupvue_type_template_id_5b0b61a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"my-popups"},[_c('div',{staticClass:"modal d-block"},[_c('div',{staticClass:"modal-dialog modal-dialog-centered",staticStyle:{"max-width":"900px !important"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header theme-primary partition-full"},[_c('h4',{staticClass:"modal-title"},[_vm._v(_vm._s(_vm.$t('ApprovalChain'))+": "+_vm._s(this.ChainName)+" ")]),_c('button',{staticClass:"close",attrs:{"type":"button"},on:{"click":_vm.ClosePopup}},[_c('em',{staticClass:"fa fa-times",attrs:{"aria-hidden":"true"}})])]),_c('div',{staticClass:"modal-body"},[_c('div',{staticClass:"col-md-12"},[_c('div',{staticClass:"form-group"},[_c('div',{staticClass:"listing OuterMainDiv"},[_c('div',{staticClass:"row",staticStyle:{"max-height":"500px","overflow-y":"auto"}},[_c('tg-list',{attrs:{"IsShowAction":false,"listType":['List'],"ModuleName":"Approval","SubModuleCode":"ApprovalRule","IdentityColumn":"APPROVALCHAINGROUPMAPID","ListData":_vm.GroupData,"HeaderData":_vm.Headers,"callbackfunction":_vm.FetchData,"TotalRecords":_vm.TotalRecords,"ListDataCallBackFunction":_vm.FetchData,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"PagerButtonClick":_vm.pagerMethod},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'GROUPNAME')?[_vm._v(" "+_vm._s(data.row.GROUPNAME)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'USERS')?[_vm._v(" "+_vm._s(data.row.USERS)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'APPROVERORDER')?[_vm._v(" "+_vm._s(data.row.APPROVERORDER)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'Action')?[_c('td',{staticClass:"text-center single-action"},[_c('div',{staticClass:"cstm-drop-btn"},[_c('span',[_c('a',{on:{"click":function($event){return _vm.DeleteApprovalGroup(data.row)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-trash text-danger action-icon"})])])])])])]:_vm._e(),(data.column.COLUMN_NAME == 'RankUp' && _vm.GroupData.length > 1)?[(data.row.APPROVERORDER > 1)?[_c('span',[_c('a',{on:{"click":function($event){return _vm.RankUpDown(data.row.APPROVALCHAINGROUPMAPID, 'RankUp')}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-arrow-up text-primary action-icon down"})])])])]:_vm._e()]:_vm._e(),(data.column.COLUMN_NAME == 'RankDown' && _vm.GroupData.length > 1)?[(data.row.APPROVERORDER < _vm.GroupData.length)?[_c('span',[_c('a',{on:{"click":function($event){return _vm.RankUpDown(data.row.APPROVALCHAINGROUPMAPID, 'RankDown')}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-arrow-down text-primary action-icon down"})])])])]:_vm._e()]:_vm._e()]}}])})],1)])])])])])])])])}
@@ -390,10 +390,13 @@ var component = Object(componentNormalizer["a" /* default */])(
           }
         }, {
           astype: "TextField",
-          label: this.$t('AuditRuleName'),
+          label: this.$t('RuleName'),
           name: "AuditRule",
           value: "",
           placeholder: "",
+          config: {
+            onChange: this.checkRuleName
+          },
           validationRules: {
             "required": true,
             max: 250
@@ -441,16 +444,16 @@ var component = Object(componentNormalizer["a" /* default */])(
           }
         }, {
           astype: "MultiSelectField",
-          label: 'Users',
+          label: this.$t('Users'),
           name: "User",
           value: null,
           mode: "tag",
           placeholder: "",
-          config: {
-            options: []
-          },
           validationRules: {
             "required": true
+          },
+          config: {
+            options: []
           }
         }, {
           astype: "toggleField",
@@ -611,8 +614,6 @@ var component = Object(componentNormalizer["a" /* default */])(
     };
   },
   async created() {
-    debugger;
-    //this.isLoading = true
     await this.GetLocation();
     await this.GetProjectList();
     await this.GetApprovalChain();
@@ -664,9 +665,7 @@ var component = Object(componentNormalizer["a" /* default */])(
         }).join(",")
       };
       var poststring = JSON.stringify(jsonobj);
-      debugger;
       DataService["a" /* default */].AddRule(poststring).then(response => {
-        debugger;
         if (response.data == true) {
           this.$router.push({
             name: 'ApprovalRule'
@@ -694,10 +693,9 @@ var component = Object(componentNormalizer["a" /* default */])(
           } else {
             await vm.GetUsers();
           }
-          this.FormSchema[0].Data[4].value = RuleData[0].USERS;
+          // (this.FormSchema)[0].Data[4].value = RuleData[0].USERS;
           vm.UserList = RuleData[0].USERS != null ? RuleData[0].USERS.split(",") : RuleData[0].USERS;
           if (vm.UserList != null) {
-            debugger;
             var listUsers = [];
             for (let i = 0; i < vm.UserList.length - 1; i++) {
               listUsers.push(vm.UserList[i]);
@@ -708,12 +706,12 @@ var component = Object(componentNormalizer["a" /* default */])(
                 if (obj.USER_NAME != undefined) {
                   vm.TagsSelectedArray.push({
                     label: obj.USER_NAME,
-                    value: obj.USER_ID
+                    value: obj.USER_ID.toString()
                   });
                 } else {
                   vm.TagsSelectedArray.push({
                     label: obj.USERNAME,
-                    value: obj.USER_ID
+                    value: obj.USER_ID.toString()
                   });
                 }
               }
@@ -727,7 +725,6 @@ var component = Object(componentNormalizer["a" /* default */])(
           this.FormSchema[0].Data[8].value = RuleData[0].CLIENTS != null ? RuleData[0].CLIENTS : RuleData[0].CLIENTS;
           vm.ClienList = RuleData[0].CLIENTS != null ? RuleData[0].USERS.split(",") : RuleData[0].CLIENTS;
           if (vm.ClienList != null) {
-            debugger;
             var ClienList = [];
             for (let i = 0; i < vm.ClientData.length; i++) {
               ClienList.push(vm.ClientData[i]);
@@ -914,16 +911,18 @@ var component = Object(componentNormalizer["a" /* default */])(
         vm.FormSchema[0].Data[6].visibility = true;
         vm.FormSchema[0].Data[0].visibility = false;
         vm.FormSchema[0].Data[5].visibility = true;
+        if (this.$route.params.id == null) {
+          vm.FormSchema[0].Data[4].config.options = [];
+        }
       }
       if (field != undefined ? field.value == 3 : event == 3) {
-        debugger;
         vm.FormSchema[0].Data[4].visibility = true;
         vm.FormSchema[0].Data[0].visibility = false;
         vm.FormSchema[0].Data[5].visibility = true;
         vm.FormSchema[0].Data[8].value = '';
         //vm.FormSchema[0].Data[6].config.options=[];
         // vm.FormSchema[0].Data[3].config.options=[];
-        vm.FormSchema[0].Data[3].value = 0;
+        //vm.FormSchema[0].Data[3].value = 0;
         vm.FormSchema[0].Data[3].visibility = false;
         //  vm.FormSchema[0].Data[4].value= '';
         //  vm.FormSchema[0].Data[4].config.options=[];
@@ -937,6 +936,9 @@ var component = Object(componentNormalizer["a" /* default */])(
         vm.FormSchema[0].Data[6].visibility = true;
         vm.FormSchema[0].Data[0].visibility = false;
         vm.FormSchema[0].Data[5].visibility = true;
+        if (this.$route.params.id == null) {
+          vm.FormSchema[0].Data[4].config.options = [];
+        }
         //GetProjectList();
       }
 
@@ -975,29 +977,40 @@ var component = Object(componentNormalizer["a" /* default */])(
       //})
       vm.isLoading = false;
       vm.FormSchema[0].Data[8].config.options = [];
-    }
-  },
-  OnApprovalType(event, field) {
-    debugger;
-    var vm = this;
-    vm.isLoading = true;
-    //     field.value = event.target.getAttribute('data-value');
-    if (field != undefined ? field.value == 1 : event == 1) {
-      vm.FormSchema[0].Data[7].visibility = true;
-      vm.FormSchema[0].Data[8].visibility = false;
-      vm.FormSchema[0].Data[5].config.options = [];
-      //vm.FormSchema[0].Data[5].config.options=[];
-    }
+    },
+    OnApprovalType(event, field) {
+      var vm = this;
+      vm.isLoading = true;
+      //     field.value = event.target.getAttribute('data-value');
+      if (field != undefined ? field.value == 1 : event == 1) {
+        vm.FormSchema[0].Data[7].visibility = true;
+        vm.FormSchema[0].Data[8].visibility = false;
+        vm.FormSchema[0].Data[5].config.options = [];
+        //vm.FormSchema[0].Data[5].config.options=[];
+      }
 
-    if (field != undefined ? field.value == 2 : event == 2) {
-      vm.FormSchema[0].Data[7].visibility = false;
-      vm.FormSchema[0].Data[8].visibility = true;
+      if (field != undefined ? field.value == 2 : event == 2) {
+        vm.FormSchema[0].Data[7].visibility = false;
+        vm.FormSchema[0].Data[8].visibility = true;
+      }
+      if (field != undefined ? field.value == 3 : event == 3) {
+        this.FormSchema[0].Data[7].visibility = true;
+        this.FormSchema[0].Data[8].visibility = true;
+      }
+      vm.isLoading = false;
+    },
+    checkRuleName(e, Fields) {
+      var vm = this;
+      var ruleName = Fields.value;
+      var url = `RuleName=${ruleName}`;
+      DataService["a" /* default */].CheckDuplicateRule(url).then(response => {
+        if (response.data == true && vm.FormSchema[0].Data[1].value) {
+          vm.FormSchema[0].Data[1].value = '';
+          vm.ShowAlert(vm.$t('RuleExist'), "warning", true, vm.$t("Alert"));
+          vm.FormSchema[0].Data[1].validationRules.required = true;
+        }
+      });
     }
-    if (field != undefined ? field.value == 3 : event == 3) {
-      this.FormSchema[0].Data[7].visibility = true;
-      this.FormSchema[0].Data[8].visibility = true;
-    }
-    vm.isLoading = false;
   }
 });
 // CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=script&lang=js

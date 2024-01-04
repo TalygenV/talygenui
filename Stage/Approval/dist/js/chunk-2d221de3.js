@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6c0ad526-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=651c59d8&lang=en
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12 padding-t_8"},[_c('div',{staticClass:"theme-primary partition-full"},[_c('span',{staticClass:"p-name text-white"},[_vm._v(_vm._s(_vm.$t('AddApprovalGroup')))]),_c('span',{staticClass:"float-right"},[_c('a',{staticClass:"p-action-btn text-white",attrs:{"href":"javascript:;","title":"Page Tour"},on:{"click":function($event){return _vm.setTourGuideSteps(0)}}},[_c('em',{staticClass:"fa fa-road",attrs:{"aria-hidden":"true"}}),_c('br'),_vm._v(_vm._s(_vm.$t('PageTour'))+" ")])])])])])]),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit}}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")])],1)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7de95e48-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=caad60ba&lang=en
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12 padding-t_8"},[_c('div',{staticClass:"theme-primary partition-full"},[_c('span',{staticClass:"p-name text-white"},[_vm._v(_vm._s(_vm.$t('AddApprovalGroup')))])])])])]),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit}}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")])],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=651c59d8&lang=en
+// CONCATENATED MODULE: ./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=caad60ba&lang=en
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -22,13 +22,6 @@ var DataService = __webpack_require__("1115");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/AddGroup.vue?vue&type=script&lang=js
 
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -127,10 +120,10 @@ var DataService = __webpack_require__("1115");
     };
   },
   created: async function () {
+    debugger;
     await this.GetNotficationUsers();
     if (this.$route.params.id != null) {
       this.ApprovalGroupId = this.$route.params.id;
-      await this.GetNotficationUsers();
       await this.ManageItemsGroup();
     }
     this.DataLoaded = 1;
@@ -165,6 +158,7 @@ var DataService = __webpack_require__("1115");
       });
     },
     GetNotficationUsers: async function () {
+      debugger;
       var vm = this;
       var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=APPROVALRULE&DepartmentIds`;
       await DataService["a" /* default */].LoadUsersByCompanyId(url).then(response => {
@@ -178,6 +172,7 @@ var DataService = __webpack_require__("1115");
           });
         }
       });
+      vm.FormSchema[0].Data[2].config.options;
     },
     ManageItemsGroup: async function () {
       var vm = this;
