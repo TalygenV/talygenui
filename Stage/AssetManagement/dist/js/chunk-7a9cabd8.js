@@ -1,2 +1,2294 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-7a9cabd8"],{f9bd:function(t,e,a){"use strict";var s=function(){var t=this,e=t._self._c;return e("section",[e("loader",{attrs:{"is-visible":t.isLoading}}),e("div",{staticClass:"my-popups"},[e("div",{staticClass:"modal d-block"},[e("div",{staticClass:"modal-dialog modal-dialog-centered"},[e("div",{staticClass:"modal-content"},[e("div",{staticClass:"modal-header d-flex"},[e("h5",{staticClass:"modal-title"},[t._v(" "+t._s(t.$t("AddRelationship"))+" ")]),e("button",{staticClass:"close",attrs:{type:"button",title:"Close"},on:{click:function(e){return t.ClosePopup()}}},[e("em",{staticClass:"fa fa-times"})]),e("span",{staticClass:"user-guide"},[t._m(0),e("div",{staticClass:"divancuserguide collapse overflow-auto",attrs:{id:"collapseReplyUG"}},[e("div",{staticClass:"custom-scrollbar-js",attrs:{id:"scrollbarreplyuserguideMangeView"}},[e("div",{staticClass:"con",domProps:{innerHTML:t._s(t.$t("USERGUIDE_AC_ADD_RELATIONSHIP"))}})])])])]),e("div",{staticClass:"modal-body"},[e("div",{staticClass:"col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"},[e("div",{staticClass:"row"},[e("div",{staticClass:"col-12"},[e("div",{staticClass:"rad_value",attrs:{type:"radiobutton"}},[e("div",{staticClass:"custom-control custom-radio custom-control-inline"},[e("input",{staticClass:"custom-control-input dynamic IssuedByIds",attrs:{type:"radio",id:"SearchProductName",name:"SearchProduct",value:"CheckedCheckBox"},domProps:{checked:t.SearchByBarcode},on:{change:function(e){return t.searchByProduct("barcode")}}}),e("label",{staticClass:"custom-control-label",attrs:{for:"SearchProductName"}},[t._v(t._s(t.$t("SearchbyBarcodeRFID")))])]),e("div",{staticClass:"custom-control custom-radio custom-control-inline"},[e("input",{staticClass:"custom-control-input dynamic IssuedByIds",attrs:{type:"radio",id:"SearchProducts",name:"SearchProduct",value:"CheckedCheckBox"},domProps:{checked:!t.SearchByBarcode},on:{change:function(e){return t.searchByProduct("product")}}}),e("label",{staticClass:"custom-control-label",attrs:{for:"SearchProducts"}},[t._v(t._s(t.$t("SearchbyProduct")))])])])]),t.SearchByBarcode?[e("Form",{ref:"ProductSearch",staticClass:"col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"},[e("div",{staticClass:"col-12 float-left mt-3 SearchByBarcode p-0"},[e("div",{staticClass:"col-12 col-sm-12 float-left"},[e("div",{staticClass:"form-group mb-3"},[e("label",[e("span",{attrs:{id:""}},[t._v(t._s(t.$t("Searchby"))+" "+t._s(t.$t("Barcode"))+"/"+t._s(t.$t("SerialNumber"))+"/"+t._s(t.$t("RFID"))+":")])]),e("span",{staticClass:"text-danger"},[t._v("*")]),e("Field",{staticClass:"w-100",attrs:{name:"BarCode",rules:{required:!0}},scopedSlots:t._u([{key:"default",fn:function({errors:a}){return[e("input",{directives:[{name:"model",rawName:"v-model",value:t.txtBarcode,expression:"txtBarcode"}],class:{"form-control":!0,"is-invalid":a[0]},attrs:{name:"BarCode",placeholder:"Enter Barcode",type:"text"},domProps:{value:t.txtBarcode},on:{keyup:function(e){return t.GetLocationDataByBarcode()},input:function(e){e.target.composing||(t.txtBarcode=e.target.value)}}}),a[0]?e("span",{staticClass:"invalid-feedback d-block",attrs:{name:"BarCode"}},[t._v(t._s(a[0]))]):t._e()]}}],null,!1,1518215686)})],1)])]),e("div",{staticClass:"col-9 float-left searchByProduct"},[e("div",{staticClass:"form-group"},[e("label",{attrs:{for:"Subject"}},[t._v(t._s(t.$t("Location"))+":"),e("span",{staticClass:"text-danger"},[t._v("*")])]),e("Field",{staticClass:"w-100",attrs:{name:"Location",rules:{required:!0}},scopedSlots:t._u([{key:"default",fn:function({errors:a}){return[e("select",{directives:[{name:"model",rawName:"v-model",value:t.LocationValueForBarCode,expression:"LocationValueForBarCode"}],class:{"form-control":!0,"is-invalid":a[0]},attrs:{name:"Location"},on:{change:function(e){var a=Array.prototype.filter.call(e.target.options,(function(t){return t.selected})).map((function(t){var e="_value"in t?t._value:t.value;return e}));t.LocationValueForBarCode=e.target.multiple?a:a[0]}}},[e("option",{attrs:{value:""}},[t._v(t._s(t.$t("Select"))+" ")]),""!=t.LocationValueForBarCode?e("option",{attrs:{disabled:t.LocationValueForBarCode},domProps:{value:t.LocationValueForBarCode}},[t._v(" "+t._s(t.LocationName)+" ")]):t._e()]),a[0]?e("span",{staticClass:"invalid-feedback d-block",attrs:{name:"Location"}},[t._v(t._s(a[0]))]):t._e()]}}],null,!1,652108480)})],1)]),e("div",{staticClass:"col-sm-6 col-md-6 col-lg-3 float-left pl-md-0 mt-0 mt-md-4 mt-sm-4"},[e("div",{staticClass:"background-0 text-left w-100 form-check-inline"},[e("input",{attrs:{type:"hidden",id:"hdnSearch",value:""}}),e("a",{staticClass:"btn btn-success w-50 mr-1 px-4 hlsearch",attrs:{title:"",id:"Searchassest_barcode",href:"javascript:;","data-toggle-tooltip":"tooltip","data-original-title":"Search"},on:{click:function(e){return t.SearchAssetByBarCode()}}},[e("em",{staticClass:"fa fa-search"})]),e("a",{staticClass:"btn btn-danger w-50 clearsearchtext px-4",attrs:{id:"aClear",href:"javascript:;",title:"Clear all ","data-toggle-tooltip":"tooltip","data-original-title":"Clear"},on:{click:function(e){return t.ClearhdnIdsOnChange()}}},[e("em",{staticClass:"fa fa-refresh"})])])])])]:t._e(),t.SearchByBarcode?t._e():[e("Form",{ref:"ProductSearchBar",staticClass:"col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"},[e("div",{staticClass:"col-12 float-left searchByProduct"},[e("div",{staticClass:"form-group"},[e("label",[t._v(t._s(t.$t("Location"))),e("span",{staticClass:"text-danger"},[t._v("*")])]),e("Field",{staticClass:"w-100",attrs:{name:"Location",rules:{required:!0}},scopedSlots:t._u([{key:"default",fn:function({errors:a}){return[e("tree-view",{class:{"is-invalid":a[0]},attrs:{options:t.options,placeholder:"Select Location","show-count":!0,flat:!0},on:{input:function(e){return t.BindItemTypeByUserId(t.TreeValue)}},model:{value:t.TreeValue,callback:function(e){t.TreeValue=e},expression:"TreeValue"}}),a[0]?e("span",{staticClass:"invalid-feedback d-block",attrs:{name:"Location"}},[t._v(t._s(a[0]))]):t._e()]}}],null,!1,1376239831)})],1)]),e("div",{staticClass:"col-12 float-left",attrs:{id:"searchByProduct"}},[e("div",{staticClass:"col-12 float-left pl-0 py-2"},[e("div",{staticClass:"rad_value",attrs:{type:"radiobutton"}},[e("div",{staticClass:"custom-control custom-radio custom-control-inline"},[e("input",{staticClass:"custom-control-input dynamic",attrs:{type:"radio",id:"ProductNameItem",value:"ProductName"},domProps:{checked:t.IsProductName},on:{change:function(e){return t.searchByItemName("ProductName")}}}),e("label",{staticClass:"custom-control-label",attrs:{for:"ProductNameItem"}},[t._v(t._s(t.$t("AssetId")))])]),e("div",{staticClass:"custom-control custom-radio custom-control-inline"},[e("input",{staticClass:"custom-control-input dynamic",attrs:{type:"radio",id:"ItemName",value:"Product"},domProps:{checked:!t.IsProductName},on:{change:function(e){return t.searchByItemName("Product")}}}),e("label",{staticClass:"custom-control-label",attrs:{for:"ItemName"}},[t._v(t._s(t.$t("ItemName")))])])])]),e("br"),t.IsProductName?e("div",{staticClass:"col-9 float-left pl-0"},[e("div",{staticClass:"form-group"},[e("label",[t._v(t._s(t.$t("ProductName"))+":"),e("span",{staticClass:"text-danger"},[t._v("*")])]),e("Field",{staticClass:"w-100",attrs:{name:"Product",rules:{required:!0}},scopedSlots:t._u([{key:"default",fn:function({errors:a}){return[e("select",{directives:[{name:"model",rawName:"v-model",value:t.txtAssetType,expression:"txtAssetType"}],class:{"form-control":!0,"is-invalid":a[0]},attrs:{name:"AssetTypeData"},on:{change:function(e){var a=Array.prototype.filter.call(e.target.options,(function(t){return t.selected})).map((function(t){var e="_value"in t?t._value:t.value;return e}));t.txtAssetType=e.target.multiple?a:a[0]}}},[e("option",{attrs:{value:""}},[t._v("Select")]),t._l(t.AssetTypeData,(function(a,s){return e("option",{key:s,domProps:{value:a.Value}},[t._v(t._s(a.Text)+" ")])}))],2),a[0]?e("span",{staticClass:"invalid-feedback d-block"},[t._v(t._s(a[0]))]):t._e()]}}],null,!1,4283199202)})],1)]):t._e(),t.IsProductName?t._e():e("div",{staticClass:"col-9 float-left pl-0"},[e("div",{staticClass:"form-group"},[e("label",[t._v(t._s(t.$t("ItemName"))+":"),e("span",{staticClass:"text-danger"},[t._v("*")])]),e("Field",{staticClass:"d-flex",attrs:{name:"Item Name",rules:{required:!0},label:"Item Name"},scopedSlots:t._u([{key:"default",fn:function({errors:a}){return[e("div",{staticClass:"input-group mb-3",staticStyle:{position:"relative"}},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.assetUniqueItem,expression:"assetUniqueItem"}],staticClass:"form-control",class:{"form-control":!0,"is-invalid":a[0]},attrs:{id:"txtAssetItems",name:"Item Name",placeholder:"Enter Product Name",type:"text"},domProps:{value:t.assetUniqueItem},on:{keyup:t.Filterditems,input:function(e){e.target.composing||(t.assetUniqueItem=e.target.value)}}}),a[0]?e("span",{staticClass:"invalid-feedback d-block",attrs:{name:"Item Name"}},[t._v(t._s(a[0]))]):t._e(),e("div",{staticClass:"unique_dynamicdatalist"},[t.IsDDLShowHide?e("ul",{staticClass:"listOfProduct"},t._l(t.UniqueItemData,(function(a,s){return e("li",{key:s,staticClass:"listitem all-items",attrs:{value:a.Value},on:{click:function(e){return t.uniqueItemChange(a)}}},[t._v(" "+t._s(a.Name))])})),0):t._e()])]),e("a",{staticClass:"btn float-left",staticStyle:{"background-color":"#fff",color:"#303030","border-color":"#abb5bf","border-left":"none","max-height":"37px"},attrs:{href:"javascript:;",id:"customddlinput"},on:{click:t.itemDDLShowHide}},[e("em",{staticClass:"dropdown-toggle float-right"})])]}}],null,!1,2000878517)})],1)]),e("div",{staticClass:"col-sm-8 col-md-8 col-lg-3 float-left pl-md-0 mt-0 mt-md-4 mt-sm-4 pr-0"},[e("div",{staticClass:"background-0 text-left w-100 form-check-inline"},[e("input",{attrs:{type:"hidden",id:"hdnSearch",value:""}}),e("a",{staticClass:"btn btn-success w-50 mr-1 px-4 hlsearch",attrs:{title:"",href:"javascript:;","data-toggle-tooltip":"tooltip","data-original-title":"Search"},on:{click:function(e){return t.SearchAssetByProduct()}}},[e("em",{staticClass:"fa fa-search"})]),e("a",{staticClass:"btn btn-danger w-50 clearsearchtext px-4",attrs:{id:"aClear",href:"javascript:;",title:"Clear all ","data-toggle-tooltip":"tooltip","data-original-title":"Clear"},on:{click:function(e){return t.ClearhdnIdsOnChange()}}},[e("em",{staticClass:"fa fa-refresh"})])])])])])]],2),t.searchResult?e("AddrelationListing",{attrs:{ProductData:t.ProductData,UniqueData:t.UniqueData,isDataLoaded:t.isDataLoaded,LocationValueForBarCode:t.LocationValueForBarCode,iselectVal:t.iselectVal,txtBarcode:t.txtBarcode,txtAssetType:t.txtAssetType,LocationValue:t.TreeValue,AssetData:t.AssetData,FetchData:t.FetchData,ClosePopup:t.ClosePopup,IsProduct:t.IsProduct,checkItem:t.checkItem,assignTillDate:t.assignTillDate}}):t._e()],1)])])])])])],1)},i=[function(){var t=this,e=t._self._c;return e("a",{staticClass:"ancuserguide text-white",attrs:{"data-toggle":"collapse",href:"#collapseReplyUG",role:"button","aria-expanded":"false","aria-controls":"collapseExample"}},[e("em",{staticClass:"fa fa-files-o pr-2"}),t._v("User Guide")])}],o=(a("14d9"),a("1115")),r=function(){var t=this,e=t._self._c;return e("section",[e("div",{staticClass:"col-12 listing tblassestgroupinfo px-0"},[e("div",{staticClass:"col-0 productNote"},["ProductName"==t.IsProduct?e("small",[t._v(t._s(t.$t("NoteUniqueItems")))]):t._e(),"Product"==t.IsProduct?e("small",[t._v(t._s(t.$t("UniqueItems")))]):t._e()]),e("div",{staticClass:"table-responsive"},[e("table",{staticClass:"table table-bordered dt-responsive nowrap mt-0",attrs:{id:"tblassestgroupinfo"}},[e("thead",{staticClass:"thead-bg"},[e("tr",[e("th",{staticClass:"text-center"},[e("span",[t._v(t._s(t.$t("SerialNumber")))])]),e("th",{staticClass:"text-center"},[e("span",[t._v(t._s(t.$t("ItemName")))])]),e("th",{staticClass:"text-center"},[e("span",[t._v(t._s(t.$t("PairProduct")))])]),e("th",{staticClass:"text-center"},[e("span",[t._v(t._s(t.$t("ItemMandatoryForCheckOut")))])]),e("th",{staticClass:"text-center"},[e("span",[t._v(t._s(t.$t("Action")))])])])]),e("tbody",[t._l(t.ProductData,(function(a,s){return e("tr",{key:s},[e("td",{staticClass:"text-center"},[t._v(" "+t._s(s+1)+" ")]),e("td",[t._v(t._s(a.AssetCatalogName))]),null==t.iselectVal?e("td",{staticClass:"text-center"},[null==t.LocationValueForBarCode?e("select",{ref:"productn",refInFor:!0,staticClass:"form-control",class:{"is-invalid":!a.isValidation},on:{change:function(e){return t.bindProductItem(e,a.count)}}},[e("option",{attrs:{value:""}},[t._v("Select Product Name")]),t._l(t.AssetData,(function(a,s){return e("option",{key:s,domProps:{value:a.Value}},[t._v(" "+t._s(a.Text)+" ")])}))],2):e("select",{ref:"barcode",refInFor:!0,staticClass:"form-control",class:{"is-invalid":!a.isValidation},on:{change:function(e){return t.bindProductItem(e,a.count)}}},[e("option",{attrs:{value:""}},[t._v("Select Product Name")]),t._l(t.AssetData,(function(a,s){return e("option",{key:s,domProps:{value:a.Value}},[t._v(" "+t._s(a.Name)+" ")])}))],2)]):t._e(),null!=t.iselectVal?e("td",{staticClass:"text-center"},[e("select",{staticClass:"form-control",class:{"is-invalid":!a.isValidation},on:{change:function(e){return t.bindProductItem(e,a.count)}}},[e("option",{attrs:{value:""}},[t._v("Select Product Name")]),t._l(t.UniqueItemData1,(function(a,s){return e("option",{key:s,domProps:{value:a.Value}},[t._v(t._s(a.Name)+" ")])}))],2)]):t._e(),e("td",{staticClass:"text-center"},[e("div",{staticClass:"form-group"},[e("label",{staticClass:"switch"},[e("input",{directives:[{name:"model",rawName:"v-model",value:a.IsMandatory,expression:"item.IsMandatory"}],staticClass:"form-check-input rdoticketfor custom-control-input dynamic",attrs:{id:"isCheck",type:"checkbox"},domProps:{checked:Array.isArray(a.IsMandatory)?t._i(a.IsMandatory,null)>-1:a.IsMandatory},on:{change:[function(e){var s=a.IsMandatory,i=e.target,o=!!i.checked;if(Array.isArray(s)){var r=null,n=t._i(s,r);i.checked?n<0&&t.$set(a,"IsMandatory",s.concat([r])):n>-1&&t.$set(a,"IsMandatory",s.slice(0,n).concat(s.slice(n+1)))}else t.$set(a,"IsMandatory",o)},function(e){return t.ChangeCheck(e)}]}}),t._m(0,!0)])])]),e("td",{staticClass:"text-center single-action"},[parseInt(t.result)==parseInt(s+1)?e("a",{attrs:{href:"javascript:;",id:"addProduct",title:"Add Product"},on:{click:function(e){return t.AddMoreItem(a)}}},[e("i",{staticClass:"fa fa-plus px-4 text-success"})]):t._e(),e("a",{attrs:{href:"javascript:;",title:"Delete"},on:{click:function(e){return t.deleteItem(a.count)}}},[e("i",{staticClass:"fa fa-trash px-4 text-danger"})])])])})),0==t.NoRecordLength?e("tr",[e("td",{staticClass:"text-danger text-center no-record",attrs:{colspan:"7"}},[t._v("No Record Found")])]):t._e()],2)])]),t.ProductData.length>0?e("div",{staticClass:"col-12 text-right mt-3"},[e("a",{staticClass:"btn btn-success",attrs:{href:"javascript:;",title:"Save"},on:{click:function(e){return t.SubmitData()}}},[e("i",{staticClass:"fa fa-save pr-2"}),t._v(t._s(t.$t("Save"))+" ")]),t._v("  "),e("a",{staticClass:"btn btn-danger",attrs:{href:"javascript:;",title:"Cancel",id:"ancCancelgroupRequisition"},on:{click:t.RelationPopUpClose}},[e("i",{staticClass:"fa fa-close pr-2"}),t._v(t._s(t.$t("Cancel")))])]):t._e()])])},n=[function(){var t=this,e=t._self._c;return e("span",{staticClass:"slider round"},[e("span",{staticClass:"slider-yes"},[t._v("Yes")]),e("span",{staticClass:"slider-no"},[t._v("No")])])}],l={props:{UniqueData:{type:Array},ProductData:{type:Array},LocationValue:{type:Number},txtAssetType:{type:Number},iselectVal:{type:Number},ClosePopup:{type:Function},LocationValueForBarCode:{type:Number},txtBarcode:{type:String},FetchData:{type:Function},AssetData:{type:Array},IsProduct:{type:String},assignTillDate:{type:String},checkItem:{type:Number}},data(){return{NoRecordLength:0,noDataAvailable:"No Product is available in the items list.",isCheckDeployItem:"",product:{},Relations:[],sliderValue:0,IsMandatory:!1,ChildId:null,result:1,isVal:!1,UniqueItemData1:[]}},created:function(){var t=this;if(null!=t.assignTillDate||null!=t.checkItem)return t.isVisible=!1,t.$parent.searchResult=!1,t.ShowAlert(t.$t("Product is already assigned to someone untill  "+t.assignTillDate),"warning",t.$t("Alert"));t.isVisible=!0,t.NoRecordLength=t.ProductData.length,t.UniqueItemData1=t.UniqueData},updated(){var t=this;t.lastItem()},methods:{lastItem(){var t=this;t.result=this.ProductData.length,t.NoRecordLength=this.ProductData.length,t.UniqueItemData1=t.UniqueData},ChangeCheck:function(t){var e=this;return e.IsMandatory=!1,1==t.target.checked?void(null!=e.ChildId&&(e.Relations.forEach(t=>{var a=e.Relations.some(t=>t.ChildId===e.ChildId);t.IsMandatory=1==a}),e.IsMandatory=!1)):e.IsMandatory=!1},AddMoreItem(t){var e=this;if(null!=e.ChildId){const a={AssetCatalogName:t.AssetCatalogName,count:e.ProductData.length+1,isValidation:!1};e.ProductData.push(a),e.ChildId=null}else e.ProductData.map(t=>{if(1==t.count)return t.isValidation=!1}),e.ShowAlert(e.$t("Product Name is required."),"warning",e.$t("Alert"))},bindProductItem(t,e){var a=this,s=[];let i=!1;if(a.ChildId=parseInt(t.target.value),1==e&&(a.Relations=[],0==a.Relations.length)){let t={ChildId:a.ChildId,IsMandatory:!1};return a.Relations.unshift(t),void a.ProductData.map(t=>{if(t.count==e)return t.isValidation=!0})}s.push(a.Relations),s.forEach(s=>{if(i=a.Relations.some(e=>e.ChildId===parseInt(t.target.value)),0==i){let t={ChildId:a.ChildId,IsMandatory:!1};return a.Relations.push(t),void a.ProductData.forEach(t=>{t.count==e&&(t.isValidation=!0)})}return t.target.value=null,a.ChildId=null,a.ShowAlert(a.$t("Relation with this Product Has already been added."),"failure",a.$t("Alert"))})},deleteItem(t){var e=this;e.confirmR(e.$t("Are you sure you want to delete these record(s)?"),!0,!1,(function(a){const s=e.ProductData.findIndex(e=>e.count===t);return-1!==s&&e.ProductData.splice(s,1),e.ShowAlert(e.$t("Item has been deleted Successfully "),"success",e.$t("Alert"))}))},SubmitData:function(){var t=this;let e={};if(""==this.LocationValueForBarCode||null==t.LocationValueForBarCode){if(0==t.Relations.length)return t.ProductData.forEach(t=>{if(1==t.count)return t.isValidation=!1}),t.ShowAlert(t.$t("Product Name is required."),"warning",t.$t("Alert"));e={ParentId:this.txtAssetType?parseInt(this.txtAssetType):this.iselectVal,type:this.txtAssetType?"ProductName":"Product",LocationId:this.LocationValue,Relations:t.Relations}}else e={ParentId:parseInt(this.txtBarcode),type:"ProductName",LocationId:this.LocationValueForBarCode,Relations:t.Relations};o["a"].SaveAssetRelationship(e).then(e=>{if(null!=e.data){var a=e.data;if(0==a.status)return this.RelationPopUpClose(),t.ShowAlert(t.$t("Add relationship Submitted successfully "),""+a.msg,t.$t("Alert"));t.ShowAlert(t.$t("Something went wrong"),""+a.msg,t.$t("Alert"))}})},RelationPopUpClose(){this.$parent.ClosePopup()}}},c=l,d=a("2877"),u=Object(d["a"])(c,r,n,!1,null,null,null),h=u.exports,m=a("ca17"),p=a.n(m),C=(a("542c"),{components:{AddrelationListing:h,"tree-view":p.a},props:{FetchData:{type:Function}},data(){return{SearchByBarcode:!0,IsProductName:!0,SearchByProduct:!1,LocationData:null,TreeValue:null,LocationValueForBarCode:null,AssetTypeData:[],txtBarcode:null,txtAssetType:0,searchResult:!1,isLoading:!1,IsDDLShowHide:!1,assetUniqueItem:"",iselectVal:null,UniqueItemData:[],LocationName:"",ProductData:[],options:[],isuniqueSearch:"No",AssetData:[],UniqueData:[],filterRecodes:[],SuniqueItemData:[],showProductDropdown:!1,IsProduct:"ProductName",assignTillDate:null,checkItem:null,isDataLoaded:!1,UniqueItems:[]}},created:function(){var t=this;t.searchByProduct("barcode"),t.GetLocationByCompanyId()},methods:{GetLocationDataByBarcode:async function(){var t=this;t.isLoading=!0;var e=`barcode=${this.txtBarcode}&reqFrom=addAssetRelationShip`;await o["a"].GetLocationByBarcode(e).then(e=>{null!=e.data[0]?(t.LocationName=e.data[0].LOCATION_NAME,t.LocationValueForBarCode=e.data[0].LOCATION_ID,t.isLoading=!1,t.GetAssetUniqueData()):t.isLoading=!1})},searchByProduct:function(t){var e=this;this.SearchByBarcode=!1,"barcode"==t?(e.isdata=!1,e.searchResult=!1,e.SearchByBarcode=!0,e.CheckedCheckBox="SearchProductName",e.BarcodeSelected="BarCodeSearch",e.ProductData=[]):(e.isdata=!0,e.SearchByBarcode=!1,e.searchResult=!1,e.CheckedCheckBox="SearchProducts",e.BarcodeSelected="ProductSearch",e.ProductData=[])},ClearhdnIdsOnChange:function(){var t=this;t.txtBarcode="",t.ProductData=[],t.LocationValueForBarCode="",t.TreeValue=null,t.assetUniqueItem="",t.searchByProduct("barcode")},itemDDLShowHide:function(){this.IsDDLShowHide=!this.IsDDLShowHide},uniqueItemChange:function(t){var e=this;e.iselectVal=t.Value,e.assetUniqueItem=t.Name,e.IsDDLShowHide=!1},searchByItemName:function(t){var e=this;e.IsProductName=!1,"ProductName"==t?(e.IsProductName=!0,e.IsProduct="ProductName",e.assetUniqueItem="",e.searchResult=!1):(e.IsProductName=!1,e.searchResult=!1,e.IsProduct="Product")},BindItemTypeByUserId:async function(t){var e=this;e.isLoading=!0;var a=`id=&isView=&barcode=&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=&isuniqueSearch=&issueTo=&assignedFrom=&assignedTill=&startTime=&endTime=&locationId=${e.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=`;await o["a"].GetCompanyAssestCatalogsDetalis(a).then(t=>{e.AssetTypeData=t.data.Result,e.GetAssetUniqueData(),e.isLoading=!1})},GetLocationByCompanyId:async function(){var t=this,e="reqForm=assetassignment";await o["a"].GetLocationByuserId(e).then(e=>{t.FindalLocationArray=[],e.data.data.forEach(a=>{var s=t.FindalLocationArray.filter((function(t){return t.COMPANY_LOCATION_ID==a.COMPANY_LOCATION_ID}));if(0==s.length&&null==a.PARENT_LOCATION_ID){let s=a.COMPANY_LOCATION_ID,i=t.getChildLocation(s,a,e.data.data);t.FindalLocationArray.push(i)}}),t.options=t.FindalLocationArray})},getChildLocation:function(t,e,a){let s=this,i={};i={id:e.COMPANY_LOCATION_ID,label:e.LOCATION_NAME};let o=i;var r=a.filter((function(e){return e.PARENT_LOCATION_ID==t}));let n=[];return r.forEach(t=>{let e=t.COMPANY_LOCATION_ID;var o=n.filter((function(e){return e.COMPANY_LOCATION_ID==t.COMPANY_LOCATION_ID}));if(0==o.length){var r=a.filter((function(t){return t.PARENT_LOCATION_ID==e}));if(null!=r&&r.length>0){let i=s.getChildLocation(e,t,a);n.push(i)}else i={id:""+t.COMPANY_LOCATION_ID,label:""+t.LOCATION_NAME},n.push(i)}}),o.children=n,o},ClosePopup(){this.$parent.CloseAddRelationShipPopup()},SearchAssetByBarCode:async function(){var t=this;t.isLoading=!0,t.isuniqueSearch="yes",null==t.LocationValueForBarCode&&(t.isLoading=!1);var e=`id=&catalogueIds=&uniqueIds=&isView=1&assetType=&barcode=${t.txtBarcode}&assetUniqueId=&issueTo=&reqFrom=addAssetRelationShip&isFor=search&assignedFrom=&assignedTill=&startTime=&endTime=&locationId=${t.LocationValueForBarCode}&RFID=&isuniqueSearch=no`;t.$refs.ProductSearch.validate().then(a=>{a?o["a"].GetCompanyAssestCatalogsDetalis(e).then(e=>{if(e.data.length>0){t.searchResult=!0,t.ProductData=e.data;let a=!0,s=1;t.AssetData=[],t.UniqueItemData.map(e=>{t.AssetData.push(e)}),t.ProductData.map(t=>{t.isValidation=a,t.count=s}),t.GetAssetUniqueData()}else t.searchResult=!0,t.NoRecordLength=0,t.ProductData=[];t.isDataLoaded=!0,t.isLoading=!1}):t.isLoading=!1})},Filterditems:async function(){let t=this;t.filterRecodes=[],t.isLoading=!0;let e="";if(""!==t.assetUniqueItem){t.assetUniqueItem.toLowerCase();e=null==t.LocationValueForBarCode||""==t.LocationValueForBarCode?`assetCatalogId=&name=${t.assetUniqueItem}&issueTo=&locationId=${t.TreeValue}&requestFrom=addAssetRelationShip&assetType=`:`assetCatalogId=&name=&issueTo=&locationId=${t.LocationValueForBarCode}&requestFrom=addAssetRelationShip&assetType=`,await o["a"].GetUniqueAssetItems(e).then((function(e){t.filterRecodes=e.data,t.SuniqueItemData=e.data,null!=t.filterRecodes&&(1==t.filterRecodes.length?(t.IsDDLShowHide=!0,t.uniqueItemChange(...t.filterRecodes)):(t.UniqueItemData=t.filterRecodes,t.IsDDLShowHide=!0)),t.isLoading=!1})),t.isLoading=!1}},GetAssetUniqueData:async function(){var t=this;let e="";t.UniqueItemData=[],e=null==t.LocationValueForBarCode||""==t.LocationValueForBarCode?`assetCatalogId=&name=&issueTo=&locationId=${t.TreeValue}&requestFrom=addAssetRelationShip&assetType=`:`assetCatalogId=&name=&issueTo=&locationId=${t.LocationValueForBarCode}&requestFrom=addAssetRelationShip&assetType=`,await o["a"].GetUniqueAssetItems(e).then((function(e){t.UniqueItemData=e.data,t.SuniqueItemData=e.data}))},SearchAssetByProduct:async function(){let t="";var e=this;e.isLoading=!0,e.AssetData=[],e.UniqueData=[],""!=e.txtAssetType&&e.AssetTypeData.forEach(t=>{t.Value!=e.txtAssetType&&e.AssetData.push(t)}),null==e.iselectVal?t=`id=${e.txtAssetType}&isView=1&barcode=&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=search&isuniqueSearch=no&issueTo=&assignedFrom=&assignedTill=&&startTime=&endTime=&locationId=${e.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=${e.txtAssetType}`:(e.ProductData=[],t=`id=&isView=1&barcode=&assetType=0&assetUniqueId=${e.iselectVal}&selfCheckout=&reqFrom=addAssetRelationShip&isFor=search&isuniqueSearch=no&issueTo=&assignedFrom=&assignedTill=&&startTime=&endTime=&locationId=${e.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=${e.iselectVal}&catalogueIds=`),e.getUniqueAssetItemsExceptItemName(),e.$refs.ProductSearchBar.validate().then(a=>{a?o["a"].GetCompanyAssestCatalogsDetalis(t).then(t=>{if(t.data.length>0){e.searchResult=!0,e.ProductData=t.data;let a=!0,s=1;return e.ProductData.map(t=>{t.isValidation=a,t.count=s}),void(e.isLoading=!1)}return e.isLoading=!1,1==t.data.checkItem||2==t.data.checkItem?(e.checkItem=null,e.assignTillDate=null,e.checkItem=t.data.checkItem,e.assignTillDate=t.data.assignTillDate):(e.searchResult=!0,e.NoRecordLength=0),e.searchResult=!0,e.NoRecordLength=0,e.ProductData=[],e.isDataLoaded=!0,e.isLoading=!1}):e.isLoading=!1})},getUniqueAssetItemsExceptItemName:function(){var t=this,e=`relatedInfoId=${t.iselectVal}&name=&issueTo=&locationId=${t.TreeValue}&requestFrom=ASSETREQUISITION&assetType=`;o["a"].GetUniqueAssetItemsExceptItemName(e).then(e=>{t.UniqueItems=e.data,t.UniqueItems.forEach(e=>{e.Value!=t.iselectVal&&t.UniqueData.push(e)})})}}}),f=C,I=Object(d["a"])(f,s,i,!1,null,null,null);e["a"]=I.exports},ff55:function(t,e,a){"use strict";a.r(e);var s=function(){var t=this,e=t._self._c;return e("section",[e("tg-list",{attrs:{IsShowAction:!1,listType:["List"],ModuleName:"Asset",SubModuleCode:"Asset",showCheckBox:!0,IdentityColumn:"AssetRequisitionId",HeaderText:t.$t("NEW_ASSET_REQUISITION"),ListData:t.ProductData,HeaderData:t.Headers,widgets:t.widgets,callbackfunction:t.FetchData,HeaderButtons:t.listheaderbuttons,TotalRecords:t.TotalRecord,SearchFields:t.leftSearchFields,RenderRowActionMethod:t.renderActions,ListDataCallBackFunction:t.FetchData,LegendArray:t.LegendArray,SortExp:t.SortExp,NorecordfoundText:t.$t("NoRecordfound"),SortBy:t.SortBy},on:{LeftsearchButtonClick:t.leftCommonSearch,PagerButtonClick:t.pagerMethod,HeaderButtonClick:t.commonHeaderButtonClick,ActionButtonClick:t.actionButtonClick,SortdataButtonClick:t.sortdata},scopedSlots:t._u([{key:"slotdata",fn:function({data:a}){return["CreatedAt"==a.column.COLUMN_NAME?[e("span",[t._v(t._s(t.$options.filters.formatDateTime(a.row.CreatedAt)))])]:t._e(),"View"==a.column.COLUMN_NAME?[e("a",{staticClass:"aViewRequisitionQuote",attrs:{title:"","data-toggle-tooltip":"tooltip","data-original-title":"View"}},[1==a.row.HasQuoteNewRequisitionList||1==a.row.HasPurchaseNewRequisitionList?e("span",[e("em",{staticClass:"fa fa-eye text-info action-icon",on:{click:function(e){return t.viewRequest(a.row)}}})]):e("span",[e("span",{staticClass:"fa fa-eye text-info action-icon disabled",on:{click:function(e){return t.viewRequest(a.row)}}})])])]:t._e()]}}])}),t.IsShowRelation?e("RelationPopup"):t._e(),t.IscheckApproveData?e("RequisitionViewModel",{attrs:{RequisitionData:t.RequisitionData},on:{ClosePOPuP:t.ClosePOPuP}}):t._e()],1)},i=[],o=(a("14d9"),a("1115"));let r=[{title:"Request New Product Type",iconClass:"fa fa-plus",callbackfunction:"RequestNewProductType",href:"",additionalClass:"",isdisabled:!1,isvisible:!0,checkPrivilege:!1},{title:"Delete",iconClass:"fa fa-trash",callbackfunction:"deleteItem",additionalClass:"",isdisabled:!0,isvisible:!0,checkPrivilege:!1}],n=[{fieldName:"Product Name",fieldType:"text",fieldIcon:"fa-file",paramName:"search",fieldSearchConditionName:[""],isSearch:!1,value:"",listOptions:[]},{fieldName:"Product Type",fieldType:"ddl-check",fieldIcon:"fa-user",paramName:"assettypeid",fieldSearchConditionName:[""],isSearch:!1,value:"",listOptions:[]}];function l(t,e,a){var s=t;if("Product_Type"==a){s.isLoading=!0;var i="type=ITEMCODE&issueTo=&locationId=";o["a"].GetAssetTypeCustom(i).then(t=>{s.AssetType=JSON.parse(t.data),null==s.AssetType||s.AssetType.forEach(t=>{let e={name:t.ASSETTYPE,value:t.ASSETID};s.leftSearchFields[1].listOptions.push(e)})})}}var c={buttons:r,leftsearchSchema:n,bindleftCommonSearchdropdown:l},d=a("f9bd"),u=function(){var t=this,e=t._self._c;return e("div",{staticClass:"my-popups"},[e("loader",{attrs:{"is-visible":t.isLoading}}),e("div",{staticClass:"modal d-block"},[e("div",{staticClass:"modal-dialog modal-dialog-centered"},[e("div",{staticClass:"modal-content"},[e("div",{staticClass:"modal-header"},[e("h5",{staticClass:"modal-title"},[t._v(" Quote ")]),e("button",{staticClass:"close",attrs:{href:"javascript:;"},on:{click:function(e){return t.ClosePOP(e)}}},[e("i",{staticClass:"fa fa-times",attrs:{"aria-hidden":"true"}})])]),e("div",{staticClass:"modal-body"},[e("div",{staticClass:"listing"},[e("tg-list",{attrs:{showCheckBox:!0,IsShowAction:!1,listType:["List"],ModuleName:"Asset",SubModuleCode:"Asset",IdentityColumn:"quoteId",HeaderText:t.$t("AssetManagement"),widgets:t.widgets,ListData:t.NewRequisitionList,HeaderData:t.Headers,callbackfunction:t.FeatchData,LegendArray:t.LegendArray,SortExp:t.SortExp,SortBy:t.SortBy,NorecordfoundText:t.$t("NorecordfoundText"),TotalRecords:t.TotalRecords,RenderRowActionMethod:t.renderActions,ListDataCallBackFunction:t.FeatchData},on:{PagerButtonClick:t.pagerMethod,HeaderButtonClick:t.commonHeaderButtonClick},scopedSlots:t._u([{key:"slotdata",fn:function({data:a}){return["StatusName"==a.column.COLUMN_NAME?[1001==a.row.status_id?e("em",{staticClass:"active-disabled"},[e("span",{staticClass:"btn d-inline-block w-80 text-center text-truncate btn-success"},[t._v(t._s(a.row.StatusName))])]):"Approved"==a.row.StatusName||"Rejected"==a.row.StatusName?e("em",{staticClass:"active-disabled"},[e("span",{staticClass:"btn d-inline-block w-80 text-center text-truncate btn-warning"},[t._v(t._s(a.row.StatusName))])]):e("em",{staticClass:"inactive-disabled"},[e("span",{staticClass:"btn d-inline-block w-80 text-center text-truncate btn-danger"},[t._v(t._s(a.row.StatusName))])])]:t._e()]}}])})],1)])])])])],1)},h=[],m={props:{RequisitionData:{type:Array,required:!0}},data(){return{NewRequisitionList:[],PurchaseNewRequisitionList:[],noRecord:!1,isLoading:!1,Headers:[{COLUMN_NAME:"vendor",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Vendor"),DISPLAY_ORDER:1},{COLUMN_NAME:"quantity",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Quantity"),DISPLAY_ORDER:2},{COLUMN_NAME:"price",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("UnitPrice"),DISPLAY_ORDER:3},{COLUMN_NAME:"total_Price",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("TotalPrice"),DISPLAY_ORDER:4},{COLUMN_NAME:"quote",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Quote"),DISPLAY_ORDER:5},{COLUMN_NAME:"StatusName",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Status"),DISPLAY_ORDER:6,settings:{isInSlot:!0}}],Headeres:[{COLUMN_NAME:"vendor",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Vendor"),DISPLAY_ORDER:1},{COLUMN_NAME:"quantity",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Quantity"),DISPLAY_ORDER:2},{COLUMN_NAME:"price",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("UnitPrice"),DISPLAY_ORDER:3},{COLUMN_NAME:"total_Price",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("TotalPrice"),DISPLAY_ORDER:4},{COLUMN_NAME:"purchaseLink",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Link"),DISPLAY_ORDER:5},{COLUMN_NAME:"StatusName",DATA_TYPE:"image",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("Status"),DISPLAY_ORDER:6,settings:{isInSlot:!0}}],listheaderbuttons:[],LegendArray:[],widgets:[],noRecord:!0,TotalRecords:0,CurrentPage:1,TotalPages:0,SortBy:"",SortExp:"",PageNumber:1,isPaged:1,PageSize:10}},created:function(){this.FeatchData()},methods:{FeatchData(){var t=this;t.isLoading=!0;var e=`requisitionId=${t.RequisitionData.AssetRequisitionId}&type=Quote`;o["a"].ViewRequisitionDetail(e).then(e=>{null!=e.data.QuoteNewRequisitionList&&(e.data.QuoteNewRequisitionList.length>0?(t.NewRequisitionList=e.data.QuoteNewRequisitionList,t.PurchaseNewRequisitionList=e.data.PurchaseNewRequisitionList,t.noRecord=!1,t.isLoading=!1):(t.NewRequisitionList=[],t.noRecord=!0,t.isLoading=!1)),setTimeout((function(){t.CheckBoxBootstrap()}),100)}),t.isLoading=!1},onCancel:function(t){this.ClosePOP(t)},ClosePOP:function(t){this.$emit("ClosePOPuP",t)},pagerMethod:function(t){this.pageSize=t.pageSize,this.PageNumber=t.PageNumber,this.FeatchData()},commonHeaderButtonClick:function(){},renderActions(){}}},p=m,C=a("2877"),f=Object(C["a"])(p,u,h,!1,null,null,null),I=f.exports,A={components:{RelationPopup:d["a"],RequisitionViewModel:I},data(){return{listheaderbuttons:c.buttons,leftSearchFields:c.leftsearchSchema,listActions:c.listActions,LegendArray:[],ProductData:[],PageSize:10,PageNumber:1,PageSizeOption:null,StatusListForListing:[],Headers:[{COLUMN_NAME:"ProductName",DATA_TYPE:"image",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("Product Name"),DISPLAY_ORDER:1,settings:{clickEvent:this.clickEventOfColumn,formatter:this.columnDataFormatter}},{COLUMN_NAME:"AssetType",DATA_TYPE:"text",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("Product Type"),DISPLAY_ORDER:2},{COLUMN_NAME:"Quantity",DATA_TYPE:"text",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("Requested Quantity"),DISPLAY_ORDER:3},{COLUMN_NAME:"Description",DATA_TYPE:"text",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("Description"),DISPLAY_ORDER:4},{COLUMN_NAME:"CreatedBy",DATA_TYPE:"text",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("Created By"),DISPLAY_ORDER:5},{COLUMN_NAME:"CreatedAt",DATA_TYPE:"Date",SORTABLE:!0,VISIBLE:!0,DISPLAY_NAME:this.$t("CreatedAt"),DISPLAY_ORDER:6,settings:{isInSlot:!0}},{COLUMN_NAME:"View",DATA_TYPE:"text",SORTABLE:!1,VISIBLE:!0,DISPLAY_NAME:this.$t("View"),DISPLAY_ORDER:7,settings:{isInSlot:!0}}],noRecord:!0,TotalRecord:0,CurrentPage:1,TotalPages:0,LocationId:"",SortBy:"",SortExp:"",isPaged:1,searchCondition:"",widgets:[],legendProgress:[],IsShowRelation:!1,IscheckApproveData:!1,RequisitionData:[]}},created(){var t=this;c.bindleftCommonSearchdropdown(t,"AssetRequisition","Product_Type"),t.FetchData()},methods:{columnDataFormatter:function(t,e){return t[e.COLUMN_NAME]},FetchData:function(){var t=this;t.isLoading=!0;var e=`pageSize=${t.PageSize}&pageNumber=${t.PageNumber}&sortBy=${t.SortBy}&sortExp=${this.SortExp}&${t.searchCondition}`;o["a"].NewAssetRequisitionListing(e).then(e=>{null!=e.data&&(e.data.length>0?(t.ProductData=e.data,t.TotalRecord=e.data[0].Total,t.TotalPage=Math.ceil(t.TotalRecord/t.PageSize),t.CurrentPage=t.PageNumber,t.noRecord=!1,t.isLoading=!1):(t.noRecord=!0,t.ProductData=[],t.TotalRecord=0,t.isLoading=!1)),setTimeout((function(){t.CheckBoxBootstrap()}),100)})},clickEventOfColumn:function(t,e){this.$router.push({name:"AddNewRequisition",params:{reqForm:"ProductTypeList",items:t}})},leftCommonSearch:function(t){this.PageNumber=t.PageNumber,this.isPaged=1,"undefined"!=typeof t.searchCondition?this.searchCondition=t.searchConditionJson:this.searchCondition="",this.FetchData()},currentPageMethod:function(t){this.PageSize=t.PageSize,this.PageNumber=t.PageNumber,this.FetchData()},GetPageSizeOption:function(){for(var t=[],e=10,a=e;a<e+95;a+=5)t.push(a);this.PageSizeOption=t},pagerMethod:function(t){this.PageSize=t.PageSize,this.PageNumber=t.PageNumber,this.FetchData()},commonHeaderButtonClick(t){switch(t.callbackfunction){case"RequestNewProductType":this.RequestNewProductType();break;case"deleteItem":this.deleteItem();break}},sortdata:function(t){var e="sort tb_headerSortDown";this.SortBy=t,t===this.SortBy&&(""==this.SortExp?(this.SortExp="ASC",e="sort tb_headerSortDown"):"ASC"==this.SortExp?(this.SortExp="DESC",e="sort tb_headerSortUp"):(this.SortExp="ASC",e="sort tb_headerSortDown")),this.FetchData(),$("#"+t+"  span:first-child").attr("class",e)},actionButtonClick(){},deleteItem(){var t=this,e="";$(".chkItems:checkbox:checked").not("[id^='chkAll']").each((function(){e.length>0&&(e+=","),e+=$(this).val()})),e.length>0&&t.confirmR(t.$t("ConfirmDelete"),!0,t.$t("Delete")+"  "+t.$t("New_Requisition"),(function(){var a={ids:e,tblname:"TALYGEN_new_asset_requisition",primarycolname:"asset_requisition_id"};t.isLoading=!0;var s=JSON.stringify(a);o["a"].NewAssetRequisitionDelete(s).then(e=>{e.data?($("[id^='chkAll']").prop("checked",!1).removeAttr("checked"),$(".chkItems:checkbox:checked").prop("checked",!1).removeAttr("checked"),$("[id^='DeleteMultiple']").removeClass("enable").addClass("disabled"),t.ShowAlert(t.$t("DeletedSuccess",[t.$t("New_Requisition")]),"Success",!0,t.$t("Alert")),t.FetchData()):t.ShowAlert(t.$t("DeletedError",[t.$t("New_Requisition")]),"failure",!0,t.$t("Alert"))})}))},RequestNewProductType(){this.$router.push({path:"/AssetRequisition/AddNewRequisition"})},viewRequest(t){var e=this;e.IscheckApproveData=!0,e.RequisitionData=t},ClosePOPuP:function(){var t=this;t.IscheckApproveData=!1}}},g=A,P=Object(C["a"])(g,s,i,!1,null,null,null);e["default"]=P.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-7a9cabd8"],{
+
+/***/ "f9bd":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55cbdea1-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=3b0c14b7&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('section', [_c('loader', {
+    attrs: {
+      "is-visible": _vm.isLoading
+    }
+  }), _c('div', {
+    staticClass: "my-popups"
+  }, [_c('div', {
+    staticClass: "modal d-block"
+  }, [_c('div', {
+    staticClass: "modal-dialog modal-dialog-centered"
+  }, [_c('div', {
+    staticClass: "modal-content"
+  }, [_c('div', {
+    staticClass: "modal-header d-flex"
+  }, [_c('h5', {
+    staticClass: "modal-title"
+  }, [_vm._v(" " + _vm._s(_vm.$t('AddRelationship')) + " ")]), _c('button', {
+    staticClass: "close",
+    attrs: {
+      "type": "button",
+      "title": "Close"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.ClosePopup();
+      }
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-times"
+  })]), _c('span', {
+    staticClass: "user-guide"
+  }, [_vm._m(0), _c('div', {
+    staticClass: "divancuserguide collapse overflow-auto",
+    attrs: {
+      "id": "collapseReplyUG"
+    }
+  }, [_c('div', {
+    staticClass: "custom-scrollbar-js",
+    attrs: {
+      "id": "scrollbarreplyuserguideMangeView"
+    }
+  }, [_c('div', {
+    staticClass: "con",
+    domProps: {
+      "innerHTML": _vm._s(_vm.$t('USERGUIDE_AC_ADD_RELATIONSHIP'))
+    }
+  })])])])]), _c('div', {
+    staticClass: "modal-body"
+  }, [_c('div', {
+    staticClass: "col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-12"
+  }, [_c('div', {
+    staticClass: "rad_value",
+    attrs: {
+      "type": "radiobutton"
+    }
+  }, [_c('div', {
+    staticClass: "custom-control custom-radio custom-control-inline"
+  }, [_c('input', {
+    staticClass: "custom-control-input dynamic IssuedByIds",
+    attrs: {
+      "type": "radio",
+      "id": "SearchProductName",
+      "name": "SearchProduct",
+      "value": "CheckedCheckBox"
+    },
+    domProps: {
+      "checked": _vm.SearchByBarcode
+    },
+    on: {
+      "change": function ($event) {
+        return _vm.searchByProduct('barcode');
+      }
+    }
+  }), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "SearchProductName"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('SearchbyBarcodeRFID')))])]), _c('div', {
+    staticClass: "custom-control custom-radio custom-control-inline"
+  }, [_c('input', {
+    staticClass: "custom-control-input dynamic IssuedByIds",
+    attrs: {
+      "type": "radio",
+      "id": "SearchProducts",
+      "name": "SearchProduct",
+      "value": "CheckedCheckBox"
+    },
+    domProps: {
+      "checked": !_vm.SearchByBarcode
+    },
+    on: {
+      "change": function ($event) {
+        return _vm.searchByProduct('product');
+      }
+    }
+  }), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "SearchProducts"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('SearchbyProduct')))])])])]), _vm.SearchByBarcode ? [_c('Form', {
+    ref: "ProductSearch",
+    staticClass: "col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"
+  }, [_c('div', {
+    staticClass: "col-12 float-left mt-3 SearchByBarcode p-0"
+  }, [_c('div', {
+    staticClass: "col-12 col-sm-12 float-left"
+  }, [_c('div', {
+    staticClass: "form-group mb-3"
+  }, [_c('label', [_c('span', {
+    attrs: {
+      "id": ""
+    }
+  }, [_vm._v(_vm._s(_vm.$t('Searchby')) + " " + _vm._s(_vm.$t('Barcode')) + "/" + _vm._s(_vm.$t('SerialNumber')) + "/" + _vm._s(_vm.$t('RFID')) + ":")])]), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")]), _c('Field', {
+    staticClass: "w-100",
+    attrs: {
+      "name": "BarCode",
+      "rules": {
+        'required': true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('input', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: _vm.txtBarcode,
+            expression: "txtBarcode"
+          }],
+          class: {
+            'form-control': true,
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "name": "BarCode",
+            "placeholder": "Enter Barcode",
+            "type": "text"
+          },
+          domProps: {
+            "value": _vm.txtBarcode
+          },
+          on: {
+            "keyup": function ($event) {
+              return _vm.GetLocationDataByBarcode();
+            },
+            "input": function ($event) {
+              if ($event.target.composing) return;
+              _vm.txtBarcode = $event.target.value;
+            }
+          }
+        }), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block",
+          attrs: {
+            "name": "BarCode"
+          }
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()];
+      }
+    }], null, false, 1518215686)
+  })], 1)])]), _c('div', {
+    staticClass: "col-9 float-left searchByProduct"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "Subject"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('Location')) + ":"), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")])]), _c('Field', {
+    staticClass: "w-100",
+    attrs: {
+      "name": "Location",
+      "rules": {
+        'required': true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('select', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: _vm.LocationValueForBarCode,
+            expression: "LocationValueForBarCode"
+          }],
+          class: {
+            'form-control': true,
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "name": "Location"
+          },
+          on: {
+            "change": function ($event) {
+              var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+                return o.selected;
+              }).map(function (o) {
+                var val = "_value" in o ? o._value : o.value;
+                return val;
+              });
+              _vm.LocationValueForBarCode = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+            }
+          }
+        }, [_c('option', {
+          attrs: {
+            "value": ""
+          }
+        }, [_vm._v(_vm._s(_vm.$t('Select')) + " ")]), _vm.LocationValueForBarCode != '' ? _c('option', {
+          attrs: {
+            "disabled": _vm.LocationValueForBarCode
+          },
+          domProps: {
+            "value": _vm.LocationValueForBarCode
+          }
+        }, [_vm._v(" " + _vm._s(_vm.LocationName) + " ")]) : _vm._e()]), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block",
+          attrs: {
+            "name": "Location"
+          }
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()];
+      }
+    }], null, false, 652108480)
+  })], 1)]), _c('div', {
+    staticClass: "col-sm-6 col-md-6 col-lg-3 float-left pl-md-0 mt-0 mt-md-4 mt-sm-4"
+  }, [_c('div', {
+    staticClass: "background-0 text-left w-100 form-check-inline"
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "id": "hdnSearch",
+      "value": ""
+    }
+  }), _c('a', {
+    staticClass: "btn btn-success w-50 mr-1 px-4 hlsearch",
+    attrs: {
+      "title": "",
+      "id": "Searchassest_barcode",
+      "href": "javascript:;",
+      "data-toggle-tooltip": "tooltip",
+      "data-original-title": "Search"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.SearchAssetByBarCode();
+      }
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-search"
+  })]), _c('a', {
+    staticClass: "btn btn-danger w-50 clearsearchtext px-4",
+    attrs: {
+      "id": "aClear",
+      "href": "javascript:;",
+      "title": "Clear all ",
+      "data-toggle-tooltip": "tooltip",
+      "data-original-title": "Clear"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.ClearhdnIdsOnChange();
+      }
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-refresh"
+  })])])])])] : _vm._e(), !_vm.SearchByBarcode ? [_c('Form', {
+    ref: "ProductSearchBar",
+    staticClass: "col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0"
+  }, [_c('div', {
+    staticClass: "col-12 float-left searchByProduct"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v(_vm._s(_vm.$t('Location'))), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")])]), _c('Field', {
+    staticClass: "w-100",
+    attrs: {
+      "name": "Location",
+      "rules": {
+        'required': true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('tree-view', {
+          class: {
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "options": _vm.options,
+            "placeholder": "Select Location",
+            "show-count": true,
+            "flat": true
+          },
+          on: {
+            "input": function ($event) {
+              return _vm.BindItemTypeByUserId(_vm.TreeValue);
+            }
+          },
+          model: {
+            value: _vm.TreeValue,
+            callback: function ($$v) {
+              _vm.TreeValue = $$v;
+            },
+            expression: "TreeValue"
+          }
+        }), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block",
+          attrs: {
+            "name": "Location"
+          }
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()];
+      }
+    }], null, false, 1376239831)
+  })], 1)]), _c('div', {
+    staticClass: "col-12 float-left",
+    attrs: {
+      "id": "searchByProduct"
+    }
+  }, [_c('div', {
+    staticClass: "col-12 float-left pl-0 py-2"
+  }, [_c('div', {
+    staticClass: "rad_value",
+    attrs: {
+      "type": "radiobutton"
+    }
+  }, [_c('div', {
+    staticClass: "custom-control custom-radio custom-control-inline"
+  }, [_c('input', {
+    staticClass: "custom-control-input dynamic",
+    attrs: {
+      "type": "radio",
+      "id": "ProductNameItem",
+      "value": "ProductName"
+    },
+    domProps: {
+      "checked": _vm.IsProductName
+    },
+    on: {
+      "change": function ($event) {
+        return _vm.searchByItemName('ProductName');
+      }
+    }
+  }), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "ProductNameItem"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('AssetId')))])]), _c('div', {
+    staticClass: "custom-control custom-radio custom-control-inline"
+  }, [_c('input', {
+    staticClass: "custom-control-input dynamic",
+    attrs: {
+      "type": "radio",
+      "id": "ItemName",
+      "value": "Product"
+    },
+    domProps: {
+      "checked": !_vm.IsProductName
+    },
+    on: {
+      "change": function ($event) {
+        return _vm.searchByItemName('Product');
+      }
+    }
+  }), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "ItemName"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('ItemName')))])])])]), _c('br'), _vm.IsProductName ? _c('div', {
+    staticClass: "col-9 float-left pl-0"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v(_vm._s(_vm.$t('ProductName')) + ":"), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")])]), _c('Field', {
+    staticClass: "w-100",
+    attrs: {
+      "name": "Product",
+      "rules": {
+        'required': true
+      }
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('select', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: _vm.txtAssetType,
+            expression: "txtAssetType"
+          }],
+          class: {
+            'form-control': true,
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "name": "AssetTypeData"
+          },
+          on: {
+            "change": function ($event) {
+              var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+                return o.selected;
+              }).map(function (o) {
+                var val = "_value" in o ? o._value : o.value;
+                return val;
+              });
+              _vm.txtAssetType = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+            }
+          }
+        }, [_c('option', {
+          attrs: {
+            "value": ""
+          }
+        }, [_vm._v("Select")]), _vm._l(_vm.AssetTypeData, function (item, itemIndex) {
+          return _c('option', {
+            key: itemIndex,
+            domProps: {
+              "value": item.Value
+            }
+          }, [_vm._v(_vm._s(item.Text) + " ")]);
+        })], 2), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block"
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()];
+      }
+    }], null, false, 4283199202)
+  })], 1)]) : _vm._e(), !_vm.IsProductName ? _c('div', {
+    staticClass: "col-9 float-left pl-0"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v(_vm._s(_vm.$t('ItemName')) + ":"), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")])]), _c('Field', {
+    staticClass: "d-flex",
+    attrs: {
+      "name": "Item Name",
+      "rules": {
+        'required': true
+      },
+      "label": "Item Name"
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('div', {
+          staticClass: "input-group mb-3",
+          staticStyle: {
+            "position": "relative"
+          }
+        }, [_c('input', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: _vm.assetUniqueItem,
+            expression: "assetUniqueItem"
+          }],
+          staticClass: "form-control",
+          class: {
+            'form-control': true,
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "id": "txtAssetItems",
+            "name": "Item Name",
+            "placeholder": "Enter Product Name",
+            "type": "text"
+          },
+          domProps: {
+            "value": _vm.assetUniqueItem
+          },
+          on: {
+            "keyup": _vm.Filterditems,
+            "input": function ($event) {
+              if ($event.target.composing) return;
+              _vm.assetUniqueItem = $event.target.value;
+            }
+          }
+        }), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block",
+          attrs: {
+            "name": "Item Name"
+          }
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e(), _c('div', {
+          staticClass: "unique_dynamicdatalist"
+        }, [_vm.IsDDLShowHide ? _c('ul', {
+          staticClass: "listOfProduct"
+        }, _vm._l(_vm.UniqueItemData, function (item, index) {
+          return _c('li', {
+            key: index,
+            staticClass: "listitem all-items",
+            attrs: {
+              "value": item.Value
+            },
+            on: {
+              "click": function ($event) {
+                return _vm.uniqueItemChange(item);
+              }
+            }
+          }, [_vm._v(" " + _vm._s(item.Name))]);
+        }), 0) : _vm._e()])]), _c('a', {
+          staticClass: "btn float-left",
+          staticStyle: {
+            "background-color": "#fff",
+            "color": "#303030",
+            "border-color": "#abb5bf",
+            "border-left": "none",
+            "max-height": "37px"
+          },
+          attrs: {
+            "href": "javascript:;",
+            "id": "customddlinput"
+          },
+          on: {
+            "click": _vm.itemDDLShowHide
+          }
+        }, [_c('em', {
+          staticClass: "dropdown-toggle float-right"
+        })])];
+      }
+    }], null, false, 2000878517)
+  })], 1)]) : _vm._e(), _c('div', {
+    staticClass: "col-sm-8 col-md-8 col-lg-3 float-left pl-md-0 mt-0 mt-md-4 mt-sm-4 pr-0"
+  }, [_c('div', {
+    staticClass: "background-0 text-left w-100 form-check-inline"
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "id": "hdnSearch",
+      "value": ""
+    }
+  }), _c('a', {
+    staticClass: "btn btn-success w-50 mr-1 px-4 hlsearch",
+    attrs: {
+      "title": "",
+      "href": "javascript:;",
+      "data-toggle-tooltip": "tooltip",
+      "data-original-title": "Search"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.SearchAssetByProduct();
+      }
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-search"
+  })]), _c('a', {
+    staticClass: "btn btn-danger w-50 clearsearchtext px-4",
+    attrs: {
+      "id": "aClear",
+      "href": "javascript:;",
+      "title": "Clear all ",
+      "data-toggle-tooltip": "tooltip",
+      "data-original-title": "Clear"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.ClearhdnIdsOnChange();
+      }
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-refresh"
+  })])])])])])] : _vm._e()], 2), _vm.searchResult ? _c('AddrelationListing', {
+    attrs: {
+      "ProductData": _vm.ProductData,
+      "UniqueData": _vm.UniqueData,
+      "isDataLoaded": _vm.isDataLoaded,
+      "LocationValueForBarCode": _vm.LocationValueForBarCode,
+      "iselectVal": _vm.iselectVal,
+      "txtBarcode": _vm.txtBarcode,
+      "txtAssetType": _vm.txtAssetType,
+      "LocationValue": _vm.TreeValue,
+      "AssetData": _vm.AssetData,
+      "FetchData": _vm.FetchData,
+      "ClosePopup": _vm.ClosePopup,
+      "IsProduct": _vm.IsProduct,
+      "checkItem": _vm.checkItem,
+      "assignTillDate": _vm.assignTillDate
+    }
+  }) : _vm._e()], 1)])])])])])], 1);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('a', {
+    staticClass: "ancuserguide text-white",
+    attrs: {
+      "data-toggle": "collapse",
+      "href": "#collapseReplyUG",
+      "role": "button",
+      "aria-expanded": "false",
+      "aria-controls": "collapseExample"
+    }
+  }, [_c('em', {
+    staticClass: "fa fa-files-o pr-2"
+  }), _vm._v("User Guide")]);
+}];
+
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=3b0c14b7&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
+var es_array_push = __webpack_require__("14d9");
+
+// EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
+var DataService = __webpack_require__("1115");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55cbdea1-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=template&id=392a5a18&
+var AddRelationListingvue_type_template_id_392a5a18_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('section', [_c('div', {
+    staticClass: "col-12 listing tblassestgroupinfo px-0"
+  }, [_c('div', {
+    staticClass: "col-0 productNote"
+  }, [_vm.IsProduct == 'ProductName' ? _c('small', [_vm._v(_vm._s(_vm.$t('NoteUniqueItems')))]) : _vm._e(), _vm.IsProduct == 'Product' ? _c('small', [_vm._v(_vm._s(_vm.$t('UniqueItems')))]) : _vm._e()]), _c('div', {
+    staticClass: "table-responsive"
+  }, [_c('table', {
+    staticClass: "table table-bordered dt-responsive nowrap mt-0",
+    attrs: {
+      "id": "tblassestgroupinfo"
+    }
+  }, [_c('thead', {
+    staticClass: "thead-bg"
+  }, [_c('tr', [_c('th', {
+    staticClass: "text-center"
+  }, [_c('span', [_vm._v(_vm._s(_vm.$t('SerialNumber')))])]), _c('th', {
+    staticClass: "text-center"
+  }, [_c('span', [_vm._v(_vm._s(_vm.$t('ItemName')))])]), _c('th', {
+    staticClass: "text-center"
+  }, [_c('span', [_vm._v(_vm._s(_vm.$t('PairProduct')))])]), _c('th', {
+    staticClass: "text-center"
+  }, [_c('span', [_vm._v(_vm._s(_vm.$t('ItemMandatoryForCheckOut')))])]), _c('th', {
+    staticClass: "text-center"
+  }, [_c('span', [_vm._v(_vm._s(_vm.$t('Action')))])])])]), _c('tbody', [_vm._l(_vm.ProductData, function (item, index) {
+    return _c('tr', {
+      key: index
+    }, [_c('td', {
+      staticClass: "text-center"
+    }, [_vm._v(" " + _vm._s(index + 1) + " ")]), _vm.iselectVal != null ? _c('td', [_vm._v(_vm._s(item.Name))]) : _c('td', [_vm._v(_vm._s(item.AssetCatalogName))]), _vm.iselectVal == null ? _c('td', {
+      staticClass: "text-center"
+    }, [_vm.LocationValueForBarCode == null ? _c('select', {
+      ref: "productn",
+      refInFor: true,
+      staticClass: "form-control",
+      class: {
+        'is-invalid': item.isValidation ? false : true
+      },
+      on: {
+        "change": function ($event) {
+          return _vm.bindProductItem($event, item.count);
+        }
+      }
+    }, [_c('option', {
+      attrs: {
+        "value": ""
+      }
+    }, [_vm._v("Select Product Name")]), _vm._l(_vm.AssetData, function (item, itemIndex) {
+      return _c('option', {
+        key: itemIndex,
+        domProps: {
+          "value": item.Value
+        }
+      }, [_vm._v(" " + _vm._s(item.Text) + " ")]);
+    })], 2) : _c('select', {
+      ref: "barcode",
+      refInFor: true,
+      staticClass: "form-control",
+      class: {
+        'is-invalid': item.isValidation ? false : true
+      },
+      on: {
+        "change": function ($event) {
+          return _vm.bindProductItem($event, item.count);
+        }
+      }
+    }, [_c('option', {
+      attrs: {
+        "value": ""
+      }
+    }, [_vm._v("Select Product Name")]), _vm._l(_vm.AssetData, function (item, itemIndex) {
+      return _c('option', {
+        key: itemIndex,
+        domProps: {
+          "value": item.Value
+        }
+      }, [_vm._v(" " + _vm._s(item.Text) + " ")]);
+    })], 2)]) : _vm._e(), _vm.iselectVal != null ? _c('td', {
+      staticClass: "text-center"
+    }, [_c('select', {
+      staticClass: "form-control",
+      class: {
+        'is-invalid': item.isValidation ? false : true
+      },
+      on: {
+        "change": function ($event) {
+          return _vm.bindProductItem($event, item.count);
+        }
+      }
+    }, [_c('option', {
+      attrs: {
+        "value": ""
+      }
+    }, [_vm._v("Select Product Name")]), _vm._l(_vm.UniqueItemData1, function (i, itemIndex) {
+      return _c('option', {
+        key: itemIndex,
+        domProps: {
+          "value": i.Value
+        }
+      }, [_vm._v(_vm._s(i.Name) + " ")]);
+    })], 2)]) : _vm._e(), _c('td', {
+      staticClass: "text-center"
+    }, [_c('div', {
+      staticClass: "form-group"
+    }, [_c('label', {
+      staticClass: "switch"
+    }, [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: item.IsMandatory,
+        expression: "item.IsMandatory"
+      }],
+      staticClass: "form-check-input rdoticketfor custom-control-input dynamic",
+      attrs: {
+        "id": "isCheck",
+        "type": "checkbox"
+      },
+      domProps: {
+        "checked": Array.isArray(item.IsMandatory) ? _vm._i(item.IsMandatory, null) > -1 : item.IsMandatory
+      },
+      on: {
+        "change": [function ($event) {
+          var $$a = item.IsMandatory,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false;
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v);
+            if ($$el.checked) {
+              $$i < 0 && _vm.$set(item, "IsMandatory", $$a.concat([$$v]));
+            } else {
+              $$i > -1 && _vm.$set(item, "IsMandatory", $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+            }
+          } else {
+            _vm.$set(item, "IsMandatory", $$c);
+          }
+        }, function ($event) {
+          return _vm.ChangeCheck($event);
+        }]
+      }
+    }), _vm._m(0, true)])])]), _c('td', {
+      staticClass: "text-center single-action"
+    }, [parseInt(_vm.result) == parseInt(index + 1) ? _c('a', {
+      attrs: {
+        "href": "javascript:;",
+        "id": "addProduct",
+        "title": "Add Product"
+      },
+      on: {
+        "click": function ($event) {
+          return _vm.AddMoreItem(item);
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-plus px-4 text-success"
+    })]) : _vm._e(), _c('a', {
+      attrs: {
+        "href": "javascript:;",
+        "title": "Delete"
+      },
+      on: {
+        "click": function ($event) {
+          return _vm.deleteItem(item.count);
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-trash px-4 text-danger"
+    })])])]);
+  }), _vm.NoRecordLength == 0 ? _c('tr', [_c('td', {
+    staticClass: "text-danger text-center no-record",
+    attrs: {
+      "colspan": "7"
+    }
+  }, [_vm._v("No Record Found")])]) : _vm._e()], 2)])]), _vm.ProductData.length > 0 ? _c('div', {
+    staticClass: "col-12 text-right mt-3"
+  }, [_c('a', {
+    staticClass: "btn btn-success",
+    attrs: {
+      "href": "javascript:;",
+      "title": "Save"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.SubmitData();
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-save pr-2"
+  }), _vm._v(_vm._s(_vm.$t('Save')) + " ")]), _vm._v("  "), _c('a', {
+    staticClass: "btn btn-danger",
+    attrs: {
+      "href": "javascript:;",
+      "title": "Cancel",
+      "id": "ancCancelgroupRequisition"
+    },
+    on: {
+      "click": _vm.RelationPopUpClose
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-close pr-2"
+  }), _vm._v(_vm._s(_vm.$t('Cancel')))])]) : _vm._e()])]);
+};
+var AddRelationListingvue_type_template_id_392a5a18_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('span', {
+    staticClass: "slider round"
+  }, [_c('span', {
+    staticClass: "slider-yes"
+  }, [_vm._v("Yes")]), _c('span', {
+    staticClass: "slider-no"
+  }, [_vm._v("No")])]);
+}];
+
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationListing.vue?vue&type=template&id=392a5a18&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=script&lang=js&
+
+
+/* harmony default export */ var AddRelationListingvue_type_script_lang_js_ = ({
+  props: {
+    UniqueData: {
+      type: Array
+    },
+    ProductData: {
+      type: Array
+    },
+    LocationValue: {
+      type: Number
+    },
+    txtAssetType: {
+      type: Number
+    },
+    iselectVal: {
+      type: Number
+    },
+    ClosePopup: {
+      type: Function
+    },
+    LocationValueForBarCode: {
+      type: Number
+    },
+    txtBarcode: {
+      type: String
+    },
+    FetchData: {
+      type: Function
+    },
+    AssetData: {
+      type: Array
+    },
+    IsProduct: {
+      type: String
+    },
+    assignTillDate: {
+      type: String
+    },
+    checkItem: {
+      type: Number
+    }
+  },
+  data() {
+    return {
+      NoRecordLength: 0,
+      noDataAvailable: 'No Product is available in the items list.',
+      isCheckDeployItem: '',
+      product: {},
+      Relations: [],
+      sliderValue: 0,
+      IsMandatory: false,
+      ChildId: null,
+      result: 1,
+      isVal: false,
+      UniqueItemData1: []
+    };
+  },
+  created: function () {
+    var vm = this;
+    if (vm.assignTillDate != null || vm.checkItem != null) {
+      vm.isVisible = false;
+      vm.$parent.searchResult = false;
+      return vm.ShowAlert(vm.$t(`Product is already assigned to someone untill  ${vm.assignTillDate}`), "warning", vm.$t("Alert"));
+    } else {
+      vm.isVisible = true;
+      vm.NoRecordLength = vm.ProductData.length;
+      vm.UniqueItemData1 = vm.UniqueData;
+    }
+  },
+  updated() {
+    var vm = this;
+    vm.lastItem();
+  },
+  methods: {
+    lastItem() {
+      var vm = this;
+      vm.result = this.ProductData.length;
+      vm.NoRecordLength = this.ProductData.length;
+      vm.UniqueItemData1 = vm.UniqueData;
+    },
+    ChangeCheck: function (event) {
+      var vm = this;
+      vm.IsMandatory = false;
+      if (event.target.checked == true) {
+        if (vm.ChildId != null) {
+          vm.Relations.forEach(element => {
+            var itemExist = vm.Relations.some(x => x.ChildId === vm.ChildId);
+            if (itemExist == true) {
+              element.IsMandatory = true;
+            } else {
+              element.IsMandatory = false;
+            }
+          });
+          vm.IsMandatory = false;
+        }
+        return;
+      } else {
+        return vm.IsMandatory = false;
+      }
+    },
+    AddMoreItem(item) {
+      var vm = this;
+      if (vm.ChildId != null) {
+        const product = {
+          AssetCatalogName: item.AssetCatalogName,
+          count: vm.ProductData.length + 1,
+          isValidation: false
+        };
+        vm.ProductData.push(product);
+        vm.ChildId = null;
+      } else {
+        vm.ProductData.map(ele => {
+          if (ele.count == 1) {
+            return ele.isValidation = false;
+          }
+        });
+        vm.ShowAlert(vm.$t("Product Name is required."), "warning", vm.$t("Alert"));
+      }
+    },
+    bindProductItem(value, count) {
+      var vm = this;
+      var temp = [];
+      let isChildExit = false;
+      vm.ChildId = parseInt(value.target.value);
+      if (count == 1) {
+        vm.Relations = [];
+        if (vm.Relations.length == 0) {
+          let childId = {
+            ChildId: vm.ChildId,
+            IsMandatory: false
+          };
+          vm.Relations.unshift(childId);
+          vm.ProductData.map(ele => {
+            if (ele.count == count) {
+              return ele.isValidation = true;
+            }
+          });
+          return;
+        }
+      }
+      temp.push(vm.Relations);
+      temp.forEach(ele => {
+        isChildExit = vm.Relations.some(x => x.ChildId === parseInt(value.target.value));
+        if (isChildExit == false) {
+          let childId = {
+            ChildId: vm.ChildId,
+            IsMandatory: false
+          };
+          vm.Relations.push(childId);
+          vm.ProductData.forEach(ele => {
+            if (ele.count == count) {
+              ele.isValidation = true;
+            }
+          });
+          return;
+        } else {
+          value.target.value = null;
+          vm.ChildId = null;
+          return vm.ShowAlert(vm.$t("Relation with this Product Has already been added."), "failure", vm.$t("Alert"));
+        }
+      });
+    },
+    deleteItem(value) {
+      var vm = this;
+      vm.confirmR(vm.$t('Are you sure you want to delete these record(s)?'), true, false, function (result) {
+        const index = vm.ProductData.findIndex(x => x.count === value);
+        if (index !== -1) {
+          vm.ProductData.splice(index, 1);
+          // this.$parent.ClearhdnIdsOnChange();
+        }
+
+        return vm.ShowAlert(vm.$t("Item has been deleted Successfully "), "success", vm.$t("Alert"));
+      });
+    },
+    SubmitData: function () {
+      var vm = this;
+      let obj = {};
+      if (this.LocationValueForBarCode == "" || vm.LocationValueForBarCode == null) {
+        if (vm.Relations.length == 0) {
+          vm.ProductData.forEach(ele => {
+            if (ele.count == 1) {
+              return ele.isValidation = false;
+            }
+          });
+          return vm.ShowAlert(vm.$t("Product Name is required."), "warning", vm.$t("Alert"));
+        }
+        obj = {
+          "ParentId": this.txtAssetType ? parseInt(this.txtAssetType) : this.iselectVal,
+          "type": this.txtAssetType ? "ProductName" : "Product",
+          "LocationId": this.LocationValue,
+          "Relations": vm.Relations
+        };
+      } else {
+        obj = {
+          "ParentId": parseInt(this.txtBarcode),
+          "type": "ProductName",
+          "LocationId": this.LocationValueForBarCode,
+          "Relations": vm.Relations
+        };
+      }
+      DataService["a" /* default */].SaveAssetRelationship(obj).then(response => {
+        if (response.data != null) {
+          var result = response.data;
+          if (result.status == 0) {
+            this.RelationPopUpClose();
+            return vm.ShowAlert(vm.$t("Add relationship Submitted successfully "), `${result.msg}`, vm.$t("Alert"));
+          } else {
+            vm.ShowAlert(vm.$t("Something went wrong"), `${result.msg}`, vm.$t("Alert"));
+          }
+        }
+      });
+    },
+    RelationPopUpClose() {
+      this.$parent.ClosePopup();
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationListing.vue?vue&type=script&lang=js&
+ /* harmony default export */ var Modal_AddRelationListingvue_type_script_lang_js_ = (AddRelationListingvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("2877");
+
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationListing.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  Modal_AddRelationListingvue_type_script_lang_js_,
+  AddRelationListingvue_type_template_id_392a5a18_render,
+  AddRelationListingvue_type_template_id_392a5a18_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var AddRelationListing = (component.exports);
+// EXTERNAL MODULE: ./node_modules/@riophae/vue-treeselect/dist/vue-treeselect.cjs.js
+var vue_treeselect_cjs = __webpack_require__("ca17");
+var vue_treeselect_cjs_default = /*#__PURE__*/__webpack_require__.n(vue_treeselect_cjs);
+
+// EXTERNAL MODULE: ./node_modules/@riophae/vue-treeselect/dist/vue-treeselect.css
+var vue_treeselect = __webpack_require__("542c");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=script&lang=js&
+
+
+
+
+
+/* harmony default export */ var AddRelationPopupvue_type_script_lang_js_ = ({
+  components: {
+    AddrelationListing: AddRelationListing,
+    'tree-view': vue_treeselect_cjs_default.a
+  },
+  props: {
+    FetchData: {
+      type: Function
+    }
+  },
+  data() {
+    return {
+      SearchByBarcode: true,
+      IsProductName: true,
+      SearchByProduct: false,
+      LocationData: null,
+      TreeValue: null,
+      LocationValueForBarCode: null,
+      AssetTypeData: [],
+      txtBarcode: null,
+      txtAssetType: 0,
+      searchResult: false,
+      isLoading: false,
+      IsDDLShowHide: false,
+      assetUniqueItem: '',
+      iselectVal: null,
+      UniqueItemData: [],
+      LocationName: '',
+      ProductData: [],
+      options: [],
+      isuniqueSearch: 'No',
+      AssetData: [],
+      UniqueData: [],
+      filterRecodes: [],
+      SuniqueItemData: [],
+      showProductDropdown: false,
+      IsProduct: 'ProductName',
+      assignTillDate: null,
+      checkItem: null,
+      isDataLoaded: false,
+      UniqueItems: []
+    };
+  },
+  created: function () {
+    var vm = this;
+    vm.searchByProduct('barcode');
+    vm.GetLocationByCompanyId();
+  },
+  methods: {
+    GetLocationDataByBarcode: async function () {
+      var vm = this;
+      vm.isLoading = true;
+      var url = `barcode=${this.txtBarcode}&reqFrom=addAssetRelationShip`;
+      await DataService["a" /* default */].GetLocationByBarcode(url).then(response => {
+        if (response.data[0] != null) {
+          vm.LocationName = response.data[0].LOCATION_NAME;
+          vm.LocationValueForBarCode = response.data[0].LOCATION_ID;
+          vm.isLoading = false;
+          // vm.GetAssetUniqueData();
+        } else {
+          vm.isLoading = false;
+        }
+      });
+    },
+    searchByProduct: function (val) {
+      var vm = this;
+      this.SearchByBarcode = false;
+      if (val == 'barcode') {
+        vm.isdata = false;
+        vm.searchResult = false;
+        vm.SearchByBarcode = true;
+        vm.CheckedCheckBox = 'SearchProductName';
+        vm.BarcodeSelected = 'BarCodeSearch';
+        vm.ProductData = [];
+      } else {
+        vm.isdata = true;
+        vm.SearchByBarcode = false;
+        vm.searchResult = false;
+        vm.CheckedCheckBox = 'SearchProducts';
+        vm.BarcodeSelected = 'ProductSearch';
+        vm.ProductData = [];
+      }
+      //this.ClearhdnIdsOnChange();
+    },
+
+    ClearhdnIdsOnChange: function () {
+      var vm = this;
+      vm.txtBarcode = '';
+      vm.ProductData = [];
+      vm.LocationValueForBarCode = '', vm.TreeValue = null, vm.assetUniqueItem = '';
+      vm.searchByProduct('barcode');
+    },
+    itemDDLShowHide: function () {
+      this.IsDDLShowHide = !this.IsDDLShowHide;
+    },
+    uniqueItemChange: function (item) {
+      debugger;
+      var vm = this;
+      vm.iselectVal = item.Value;
+      vm.assetUniqueItem = item.Name;
+      vm.IsDDLShowHide = false;
+    },
+    searchByItemName: function (val) {
+      var vm = this;
+      vm.IsProductName = false;
+      if (val == 'ProductName') {
+        vm.IsProductName = true;
+        vm.IsProduct = 'ProductName';
+        vm.assetUniqueItem = '';
+        vm.searchResult = false;
+      } else {
+        vm.IsProductName = false;
+        vm.searchResult = false;
+        vm.IsProduct = 'Product';
+      }
+    },
+    BindItemTypeByUserId: async function (ths) {
+      debugger;
+      var vm = this;
+      vm.isLoading = true;
+      var url = `id=&isView=&barcode=&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=&isuniqueSearch=&issueTo=&assignedFrom=&assignedTill=&startTime=&endTime=&locationId=${vm.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=`;
+      await DataService["a" /* default */].GetCompanyAssestCatalogsDetalis(url).then(response => {
+        vm.AssetTypeData = response.data.Result;
+        vm.GetAssetUniqueData();
+        vm.isLoading = false;
+      });
+    },
+    GetLocationByCompanyId: async function () {
+      var vm = this;
+      var url = `reqForm=assetassignment`;
+      await DataService["a" /* default */].GetLocationByuserId(url).then(response => {
+        vm.FindalLocationArray = [];
+        response.data.data.forEach(value => {
+          var CheckIfExist = vm.FindalLocationArray.filter(function (el) {
+            return el.COMPANY_LOCATION_ID == value.COMPANY_LOCATION_ID;
+          });
+          if (CheckIfExist.length == 0) {
+            if (value.PARENT_LOCATION_ID == null) {
+              let locationId = value.COMPANY_LOCATION_ID;
+              let rslt = vm.getChildLocation(locationId, value, response.data.data);
+              vm.FindalLocationArray.push(rslt);
+            }
+          }
+        });
+        vm.options = vm.FindalLocationArray;
+      });
+    },
+    getChildLocation: function (locationId, currentItem, data) {
+      let ths = this;
+      let treeArray = {};
+      treeArray = {
+        id: currentItem.COMPANY_LOCATION_ID,
+        label: currentItem.LOCATION_NAME
+      };
+      let retrunArray = treeArray;
+      var childArray = data.filter(function (el) {
+        return el.PARENT_LOCATION_ID == locationId;
+      });
+      let finalChildArray = [];
+      childArray.forEach(value => {
+        let ChildfolderId = value.COMPANY_LOCATION_ID;
+        var CheckIfExist1 = finalChildArray.filter(function (el) {
+          return el.COMPANY_LOCATION_ID == value.COMPANY_LOCATION_ID;
+        });
+        if (CheckIfExist1.length == 0) {
+          var CheckIfExist = data.filter(function (el) {
+            return el.PARENT_LOCATION_ID == ChildfolderId;
+          });
+          if (CheckIfExist != null && CheckIfExist.length > 0) {
+            let rslt = ths.getChildLocation(ChildfolderId, value, data);
+            finalChildArray.push(rslt);
+          } else {
+            treeArray = {
+              id: `${value.COMPANY_LOCATION_ID}`,
+              label: `${value.LOCATION_NAME}`
+            };
+            finalChildArray.push(treeArray);
+          }
+        }
+      });
+      retrunArray.children = finalChildArray;
+      return retrunArray;
+    },
+    ClosePopup() {
+      this.$parent.CloseAddRelationShipPopup();
+    },
+    // searchfilter: function () {
+    //     var vm = this;
+    //     vm.isLoading = true;
+    //     var url = `id=&isView=1&barcode=${this.txtBarcode}&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=search&isuniqueSearch=yes&issueTo=&assignedFrom=&assignedTill=&&startTime=&endTime=&locationId=&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=`;
+    //     DataService.GetCompanyAssestCatalogsDetalis(url).then(response => {
+    //         if (response.data[0] != null) {
+    //             vm.LocationName = response.data[0].LocationName;
+    //             vm.LocationValueForBarCode = response.data[0].LocationId;
+    //             vm.isLoading = false;
+    //         }
+    //         else {
+    //             vm.isLoading = false;
+    //         }
+    //     })
+
+    // },
+
+    SearchAssetByBarCode: async function () {
+      var vm = this;
+      vm.isLoading = true;
+      vm.isuniqueSearch = 'yes';
+      await vm.getNonUniqueProductsByBarcodeLocation();
+      if (vm.LocationValueForBarCode == null) {
+        vm.isLoading = false;
+      }
+      var url = `id=&catalogueIds=&uniqueIds=&isView=1&assetType=&barcode=${vm.txtBarcode}&assetUniqueId=&issueTo=&reqFrom=addAssetRelationShip&isFor=search&assignedFrom=&assignedTill=&startTime=&endTime=&locationId=${vm.LocationValueForBarCode}&RFID=&isuniqueSearch=no`;
+      vm.$refs.ProductSearch.validate().then(result => {
+        if (result) {
+          DataService["a" /* default */].GetCompanyAssestCatalogsDetalis(url).then(response => {
+            if (response.data.length > 0) {
+              vm.searchResult = true;
+              vm.ProductData = response.data;
+              let isValidation = true;
+              let count = 1;
+              let isMatchRecord = false;
+              vm.AssetData = [];
+              vm.AssetTypeData.map(item => {
+                isMatchRecord = vm.ProductData.some(x => x.AssetCatalogueId == item.Value);
+                if (isMatchRecord == false) {
+                  vm.AssetData.push(item);
+                } else {
+                  console.log("isMatchRecord", isMatchRecord);
+                }
+              });
+              vm.ProductData.map(ele => {
+                ele.isValidation = isValidation;
+                ele.count = count;
+              });
+            } else {
+              vm.searchResult = true;
+              vm.NoRecordLength = 0;
+              vm.ProductData = [];
+            }
+            vm.isDataLoaded = true;
+            vm.isLoading = false;
+          });
+        } else {
+          vm.isLoading = false;
+        }
+      });
+    },
+    Filterditems: async function () {
+      let vm = this;
+      vm.filterRecodes = [];
+      vm.isLoading = true;
+      let url = '';
+      if (vm.assetUniqueItem !== "") {
+        const searchTerm = vm.assetUniqueItem.toLowerCase();
+        if (vm.LocationValueForBarCode == null || vm.LocationValueForBarCode == '') {
+          url = `assetCatalogId=&name=${vm.assetUniqueItem}&issueTo=&locationId=${vm.TreeValue}&requestFrom=addAssetRelationShip&assetType=`;
+        } else {
+          url = `assetCatalogId=&name=&issueTo=&locationId=${vm.LocationValueForBarCode}&requestFrom=addAssetRelationShip&assetType=`;
+        }
+        await DataService["a" /* default */].GetUniqueAssetItems(url).then(function (response) {
+          vm.filterRecodes = response.data;
+          vm.SuniqueItemData = response.data;
+          if (vm.filterRecodes != null) {
+            if (vm.filterRecodes.length == 1) {
+              vm.IsDDLShowHide = true;
+              vm.uniqueItemChange(...vm.filterRecodes);
+            } else {
+              vm.UniqueItemData = vm.filterRecodes;
+              vm.IsDDLShowHide = true;
+            }
+          } else {
+            ///
+          }
+          vm.isLoading = false;
+        });
+        vm.isLoading = false;
+        //vm.filterRecodes = vm.UniqueItemData.filter(x => x.Name.toLowerCase().includes(searchTerm));
+        // if (vm.filterRecodes != null) {
+
+        //     if (vm.filterRecodes.length == 1) {
+        //         vm.IsDDLShowHide = true;
+        //         vm.uniqueItemChange(...vm.filterRecodes);
+
+        //     }
+        //     else {
+
+        //         vm.UniqueItemData = vm.filterRecodes;
+        //         vm.IsDDLShowHide = true;
+        //     }
+
+        // }
+        // else {
+        //     ///
+        // }
+      } else {
+        // vm.IsDDLShowHide = false;
+      }
+    },
+    GetAssetUniqueData: async function () {
+      debugger;
+      var vm = this;
+      let url = '';
+      vm.UniqueItemData = [];
+      if (vm.LocationValueForBarCode == null || vm.LocationValueForBarCode == '') {
+        url = `assetCatalogId=&name=&issueTo=&locationId=${vm.TreeValue}&requestFrom=addAssetRelationShip&assetType=`;
+      } else {
+        url = `assetCatalogId=&name=&issueTo=&locationId=${vm.LocationValueForBarCode}&requestFrom=addAssetRelationShip&assetType=`;
+      }
+      await DataService["a" /* default */].GetUniqueAssetItems(url).then(function (response) {
+        vm.UniqueItemData = response.data;
+        vm.SuniqueItemData = response.data;
+      });
+    },
+    SearchAssetByProduct: async function () {
+      debugger;
+      let url = '';
+      var vm = this;
+      vm.isLoading = true;
+      vm.AssetData = [];
+      vm.UniqueData = [];
+      if (vm.txtAssetType != '') {
+        vm.AssetTypeData.forEach(item => {
+          if (item.Value != vm.txtAssetType) {
+            vm.AssetData.push(item);
+          }
+        });
+      }
+      // else if (vm.iselectVal != '') {
+
+      //     // vm.UniqueItemData.forEach((item) => {
+      //     //     if (item.Value != vm.iselectVal) {
+      //     //         vm.UniqueData.push(item);
+      //     //     }
+      //     // })
+
+      // }
+      if (vm.iselectVal == null) {
+        url = `id=${vm.txtAssetType}&isView=1&barcode=&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=search&isuniqueSearch=no&issueTo=&assignedFrom=&assignedTill=&&startTime=&endTime=&locationId=${vm.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=${vm.txtAssetType}`;
+      } else {
+        vm.ProductData = [];
+        url = `id=&isView=1&barcode=&assetType=0&assetUniqueId=${vm.iselectVal}&selfCheckout=&reqFrom=addAssetRelationShip&isFor=search&isuniqueSearch=no&issueTo=&assignedFrom=&assignedTill=&&startTime=&endTime=&locationId=${vm.TreeValue}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=${vm.iselectVal}&catalogueIds=`;
+      }
+      vm.getUniqueAssetItemsExceptItemName();
+      vm.$refs.ProductSearchBar.validate().then(result => {
+        if (result) {
+          DataService["a" /* default */].GetCompanyAssestCatalogsDetalis(url).then(response => {
+            if (response.data.length > 0) {
+              vm.searchResult = true;
+              vm.ProductData = response.data;
+              let isValidation = true;
+              let count = 1;
+              vm.ProductData.map(ele => {
+                ele.isValidation = isValidation;
+                ele.count = count;
+              });
+              vm.isLoading = false;
+              return;
+            } else {
+              vm.isLoading = false;
+              if (response.data.checkItem == 1 || response.data.checkItem == 2) {
+                vm.checkItem = null;
+                vm.assignTillDate = null;
+                vm.checkItem = response.data.checkItem;
+                vm.assignTillDate = response.data.assignTillDate;
+              } else {
+                vm.searchResult = true;
+                vm.NoRecordLength = 0;
+              }
+              vm.searchResult = true;
+              vm.NoRecordLength = 0;
+              vm.ProductData = [];
+            }
+            vm.isDataLoaded = true;
+            return vm.isLoading = false;
+          });
+
+          // debugger;
+          // if (vm.iselectVal != '') {
+
+          //     vm.SuniqueItemData.forEach((item) => {
+          //         if (item.Value != vm.iselectVal) {
+          //             vm.UniqueData.push(item);
+          //         }
+          //     })
+          // }
+        } else {
+          vm.isLoading = false;
+        }
+      });
+    },
+    getUniqueAssetItemsExceptItemName: function () {
+      var vm = this;
+      var url = `relatedInfoId=${vm.iselectVal}&name=&issueTo=&locationId=${vm.TreeValue}&requestFrom=ASSETREQUISITION&assetType=`;
+      DataService["a" /* default */].GetUniqueAssetItemsExceptItemName(url).then(response => {
+        vm.UniqueItems = response.data;
+        vm.UniqueItems.forEach(item => {
+          if (item.Value != vm.iselectVal) {
+            vm.UniqueData.push(item);
+          }
+        });
+      });
+    },
+    getNonUniqueProductsByBarcodeLocation: function () {
+      debugger;
+      var vm = this;
+      vm.isLoading = true;
+      var url = `id=&isView=&barcode=&assetType=&assetUniqueId=&selfCheckout=&reqFrom=addAssetRelationShip&isFor=&isuniqueSearch=&issueTo=&assignedFrom=&assignedTill=&startTime=&endTime=&locationId=${vm.LocationValueForBarCode}&RFID=&pageSize=&pageNum=&assignedFromDateTime=&assignedTillDateTime=&uniqueIds=&catalogueIds=`;
+      DataService["a" /* default */].GetCompanyAssestCatalogsDetalis(url).then(response => {
+        vm.AssetTypeData = response.data.Result;
+        vm.isLoading = false;
+      });
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationPopup.vue?vue&type=script&lang=js&
+ /* harmony default export */ var Modal_AddRelationPopupvue_type_script_lang_js_ = (AddRelationPopupvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/Modal/AddRelationPopup.vue
+
+
+
+
+
+/* normalize component */
+
+var AddRelationPopup_component = Object(componentNormalizer["a" /* default */])(
+  Modal_AddRelationPopupvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var AddRelationPopup = __webpack_exports__["a"] = (AddRelationPopup_component.exports);
+
+/***/ }),
+
+/***/ "ff55":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55cbdea1-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=0ecd16d8&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('section', [_c('tg-list', {
+    attrs: {
+      "IsShowAction": false,
+      "listType": ['List'],
+      "ModuleName": "Asset",
+      "SubModuleCode": "Asset",
+      "showCheckBox": true,
+      "PageSize": _vm.PageSize,
+      "IdentityColumn": "AssetRequisitionId",
+      "HeaderText": _vm.$t('NEW_ASSET_REQUISITION'),
+      "ListData": _vm.ProductData,
+      "HeaderData": _vm.Headers,
+      "widgets": _vm.widgets,
+      "callbackfunction": _vm.FetchData,
+      "HeaderButtons": _vm.listheaderbuttons,
+      "TotalRecords": _vm.TotalRecord,
+      "SearchFields": _vm.leftSearchFields,
+      "RenderRowActionMethod": _vm.renderActions,
+      "ListDataCallBackFunction": _vm.FetchData,
+      "LegendArray": _vm.LegendArray,
+      "SortExp": _vm.SortExp,
+      "NorecordfoundText": _vm.$t('NoRecordfound'),
+      "SortBy": _vm.SortBy
+    },
+    on: {
+      "LeftsearchButtonClick": _vm.leftCommonSearch,
+      "PagerButtonClick": _vm.pagerMethod,
+      "HeaderButtonClick": _vm.commonHeaderButtonClick,
+      "ActionButtonClick": _vm.actionButtonClick,
+      "SortdataButtonClick": _vm.sortdata
+    },
+    scopedSlots: _vm._u([{
+      key: "slotdata",
+      fn: function ({
+        data
+      }) {
+        return [data.column.COLUMN_NAME == 'CreatedAt' ? [_c('span', [_vm._v(_vm._s(_vm.$options.filters.formatDateTime(data.row.CreatedAt)))])] : _vm._e(), data.column.COLUMN_NAME == 'View' ? [_c('a', {
+          staticClass: "aViewRequisitionQuote",
+          attrs: {
+            "title": "",
+            "data-toggle-tooltip": "tooltip",
+            "data-original-title": "View"
+          }
+        }, [_c('span', [_c('span', {
+          staticClass: "fa fa-eye text-info action-icon",
+          on: {
+            "click": function ($event) {
+              return _vm.viewRequest(data.row);
+            }
+          }
+        })])])] : _vm._e()];
+      }
+    }])
+  }), _vm.IsShowRelation ? _c('RelationPopup') : _vm._e(), _vm.IscheckApproveData ? _c('RequisitionViewModel', {
+    attrs: {
+      "RequisitionData": _vm.RequisitionData
+    },
+    on: {
+      "ClosePOPuP": _vm.ClosePOPuP
+    }
+  }) : _vm._e()], 1);
+};
+var staticRenderFns = [];
+
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=0ecd16d8&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
+var es_array_push = __webpack_require__("14d9");
+
+// EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
+var DataService = __webpack_require__("1115");
+
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListingSchema.js
+
+
+let buttons = [{
+  title: 'Request New Product Type',
+  iconClass: 'fa fa-plus',
+  callbackfunction: 'RequestNewProductType',
+  href: '',
+  additionalClass: '',
+  isdisabled: false,
+  isvisible: true,
+  checkPrivilege: false
+}, {
+  title: 'Delete',
+  id: 'DeleteMultiple',
+  iconClass: 'fa fa-trash',
+  callbackfunction: 'deleteItem',
+  additionalClass: '',
+  isdisabled: true,
+  isvisible: true,
+  checkPrivilege: true,
+  isEnabledOnSelectedRow: true
+}];
+let leftsearchSchema = [{
+  fieldName: "Product Name",
+  fieldType: "text",
+  fieldIcon: "fa-file",
+  paramName: "search",
+  fieldSearchConditionName: [''],
+  isSearch: false,
+  value: "",
+  listOptions: []
+}, {
+  fieldName: 'Product Type',
+  fieldType: "ddl-check",
+  fieldIcon: "fa-user",
+  paramName: "assettypeid",
+  fieldSearchConditionName: [''],
+  isSearch: false,
+  value: "",
+  listOptions: []
+}];
+function bindleftCommonSearchdropdown(instance, modulename, filtername) {
+  var vm = instance;
+  if (filtername == "Product_Type") {
+    vm.isLoading = true;
+    var url = `type=ITEMCODE&issueTo=&locationId=`;
+    DataService["a" /* default */].GetAssetTypeCustom(url).then(response => {
+      vm.AssetType = JSON.parse(response.data);
+      if (vm.AssetType != null) {
+        vm.AssetType.forEach(item => {
+          let obj = {
+            name: item.ASSETTYPE,
+            value: item.ASSETID
+          };
+          vm.leftSearchFields[1].listOptions.push(obj);
+        });
+        return;
+      }
+    });
+  }
+}
+/* harmony default export */ var NewAssetRequisitionListingSchema = ({
+  buttons,
+  leftsearchSchema,
+  bindleftCommonSearchdropdown
+});
+// EXTERNAL MODULE: ./src/components/Modal/AddRelationPopup.vue + 9 modules
+var AddRelationPopup = __webpack_require__("f9bd");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55cbdea1-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=02ae6e82&
+var NewRequisitionViewModelvue_type_template_id_02ae6e82_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "my-popups"
+  }, [_c('loader', {
+    attrs: {
+      "is-visible": _vm.isLoading
+    }
+  }), _c('div', {
+    staticClass: "modal d-block"
+  }, [_c('div', {
+    staticClass: "modal-dialog modal-dialog-centered"
+  }, [_c('div', {
+    staticClass: "modal-content"
+  }, [_c('div', {
+    staticClass: "modal-header"
+  }, [_c('h5', {
+    staticClass: "modal-title"
+  }, [_vm._v(" Quote ")]), _c('button', {
+    staticClass: "close",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.ClosePOP($event);
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-times",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _c('div', {
+    staticClass: "modal-body"
+  }, [_c('div', {
+    staticClass: "listing"
+  }, [_c('tg-list', {
+    attrs: {
+      "showCheckBox": true,
+      "IsShowAction": false,
+      "listType": ['List'],
+      "ModuleName": "Asset",
+      "SubModuleCode": "Asset",
+      "IdentityColumn": "quoteId",
+      "HeaderText": _vm.$t('AssetManagement'),
+      "widgets": _vm.widgets,
+      "ListData": _vm.NewRequisitionList,
+      "HeaderData": _vm.Headers,
+      "callbackfunction": _vm.FeatchData,
+      "LegendArray": _vm.LegendArray,
+      "SortExp": _vm.SortExp,
+      "SortBy": _vm.SortBy,
+      "NorecordfoundText": _vm.$t('NorecordfoundText'),
+      "TotalRecords": _vm.TotalRecords,
+      "RenderRowActionMethod": _vm.renderActions,
+      "ListDataCallBackFunction": _vm.FeatchData
+    },
+    on: {
+      "PagerButtonClick": _vm.pagerMethod,
+      "HeaderButtonClick": _vm.commonHeaderButtonClick
+    },
+    scopedSlots: _vm._u([{
+      key: "slotdata",
+      fn: function ({
+        data
+      }) {
+        return [data.column.COLUMN_NAME == 'StatusName' ? [data.row.status_id == 1001 ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-success"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : data.row.StatusName == 'Approved' ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-warning"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : data.row.StatusName == 'Rejected' ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-warning"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : _c('em', {
+          staticClass: "inactive-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-danger"
+        }, [_vm._v(_vm._s(data.row.StatusName))])])] : _vm._e()];
+      }
+    }])
+  })], 1)])])])])], 1);
+};
+var NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns = [];
+
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=02ae6e82&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=script&lang=js&
+
+/* harmony default export */ var NewRequisitionViewModelvue_type_script_lang_js_ = ({
+  props: {
+    RequisitionData: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      NewRequisitionList: [],
+      PurchaseNewRequisitionList: [],
+      noRecord: false,
+      isLoading: false,
+      Headers: [{
+        "COLUMN_NAME": "vendor",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Vendor"),
+        "DISPLAY_ORDER": 1
+      }, {
+        "COLUMN_NAME": "quantity",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Quantity"),
+        "DISPLAY_ORDER": 2
+      }, {
+        "COLUMN_NAME": "price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("UnitPrice"),
+        "DISPLAY_ORDER": 3
+      }, {
+        "COLUMN_NAME": "total_Price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("TotalPrice"),
+        "DISPLAY_ORDER": 4
+      }, {
+        "COLUMN_NAME": "quote",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Quote"),
+        "DISPLAY_ORDER": 5
+      }, {
+        "COLUMN_NAME": "StatusName",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Status"),
+        "DISPLAY_ORDER": 6,
+        settings: {
+          isInSlot: true
+        }
+      }],
+      Headeres: [{
+        "COLUMN_NAME": "vendor",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Vendor"),
+        "DISPLAY_ORDER": 1
+      }, {
+        "COLUMN_NAME": "quantity",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Quantity"),
+        "DISPLAY_ORDER": 2
+      }, {
+        "COLUMN_NAME": "price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("UnitPrice"),
+        "DISPLAY_ORDER": 3
+      }, {
+        "COLUMN_NAME": "total_Price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("TotalPrice"),
+        "DISPLAY_ORDER": 4
+      }, {
+        "COLUMN_NAME": "purchaseLink",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Link"),
+        "DISPLAY_ORDER": 5
+      }, {
+        "COLUMN_NAME": "StatusName",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Status"),
+        "DISPLAY_ORDER": 6,
+        settings: {
+          isInSlot: true
+        }
+      }],
+      listheaderbuttons: [],
+      LegendArray: [],
+      widgets: [],
+      noRecord: true,
+      TotalRecords: 0,
+      CurrentPage: 1,
+      TotalPages: 0,
+      SortBy: '',
+      SortExp: '',
+      PageNumber: 1,
+      isPaged: 1,
+      PageSize: 10
+    };
+  },
+  created: function () {
+    this.FeatchData();
+  },
+  methods: {
+    FeatchData() {
+      var vm = this;
+      vm.isLoading = true;
+      var params = `requisitionId=${vm.RequisitionData.AssetRequisitionId}&type=Quote`;
+      DataService["a" /* default */].ViewRequisitionDetail(params).then(response => {
+        if (response.data.QuoteNewRequisitionList != null) {
+          if (response.data.QuoteNewRequisitionList.length > 0) {
+            vm.NewRequisitionList = response.data.QuoteNewRequisitionList;
+            vm.PurchaseNewRequisitionList = response.data.PurchaseNewRequisitionList;
+            // vm.TotalRecord = vm.PendingRequestData[0].TOTAL_PAGES;
+            // vm.TotalPage = vm.TotalRecord;
+            // vm.CurrentPage = vm.PageNumber;
+            vm.noRecord = false;
+            vm.isLoading = false;
+          } else {
+            vm.NewRequisitionList = [];
+            vm.noRecord = true;
+            vm.isLoading = false;
+          }
+        }
+        setTimeout(function () {
+          vm.CheckBoxBootstrap();
+        }, 100);
+      });
+      vm.isLoading = false;
+    },
+    onCancel: function (item) {
+      this.ClosePOP(item);
+    },
+    ClosePOP: function (item) {
+      this.$emit('ClosePOPuP', item);
+    },
+    pagerMethod: function (value) {
+      this.pageSize = value.pageSize;
+      this.PageNumber = value.PageNumber;
+      this.FeatchData();
+    },
+    commonHeaderButtonClick: function () {},
+    renderActions() {}
+  }
+});
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=script&lang=js&
+ /* harmony default export */ var Modal_NewRequisitionViewModelvue_type_script_lang_js_ = (NewRequisitionViewModelvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__("2877");
+
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  Modal_NewRequisitionViewModelvue_type_script_lang_js_,
+  NewRequisitionViewModelvue_type_template_id_02ae6e82_render,
+  NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var NewRequisitionViewModel = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=script&lang=js&
+
+
+
+
+
+/* harmony default export */ var NewAssetRequisitionListingvue_type_script_lang_js_ = ({
+  components: {
+    RelationPopup: AddRelationPopup["a" /* default */],
+    RequisitionViewModel: NewRequisitionViewModel
+  },
+  data() {
+    return {
+      listheaderbuttons: NewAssetRequisitionListingSchema.buttons,
+      leftSearchFields: NewAssetRequisitionListingSchema.leftsearchSchema,
+      listActions: NewAssetRequisitionListingSchema.listActions,
+      LegendArray: [],
+      ProductData: [],
+      PageSize: 10,
+      PageNumber: 1,
+      PageSizeOption: null,
+      StatusListForListing: [],
+      Headers: [{
+        "COLUMN_NAME": "ProductName",
+        "DATA_TYPE": "image",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('Product Name'),
+        "DISPLAY_ORDER": 1,
+        settings: {
+          clickEvent: this.clickEventOfColumn,
+          formatter: this.columnDataFormatter
+        }
+      }, {
+        "COLUMN_NAME": "AssetType",
+        "DATA_TYPE": "text",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('Product Type'),
+        "DISPLAY_ORDER": 2
+      }, {
+        "COLUMN_NAME": "Quantity",
+        "DATA_TYPE": "text",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('Requested Quantity'),
+        "DISPLAY_ORDER": 3
+      }, {
+        "COLUMN_NAME": "Description",
+        "DATA_TYPE": "text",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('Description'),
+        "DISPLAY_ORDER": 4
+      }, {
+        "COLUMN_NAME": "CreatedBy",
+        "DATA_TYPE": "text",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('Created By'),
+        "DISPLAY_ORDER": 5
+      }, {
+        "COLUMN_NAME": "CreatedAt",
+        "DATA_TYPE": "Date",
+        "SORTABLE": true,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('CreatedAt'),
+        "DISPLAY_ORDER": 6,
+        settings: {
+          isInSlot: true
+        }
+      }, {
+        "COLUMN_NAME": "View",
+        "DATA_TYPE": "text",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t('View'),
+        "DISPLAY_ORDER": 7,
+        settings: {
+          isInSlot: true
+        }
+      }],
+      noRecord: true,
+      TotalRecord: 0,
+      CurrentPage: 1,
+      TotalPages: 0,
+      LocationId: '',
+      SortBy: '',
+      SortExp: '',
+      isPaged: 1,
+      searchCondition: "",
+      widgets: [],
+      legendProgress: [],
+      IsShowRelation: false,
+      IscheckApproveData: false,
+      RequisitionData: []
+    };
+  },
+  async created() {
+    var vm = this;
+    await vm.GetPageSize();
+    NewAssetRequisitionListingSchema.bindleftCommonSearchdropdown(vm, 'AssetRequisition', 'Product_Type');
+    vm.FetchData();
+  },
+  methods: {
+    columnDataFormatter: function (row, column) {
+      return row[column.COLUMN_NAME];
+    },
+    async GetPageSize() {
+      var vm = this;
+      var params = 'key=DefaultPageSize';
+      await DataService["a" /* default */].GetConfigurationValueForCompanyByKey(params).then(response => {
+        if (response.data != null) {
+          vm.PageSize = parseInt(response.data);
+        }
+      });
+    },
+    FetchData: function () {
+      var vm = this;
+      vm.isLoading = true;
+      var params = `pageSize=${vm.PageSize}&pageNumber=${vm.PageNumber}&sortBy=${vm.SortBy}&sortExp=${this.SortExp}&${vm.searchCondition}`;
+      DataService["a" /* default */].NewAssetRequisitionListing(params).then(response => {
+        if (response.data != null) {
+          if (response.data.length > 0) {
+            vm.ProductData = response.data;
+            vm.TotalRecord = response.data[0].Total;
+            vm.TotalPage = Math.ceil(vm.TotalRecord / vm.PageSize);
+            vm.CurrentPage = vm.PageNumber;
+            vm.noRecord = false;
+            vm.isLoading = false;
+          } else {
+            vm.noRecord = true;
+            vm.ProductData = [];
+            vm.TotalRecord = 0;
+            vm.isLoading = false;
+          }
+        }
+        setTimeout(function () {
+          vm.CheckBoxBootstrap();
+        }, 100);
+        setTimeout(function () {
+          vm.ResponsiveDataTable('tablelistingdata');
+        }, 500);
+      });
+    },
+    clickEventOfColumn: function (row, column) {
+      this.$router.push({
+        name: "AddNewRequisition",
+        params: {
+          reqForm: 'ProductTypeList',
+          items: row
+        }
+      });
+    },
+    leftCommonSearch: function (value) {
+      this.PageNumber = value.PageNumber;
+      this.isPaged = 1;
+      if (typeof value.searchCondition != 'undefined') {
+        this.searchCondition = value.searchConditionJson;
+      } else {
+        this.searchCondition = "";
+      }
+      this.FetchData();
+    },
+    currentPageMethod: function (value) {
+      this.PageSize = value.PageSize;
+      this.PageNumber = value.PageNumber;
+      this.FetchData();
+    },
+    GetPageSizeOption: function () {
+      var list = [];
+      var defaultPageSize = 10;
+      for (var i = defaultPageSize; i < defaultPageSize + 95; i += 5) {
+        list.push(i);
+      }
+      this.PageSizeOption = list;
+    },
+    pagerMethod: function (value) {
+      this.PageSize = value.PageSize;
+      this.PageNumber = value.PageNumber;
+      this.FetchData();
+    },
+    commonHeaderButtonClick(event) {
+      switch (event.callbackfunction) {
+        case "RequestNewProductType":
+          this.RequestNewProductType();
+          break;
+        case "deleteItem":
+          this.deleteItem();
+          break;
+      }
+    },
+    sortdata: function (s) {
+      var SortDir = "sort tb_headerSortDown";
+      this.SortBy = s;
+      if (s === this.SortBy) {
+        if (this.SortExp == "") {
+          this.SortExp = "ASC";
+          SortDir = "sort tb_headerSortDown";
+        } else if (this.SortExp == "ASC") {
+          this.SortExp = "DESC";
+          SortDir = "sort tb_headerSortUp";
+        } else {
+          this.SortExp = "ASC";
+          SortDir = "sort tb_headerSortDown";
+        }
+      }
+      this.FetchData();
+      $("#" + s + '  span:first-child').attr("class", SortDir);
+    },
+    actionButtonClick() {},
+    renderActions(row) {
+      var self = this;
+      let rtnActionArray = [];
+      self.listActions.forEach(actionItem => {
+        let action = {
+          ...actionItem
+        };
+        // switch (action.title) {
+        //     case 'Edit':
+        //         action.isVisible = true;
+        //         break;
+        // }
+        rtnActionArray.push(action);
+      });
+      return rtnActionArray;
+    },
+    deleteItem() {
+      var vm = this;
+      var val = "";
+      $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
+        if (val.length > 0) val += ',';
+        val += $(this).val();
+      });
+      if (val.length > 0) {
+        vm.confirmR(vm.$t("ConfirmDelete"), true, vm.$t("Delete") + "  " + vm.$t("New_Requisition"), function () {
+          var postJSON = {
+            ids: val,
+            tblname: "TALYGEN_new_asset_requisition",
+            primarycolname: "asset_requisition_id"
+          };
+          vm.isLoading = true;
+          var poststing = JSON.stringify(postJSON);
+          DataService["a" /* default */].NewAssetRequisitionDelete(poststing).then(response => {
+            if (response.data) {
+              $("[id^='chkAll']").prop("checked", false).removeAttr('checked');
+              $('.chkItems:checkbox:checked').prop("checked", false).removeAttr('checked');
+              vm.listheaderbuttons[1].isdisabled = true;
+              vm.ShowAlert(vm.$t('DeletedSuccess', [vm.$t('New_Requisition')]), "Success", true, vm.$t('Alert'));
+              vm.FetchData();
+            } else {
+              vm.ShowAlert(vm.$t('DeletedError', [vm.$t('New_Requisition')]), "failure", true, vm.$t('Alert'));
+            }
+          });
+        });
+      }
+    },
+    RequestNewProductType() {
+      debugger;
+      this.$router.push({
+        path: '/AssetRequisition/AddNewRequisition'
+      });
+    },
+    viewRequest(item) {
+      var vm = this;
+      vm.IscheckApproveData = true;
+      vm.RequisitionData = item;
+    },
+    ClosePOPuP: function () {
+      var vm = this;
+      vm.IscheckApproveData = false;
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=script&lang=js&
+ /* harmony default export */ var AssetRequisition_NewAssetRequisitionListingvue_type_script_lang_js_ = (NewAssetRequisitionListingvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue
+
+
+
+
+
+/* normalize component */
+
+var NewAssetRequisitionListing_component = Object(componentNormalizer["a" /* default */])(
+  AssetRequisition_NewAssetRequisitionListingvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var NewAssetRequisitionListing = __webpack_exports__["default"] = (NewAssetRequisitionListing_component.exports);
+
+/***/ })
+
+}]);
 //# sourceMappingURL=chunk-7a9cabd8.js.map
