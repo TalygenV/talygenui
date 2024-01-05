@@ -33,14 +33,14 @@ var DataService = __webpack_require__("1115");
 // EXTERNAL MODULE: ./node_modules/tg-controls_cli/dist/myLib.common.js
 var myLib_common = __webpack_require__("240d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fdf5762c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=5b0b61a8
-var ApprovalGroupPopupvue_type_template_id_5b0b61a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"my-popups"},[_c('div',{staticClass:"modal d-block"},[_c('div',{staticClass:"modal-dialog modal-dialog-centered",staticStyle:{"max-width":"900px !important"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header theme-primary partition-full"},[_c('h4',{staticClass:"modal-title"},[_vm._v(_vm._s(_vm.$t('ApprovalChain'))+": "+_vm._s(this.ChainName)+" ")]),_c('button',{staticClass:"close",attrs:{"type":"button"},on:{"click":_vm.ClosePopup}},[_c('em',{staticClass:"fa fa-times",attrs:{"aria-hidden":"true"}})])]),_c('div',{staticClass:"modal-body"},[_c('div',{staticClass:"col-md-12"},[_c('div',{staticClass:"form-group"},[_c('div',{staticClass:"listing OuterMainDiv"},[_c('div',{staticClass:"row",staticStyle:{"max-height":"500px","overflow-y":"auto"}},[_c('tg-list',{attrs:{"IsShowAction":false,"listType":['List'],"ModuleName":"Approval","SubModuleCode":"ApprovalRule","IdentityColumn":"APPROVALCHAINGROUPMAPID","ListData":_vm.GroupData,"HeaderData":_vm.Headers,"callbackfunction":_vm.FetchData,"TotalRecords":_vm.TotalRecords,"ListDataCallBackFunction":_vm.FetchData,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"PagerButtonClick":_vm.pagerMethod},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fdf5762c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=3887a428
+var ApprovalGroupPopupvue_type_template_id_3887a428_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"my-popups"},[_c('div',{staticClass:"modal d-block"},[_c('div',{staticClass:"modal-dialog modal-dialog-centered",staticStyle:{"max-width":"900px !important"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header theme-primary partition-full"},[_c('h4',{staticClass:"modal-title"},[_vm._v(_vm._s(_vm.$t('ApprovalChain'))+": "+_vm._s(this.ChainName)+" ")]),_c('button',{staticClass:"close",attrs:{"type":"button"},on:{"click":_vm.ClosePopup}},[_c('em',{staticClass:"fa fa-times",attrs:{"aria-hidden":"true"}})])]),_c('div',{staticClass:"modal-body"},[_c('div',{staticClass:"col-md-12"},[_c('div',{staticClass:"form-group"},[_c('div',{staticClass:"listing OuterMainDiv"},[_c('div',{staticClass:"row",staticStyle:{"max-height":"500px","overflow-y":"auto"}},[_c('tg-list',{attrs:{"IsShowAction":false,"listType":['List'],"ModuleName":"Approval","SubModuleCode":"ApprovalRule","IdentityColumn":"APPROVALCHAINGROUPMAPID","ListData":_vm.GroupData,"HeaderData":_vm.Headers,"callbackfunction":_vm.FetchData,"TotalRecords":_vm.TotalRecords,"ListDataCallBackFunction":_vm.FetchData,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"PagerButtonClick":_vm.pagerMethod},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'GROUPNAME')?[_vm._v(" "+_vm._s(data.row.GROUPNAME)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'USERS')?[_vm._v(" "+_vm._s(data.row.USERS)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'APPROVERORDER')?[_vm._v(" "+_vm._s(data.row.APPROVERORDER)+" ")]:_vm._e(),(data.column.COLUMN_NAME == 'Action')?[_c('td',{staticClass:"text-center single-action"},[_c('div',{staticClass:"cstm-drop-btn"},[_c('span',[_c('a',{on:{"click":function($event){return _vm.DeleteApprovalGroup(data.row)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-trash text-danger action-icon"})])])])])])]:_vm._e(),(data.column.COLUMN_NAME == 'RankUp' && _vm.GroupData.length > 1)?[(data.row.APPROVERORDER > 1)?[_c('span',[_c('a',{on:{"click":function($event){return _vm.RankUpDown(data.row.APPROVALCHAINGROUPMAPID, 'RankUp')}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-arrow-up text-primary action-icon down"})])])])]:_vm._e()]:_vm._e(),(data.column.COLUMN_NAME == 'RankDown' && _vm.GroupData.length > 1)?[(data.row.APPROVERORDER < _vm.GroupData.length)?[_c('span',[_c('a',{on:{"click":function($event){return _vm.RankUpDown(data.row.APPROVALCHAINGROUPMAPID, 'RankDown')}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-arrow-down text-primary action-icon down"})])])])]:_vm._e()]:_vm._e()]}}])})],1)])])])])])])])])}
-var ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns = []
+var ApprovalGroupPopupvue_type_template_id_3887a428_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=5b0b61a8
+// CONCATENATED MODULE: ./src/components/Model/ApprovalGroupPopup.vue?vue&type=template&id=3887a428
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Model/ApprovalGroupPopup.vue?vue&type=script&lang=js
 //
@@ -211,7 +211,6 @@ var ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns = []
     };
   },
   created: function () {
-    debugger;
     var vm = this;
     vm.ChainName = vm.ApprovalchainName;
     var id = vm.ApprovalchainId;
@@ -250,7 +249,6 @@ var ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns = []
       vm.$parent.CloseGroupPopup();
     },
     DeleteApprovalGroup(data) {
-      debugger;
       var vm = this;
       vm.confirmR(vm.$t("ConfirmDelete"), true, vm.$t("Delete") + "  ", function () {
         vm.isLoading = true;
@@ -267,7 +265,6 @@ var ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns = []
       });
     },
     RankUpDown(GetId, GetName) {
-      debugger;
       var vm = this;
       vm.isLoading = true;
       var Chainid = vm.ApprovalchainId;
@@ -280,7 +277,6 @@ var ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns = []
       vm.confirmR(vm.$t('VerifysequenceofApprovalGroup'), true, false, function (result) {
         var url = `approvalChainId=${Chainid}&approvalChainApprovalGroupMapId1=${GetId}&approvalChainApprovalGroupMapId2=${GetNextId}`;
         DataService["a" /* default */].SwapApproverOrder(url).then(response => {
-          debugger;
           var arraydata = [];
           arraydata = JSON.parse(response.data);
           if (arraydata[0].Status == 0) {
@@ -326,8 +322,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Model_ApprovalGroupPopupvue_type_script_lang_js,
-  ApprovalGroupPopupvue_type_template_id_5b0b61a8_render,
-  ApprovalGroupPopupvue_type_template_id_5b0b61a8_staticRenderFns,
+  ApprovalGroupPopupvue_type_template_id_3887a428_render,
+  ApprovalGroupPopupvue_type_template_id_3887a428_staticRenderFns,
   false,
   null,
   null,

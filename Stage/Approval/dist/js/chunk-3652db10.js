@@ -71,7 +71,7 @@ var myLib_common = __webpack_require__("240d");
     vm.isLoading = true;
     setTimeout(function () {
       $("#viewer").boldReportViewer({
-        reportServiceUrl: "http://localhost:12597/api" + '/ReportViewer',
+        reportServiceUrl: "https://newcrmapi.talygen.com/api" + '/ReportViewer',
         //'http://localhost:12597/api/ReportViewer',
         reportPath: vm.reportPath,
         processingMode: "Remote",
