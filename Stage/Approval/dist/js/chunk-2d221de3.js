@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fdf5762c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=caad60ba&lang=en
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fdf5762c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=3db4d963&lang=en
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12 padding-t_8"},[_c('div',{staticClass:"theme-primary partition-full"},[_c('span',{staticClass:"p-name text-white"},[_vm._v(_vm._s(_vm.$t('AddApprovalGroup')))])])])])]),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit}}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")])],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=caad60ba&lang=en
+// CONCATENATED MODULE: ./src/views/ApprovalGroup/AddGroup.vue?vue&type=template&id=3db4d963&lang=en
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -120,7 +120,6 @@ var DataService = __webpack_require__("1115");
     };
   },
   created: async function () {
-    debugger;
     await this.GetNotficationUsers();
     if (this.$route.params.id != null) {
       this.ApprovalGroupId = this.$route.params.id;
@@ -158,7 +157,6 @@ var DataService = __webpack_require__("1115");
       });
     },
     GetNotficationUsers: async function () {
-      debugger;
       var vm = this;
       var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=APPROVALRULE&DepartmentIds`;
       await DataService["a" /* default */].LoadUsersByCompanyId(url).then(response => {
