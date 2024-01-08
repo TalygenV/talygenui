@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55cbdea1-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/Manage.vue?vue&type=template&id=6a87bd71&lang=en&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/Manage.vue?vue&type=template&id=928a6e5c&lang=en&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -173,7 +173,7 @@ var render = function render() {
         })], 1)];
       }
     }], null, false, 3463087764)
-  }) : _vm._e(), _vm.DataLoaded ? _c('SearchAsset', {
+  }) : _vm._e()], 1), _vm.DataLoaded ? _c('SearchAsset', {
     attrs: {
       "GetParentDetails": _vm.GetParentDetails
     },
@@ -215,11 +215,11 @@ var render = function render() {
     staticClass: "py-2"
   }, [_c('small', {
     staticClass: "text-danger"
-  }, [_vm._v(_vm._s(_vm.$t('MandatoryString')))])])])])], 1)], 1)])], 1);
+  }, [_vm._v(_vm._s(_vm.$t('MandatoryString')))])])])])], 1)])], 1);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/ProductAssignment/Manage.vue?vue&type=template&id=6a87bd71&lang=en&
+// CONCATENATED MODULE: ./src/views/ProductAssignment/Manage.vue?vue&type=template&id=928a6e5c&lang=en&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -521,8 +521,10 @@ var luxon = __webpack_require__("1315");
       this.dataArray = AssestArrayData;
     },
     SubmitData: function () {
+      debugger;
       var vm = this;
-      var RequstionList = vm.$children[1].$children[1].$children[3].GetRequstionList;
+      //var RequstionList=vm.$children[1].$children[1].$children[3].GetRequstionList;
+      var RequstionList = vm.$children[2].$children[3].GetRequstionList;
       //debugger   
       if (vm.FormSchema[0].Data[1].value == 'Client') {
         vm.$refs.ProductAssignmentForm.fields.Departments.failed = false;
