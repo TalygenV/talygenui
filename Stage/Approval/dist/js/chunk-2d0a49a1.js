@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"fdf5762c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/ApprovalGroupList.vue?vue&type=template&id=3d61d928
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35af78b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalGroup/ApprovalGroupList.vue?vue&type=template&id=6008e27d
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('tg-list',{attrs:{"IsShowAction":false,"showCheckBox":true,"listType":[_vm.DetailListType],"ModuleName":"Approval","SubModuleCode":"Approval","IdentityColumn":"GROUPID","HeaderText":_vm.$t('ApprovalGroup'),"ListData":_vm.GroupData,"HeaderData":_vm.Headers,"widgets":_vm.widgets,"callbackfunction":_vm.FetchData,"HeaderButtons":_vm.listheaderbuttons,"TotalRecords":_vm.TotalRecords,"SearchFields":_vm.leftSearchFields,"RenderRowActionMethod":_vm.renderActions,"ListDataCallBackFunction":_vm.FetchData,"LegendArray":_vm.LegendArray,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"LeftsearchButtonClick":_vm.leftCommonSearch,"PagerButtonClick":_vm.pagerMethod,"HeaderButtonClick":_vm.commonHeaderButtonClick,"ActionButtonClick":_vm.actionButtonClick,"SortdataButtonClick":_vm.sortdata},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'STATUS')?[(data.row.SCOUNT == 0 && data.row.DCOUNT == 0)?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DropdownUpdateStatus(data.row.STATUSID, data.row.GROUPID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',attrs:{"disabled":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]]:_vm._e(),(data.column.COLUMN_NAME == 'GROUPNAME')?[(data.row.GROUPNAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.GROUPID},on:{"click":function($event){return _vm.EditGroup(data.row.GROUPID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.GROUPNAME))])])]):_vm._e()]:_vm._e()]}}])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalGroup/ApprovalGroupList.vue?vue&type=template&id=3d61d928
+// CONCATENATED MODULE: ./src/views/ApprovalGroup/ApprovalGroupList.vue?vue&type=template&id=6008e27d
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -223,6 +223,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
       PageSize: 10,
       CurrentPage: 1,
       TotalPages: 0,
+      searchCondition: '',
       StatusData: [],
       listheaderbuttons: ApprovalGroupListSchema.buttons,
       DetailListType: 'List',
