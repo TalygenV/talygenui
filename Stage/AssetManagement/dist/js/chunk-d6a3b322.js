@@ -1472,8 +1472,8 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ListOfAssest.vue?vue&type=template&id=094a6c44&
-var ListOfAssestvue_type_template_id_094a6c44_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ListOfAssest.vue?vue&type=template&id=2e1b5c14&
+var ListOfAssestvue_type_template_id_2e1b5c14_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('section', [_c('loader', {
@@ -1618,12 +1618,28 @@ var ListOfAssestvue_type_template_id_094a6c44_render = function render() {
         "value": item.AssetUniqueName
       },
       on: {
+        "keyup": function ($event) {
+          return _vm.searchUniqueAssetItems(item);
+        },
         "input": function ($event) {
           if ($event.target.composing) return;
           _vm.$set(item, "AssetUniqueName", $event.target.value);
         }
       }
-    }), item.ParentUniqueId <= 0 ? [_c('div', {
+    }), _c('div', {
+      staticClass: "unique_dynamicdatalist"
+    }, [_c('ul', _vm._l(item.itemUniqueList, function (uitem, indx) {
+      return _c('li', {
+        attrs: {
+          "value": uitem.Value
+        },
+        on: {
+          "click": function ($event) {
+            return _vm.setUniqueItem(item, uitem);
+          }
+        }
+      }, [_vm._v(_vm._s(uitem.Name))]);
+    }), 0)]), item.ParentUniqueId <= 0 ? [_c('div', {
       staticClass: "d-block py-2 text-center"
     }, [_vm._v(" " + _vm._s(_vm.$t('OR')))]), _c('input', {
       directives: [{
@@ -1987,7 +2003,7 @@ var ListOfAssestvue_type_template_id_094a6c44_render = function render() {
       staticClass: "text-center"
     }, [_vm._v(_vm._s(item.AvailableItems))]), _c('td', {
       staticClass: "text-center"
-    }, [_vm._v(_vm._s(item.HasUniqueNames == true ? 1 : item.RequestQuantity))]), item.HasUniqueNames == true || item.HasUniqueNames == false && item.ChildUniqueId > 0 ? _c('td', {
+    }, [_vm._v(_vm._s(item.HasUniqueNames == true ? 1 : item.RequestQuantity) + " ")]), item.HasUniqueNames == true || item.HasUniqueNames == false && item.ChildUniqueId > 0 ? _c('td', {
       staticClass: "text-center"
     }, [_c('input', {
       directives: [{
@@ -2273,7 +2289,7 @@ var ListOfAssestvue_type_template_id_094a6c44_render = function render() {
     }
   }) : _vm._e()], 1);
 };
-var ListOfAssestvue_type_template_id_094a6c44_staticRenderFns = [function () {
+var ListOfAssestvue_type_template_id_2e1b5c14_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('a', {
@@ -2348,7 +2364,7 @@ var ListOfAssestvue_type_template_id_094a6c44_staticRenderFns = [function () {
   })]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/ListOfAssest.vue?vue&type=template&id=094a6c44&
+// CONCATENATED MODULE: ./src/components/Modal/ListOfAssest.vue?vue&type=template&id=2e1b5c14&
 
 // EXTERNAL MODULE: ./src/components/Modal/RelatedProductPopup.vue + 4 modules
 var RelatedProductPopup = __webpack_require__("97c9");
@@ -2408,6 +2424,21 @@ var RelatedProductPopup = __webpack_require__("97c9");
       var chkData = true;
       barcode = itm.searchBarcode;
     },
+    setUniqueItem: function (item, uniqueitem) {
+      var vm = this;
+      item.AssetUniqueName = uniqueitem.Name;
+      item.itemUniqueList = [];
+    },
+    searchUniqueAssetItems: async function (item) {
+      var vm = this;
+      //debugger
+      //vm.isLoading = true;
+      var url = `name=${item.AssetUniqueName}&assetCatalogId=${item.AssetCatalogueId}&issueTo=0&locationId=${item.LocationId}&requestFrom=assetassignment`;
+      await DataService["a" /* default */].GetUniqueAssetItems(url).then(function (response) {
+        item.itemUniqueList = response.data;
+        vm.isLoading = false;
+      });
+    },
     collapseExpandChild: function (index) {
       //debugger
       if ($('#child_' + index).hasClass('d-none')) {
@@ -2441,6 +2472,7 @@ var RelatedProductPopup = __webpack_require__("97c9");
           ele.clsColor = "";
           ele.searchBarcode = '';
           ele.clsQtyDisabled = "";
+          ele.itemUniqueList = [];
           if (ele.CreateUniqueNameListing && ele.ParentUniqueId > 0) {
             ele.clsQtyDisabled = "disabled";
           }
@@ -2451,6 +2483,7 @@ var RelatedProductPopup = __webpack_require__("97c9");
           ele.AssetCatalogueGroup.forEach(child => {
             child.clsColor = "";
             child.searchBarcode = '';
+            child.itemUniqueList = [];
             child.clsQtyDisabled = "";
             child.RequestQuantity = 1;
             if (child.CreateUniqueNameListing && child.ParentUniqueId > 0) {
@@ -2584,8 +2617,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_ListOfAssestvue_type_script_lang_js_,
-  ListOfAssestvue_type_template_id_094a6c44_render,
-  ListOfAssestvue_type_template_id_094a6c44_staticRenderFns,
+  ListOfAssestvue_type_template_id_2e1b5c14_render,
+  ListOfAssestvue_type_template_id_2e1b5c14_staticRenderFns,
   false,
   null,
   null,
