@@ -1560,7 +1560,7 @@ var AddRelationPopup_component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=0ecd16d8&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=29589ea5&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1624,11 +1624,18 @@ var render = function render() {
     on: {
       "ClosePOPuP": _vm.ClosePOPuP
     }
+  }) : _vm._e(), _vm.IscheckApprovePurchaseData ? _c('NewRequisitionViewPurchase', {
+    attrs: {
+      "RequisitionData": _vm.RequisitionData
+    },
+    on: {
+      "ClosePOP": _vm.ClosePOP
+    }
   }) : _vm._e()], 1);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=0ecd16d8&
+// CONCATENATED MODULE: ./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=29589ea5&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1706,8 +1713,8 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
 // EXTERNAL MODULE: ./src/components/Modal/AddRelationPopup.vue + 9 modules
 var AddRelationPopup = __webpack_require__("f9bd");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=02ae6e82&
-var NewRequisitionViewModelvue_type_template_id_02ae6e82_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=53161ea5&
+var NewRequisitionViewModelvue_type_template_id_53161ea5_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1725,8 +1732,48 @@ var NewRequisitionViewModelvue_type_template_id_02ae6e82_render = function rende
   }, [_c('div', {
     staticClass: "modal-header"
   }, [_c('h5', {
-    staticClass: "modal-title"
-  }, [_vm._v(" Quote ")]), _c('button', {
+    staticClass: "modal-title mt-1"
+  }, [_vm._v(" " + _vm._s(_vm.$t('Quote')) + " ")]), _c('div', [_c('em', {
+    staticClass: "p-action-btn text-white p-1",
+    staticStyle: {
+      "height": "auto"
+    },
+    attrs: {
+      "id": "ancApprove",
+      "checkprivilege": "yes",
+      "title": "Approve",
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.UpdateStatus('approved');
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-check"
+  }), _c('span', {
+    staticClass: "ml-1"
+  }, [_vm._v("Approve")])]), _c('em', {
+    staticClass: "p-action-btn text-white p-1",
+    staticStyle: {
+      "height": "auto"
+    },
+    attrs: {
+      "id": "ancReject",
+      "checkprivilege": "yes",
+      "title": "Reject",
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.UpdateStatus('rejected');
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-close"
+  }), _c('span', {
+    staticClass: "ml-1"
+  }, [_vm._v("Reject")])])]), _c('button', {
     staticClass: "close",
     attrs: {
       "href": "javascript:;"
@@ -1796,9 +1843,9 @@ var NewRequisitionViewModelvue_type_template_id_02ae6e82_render = function rende
     }])
   })], 1)])])])])], 1);
 };
-var NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns = [];
+var NewRequisitionViewModelvue_type_template_id_53161ea5_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=02ae6e82&
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=53161ea5&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=script&lang=js&
 
@@ -1849,52 +1896,6 @@ var NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns = [];
         "SORTABLE": false,
         "VISIBLE": true,
         "DISPLAY_NAME": this.$t("Quote"),
-        "DISPLAY_ORDER": 5
-      }, {
-        "COLUMN_NAME": "StatusName",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("Status"),
-        "DISPLAY_ORDER": 6,
-        settings: {
-          isInSlot: true
-        }
-      }],
-      Headeres: [{
-        "COLUMN_NAME": "vendor",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("Vendor"),
-        "DISPLAY_ORDER": 1
-      }, {
-        "COLUMN_NAME": "quantity",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("Quantity"),
-        "DISPLAY_ORDER": 2
-      }, {
-        "COLUMN_NAME": "price",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("UnitPrice"),
-        "DISPLAY_ORDER": 3
-      }, {
-        "COLUMN_NAME": "total_Price",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("TotalPrice"),
-        "DISPLAY_ORDER": 4
-      }, {
-        "COLUMN_NAME": "purchaseLink",
-        "DATA_TYPE": "image",
-        "SORTABLE": false,
-        "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("Link"),
         "DISPLAY_ORDER": 5
       }, {
         "COLUMN_NAME": "StatusName",
@@ -1962,6 +1963,45 @@ var NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns = [];
       this.PageNumber = value.PageNumber;
       this.FeatchData();
     },
+    UpdateStatus(status_name) {
+      var vm = this;
+      var val = "";
+      $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
+        if (val.length > 0) val += ',';
+        val += $(this).val();
+      });
+      if (val.length > 0) {
+        vm.isLoading = true;
+        var postJSON = {
+          Ids: val,
+          category: 'quote',
+          type: status_name
+        };
+        var objectPostString = JSON.stringify(postJSON);
+        DataService["a" /* default */].UpdateAssetRequisitionQuoteStatus(objectPostString).then(response => {
+          vm.isLoading = false;
+          if (response.data.result == 'true') {
+            if (status_name == 'approved') {
+              vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('Quote')]), "success", true, vm.$t("Alert"));
+              vm.FeatchData();
+            } else {
+              vm.ShowAlert(vm.$t('CommonReject', [vm.$t('Quote')]), "success", true, vm.$t("Alert"));
+              vm.FeatchData();
+            }
+          } else {
+            if (status_name == 'approved') {
+              vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('Quote')]), "failure", true, vm.$t("Alert"));
+            } else {
+              vm.ShowAlert(vm.$t('CommonReject', [vm.$t('Quote')]), "failure", true, vm.$t("Alert"));
+            }
+          }
+        });
+      } else {
+        vm.confirmR(vm.$t('Minimum One Request should be selected.'), true, this.$t('GetScannedList'), function (result) {
+          return false;
+        });
+      }
+    },
     commonHeaderButtonClick: function () {},
     renderActions() {}
   }
@@ -1981,8 +2021,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_NewRequisitionViewModelvue_type_script_lang_js_,
-  NewRequisitionViewModelvue_type_template_id_02ae6e82_render,
-  NewRequisitionViewModelvue_type_template_id_02ae6e82_staticRenderFns,
+  NewRequisitionViewModelvue_type_template_id_53161ea5_render,
+  NewRequisitionViewModelvue_type_template_id_53161ea5_staticRenderFns,
   false,
   null,
   null,
@@ -1991,7 +2031,324 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var NewRequisitionViewModel = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=6321451b&
+var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "my-popups"
+  }, [_c('loader', {
+    attrs: {
+      "is-visible": _vm.isLoading
+    }
+  }), _c('div', {
+    staticClass: "modal d-block"
+  }, [_c('div', {
+    staticClass: "modal-dialog modal-dialog-centered"
+  }, [_c('div', {
+    staticClass: "modal-content"
+  }, [_c('div', {
+    staticClass: "modal-header"
+  }, [_c('h5', {
+    staticClass: "modal-title mt-1"
+  }, [_vm._v(" " + _vm._s(_vm.$t('OnlinePurchase')) + " ")]), _c('div', [_c('em', {
+    staticClass: "p-action-btn text-white p-1",
+    staticStyle: {
+      "height": "auto"
+    },
+    attrs: {
+      "id": "ancApprove",
+      "checkprivilege": "yes",
+      "title": "Approve",
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.UpdateStatus('approved');
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-check"
+  }), _c('span', {
+    staticClass: "ml-1"
+  }, [_vm._v("Approve")])]), _c('em', {
+    staticClass: "p-action-btn text-white p-1",
+    staticStyle: {
+      "height": "auto"
+    },
+    attrs: {
+      "id": "ancReject",
+      "checkprivilege": "yes",
+      "title": "Reject",
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.UpdateStatus('rejected');
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-close"
+  }), _c('span', {
+    staticClass: "ml-1"
+  }, [_vm._v("Reject")])])]), _c('button', {
+    staticClass: "close",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.ClosePOP($event);
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-times",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _c('div', {
+    staticClass: "modal-body"
+  }, [_c('div', {
+    staticClass: "listing"
+  }, [_c('tg-list', {
+    attrs: {
+      "showCheckBox": true,
+      "IsShowAction": false,
+      "listType": ['List'],
+      "ModuleName": "Asset",
+      "SubModuleCode": "Asset",
+      "IdentityColumn": "purchaseId",
+      "HeaderText": _vm.$t('AssetManagement'),
+      "widgets": _vm.widgets,
+      "ListData": _vm.PurchaseNewRequisitionList,
+      "HeaderData": _vm.Header,
+      "callbackfunction": _vm.FeatchData,
+      "LegendArray": _vm.LegendArray,
+      "SortExp": _vm.SortExp,
+      "SortBy": _vm.SortBy,
+      "NorecordfoundText": _vm.$t('NorecordfoundText'),
+      "TotalRecords": _vm.TotalRecord,
+      "RenderRowActionMethod": _vm.renderActions,
+      "ListDataCallBackFunction": _vm.FeatchData
+    },
+    on: {
+      "PagerButtonClick": _vm.pagerMethod,
+      "HeaderButtonClick": _vm.commonHeaderButtonClick
+    },
+    scopedSlots: _vm._u([{
+      key: "slotdata",
+      fn: function ({
+        data
+      }) {
+        return [data.column.COLUMN_NAME == 'StatusName' ? [data.row.status_id == 1001 ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-success"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : data.row.StatusName == 'Approved' ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-warning"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : data.row.StatusName == 'Rejected' ? _c('em', {
+          staticClass: "active-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-warning"
+        }, [_vm._v(_vm._s(data.row.StatusName))])]) : _c('em', {
+          staticClass: "inactive-disabled"
+        }, [_c('span', {
+          staticClass: "btn d-inline-block w-80 text-center text-truncate btn-danger"
+        }, [_vm._v(_vm._s(data.row.StatusName))])])] : _vm._e()];
+      }
+    }])
+  })], 1)])])])])], 1);
+};
+var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns = [];
+
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=6321451b&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=script&lang=js&
+
+/* harmony default export */ var NewRequisitionViewPurchaseModelvue_type_script_lang_js_ = ({
+  props: {
+    RequisitionData: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      NewRequisitionList: [],
+      PurchaseNewRequisitionList: [],
+      noRecord: false,
+      isLoading: false,
+      Header: [{
+        "COLUMN_NAME": "vendor",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Vendor"),
+        "DISPLAY_ORDER": 1
+      }, {
+        "COLUMN_NAME": "quantity",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Quantity"),
+        "DISPLAY_ORDER": 2
+      }, {
+        "COLUMN_NAME": "price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("UnitPrice"),
+        "DISPLAY_ORDER": 3
+      }, {
+        "COLUMN_NAME": "total_Price",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("TotalPrice"),
+        "DISPLAY_ORDER": 4
+      }, {
+        "COLUMN_NAME": "purchaseLink",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Link"),
+        "DISPLAY_ORDER": 5
+      }, {
+        "COLUMN_NAME": "StatusName",
+        "DATA_TYPE": "image",
+        "SORTABLE": false,
+        "VISIBLE": true,
+        "DISPLAY_NAME": this.$t("Status"),
+        "DISPLAY_ORDER": 6,
+        settings: {
+          isInSlot: true
+        }
+      }],
+      listheaderbuttons: [],
+      LegendArray: [],
+      widgets: [],
+      noRecord: true,
+      TotalRecord: 0,
+      CurrentPage: 1,
+      TotalPages: 0,
+      SortBy: '',
+      SortExp: '',
+      PageNumber: 1,
+      isPaged: 1,
+      PageSize: 10
+    };
+  },
+  created: function () {
+    this.FeatchData();
+  },
+  methods: {
+    FeatchData() {
+      var vm = this;
+      vm.isLoading = true;
+      var params = `requisitionId=${vm.RequisitionData.AssetRequisitionId}&type=Quote`;
+      DataService["a" /* default */].ViewRequisitionDetail(params).then(response => {
+        if (response.data.QuoteNewRequisitionList != null) {
+          if (response.data.QuoteNewRequisitionList.length > 0) {
+            vm.NewRequisitionList = response.data.QuoteNewRequisitionList;
+            vm.PurchaseNewRequisitionList = response.data.PurchaseNewRequisitionList;
+            // vm.TotalRecord = vm.PendingRequestData[0].TOTAL_PAGES;
+            // vm.TotalPage = vm.TotalRecord;
+            // vm.CurrentPage = vm.PageNumber;
+            vm.noRecord = false;
+            vm.isLoading = false;
+          } else {
+            vm.NewRequisitionList = [];
+            vm.PurchaseNewRequisitionList = [];
+            vm.noRecord = true;
+            vm.isLoading = false;
+          }
+        }
+        setTimeout(function () {
+          vm.CheckBoxBootstrap();
+        }, 100);
+      });
+      vm.isLoading = false;
+    },
+    onCancel: function (item) {
+      this.ClosePOP(item);
+    },
+    ClosePOP: function (item) {
+      this.$emit('ClosePOP', item);
+    },
+    pagerMethod: function (value) {
+      this.pageSize = value.pageSize;
+      this.PageNumber = value.PageNumber;
+      this.FeatchData();
+    },
+    UpdateStatus(status_name) {
+      var vm = this;
+      var val = "";
+      $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
+        if (val.length > 0) val += ',';
+        val += $(this).val();
+      });
+      if (val.length > 0) {
+        vm.isLoading = true;
+        var postJSON = {
+          Ids: val,
+          category: 'purchase',
+          type: status_name
+        };
+        var objectPostString = JSON.stringify(postJSON);
+        DataService["a" /* default */].UpdateAssetRequisitionQuoteStatus(objectPostString).then(response => {
+          vm.isLoading = false;
+          if (response.data.result == 'true') {
+            if (status_name == 'approved') {
+              vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('Purchase')]), "success", true, vm.$t("Alert"));
+              vm.FeatchData();
+            } else {
+              vm.ShowAlert(vm.$t('CommonReject', [vm.$t('Purchase')]), "success", true, vm.$t("Alert"));
+              vm.FeatchData();
+            }
+          } else {
+            if (status_name == 'approved') {
+              vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('Purchase')]), "failure", true, vm.$t("Alert"));
+            } else {
+              vm.ShowAlert(vm.$t('CommonReject', [vm.$t('Purchase')]), "failure", true, vm.$t("Alert"));
+            }
+          }
+        });
+      } else {
+        vm.confirmR(vm.$t('Minimum One Request should be selected.'), true, this.$t('GetScannedList'), function (result) {
+          return false;
+        });
+      }
+    },
+    commonHeaderButtonClick: function () {},
+    renderActions() {}
+  }
+});
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=script&lang=js&
+ /* harmony default export */ var Modal_NewRequisitionViewPurchaseModelvue_type_script_lang_js_ = (NewRequisitionViewPurchaseModelvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewPurchaseModel.vue
+
+
+
+
+
+/* normalize component */
+
+var NewRequisitionViewPurchaseModel_component = Object(componentNormalizer["a" /* default */])(
+  Modal_NewRequisitionViewPurchaseModelvue_type_script_lang_js_,
+  NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_render,
+  NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var NewRequisitionViewPurchaseModel = (NewRequisitionViewPurchaseModel_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=script&lang=js&
+
 
 
 
@@ -2000,7 +2357,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var NewAssetRequisitionListingvue_type_script_lang_js_ = ({
   components: {
     RelationPopup: AddRelationPopup["a" /* default */],
-    RequisitionViewModel: NewRequisitionViewModel
+    RequisitionViewModel: NewRequisitionViewModel,
+    NewRequisitionViewPurchase: NewRequisitionViewPurchaseModel
   },
   data() {
     return {
@@ -2086,6 +2444,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       legendProgress: [],
       IsShowRelation: false,
       IscheckApproveData: false,
+      IscheckApprovePurchaseData: false,
       RequisitionData: []
     };
   },
@@ -2259,9 +2618,18 @@ var component = Object(componentNormalizer["a" /* default */])(
       vm.IscheckApproveData = true;
       vm.RequisitionData = item;
     },
+    viewRequestPurchase(item) {
+      var vm = this;
+      vm.IscheckApprovePurchaseData = true;
+      vm.RequisitionData = item;
+    },
     ClosePOPuP: function () {
       var vm = this;
       vm.IscheckApproveData = false;
+    },
+    ClosePOP: function () {
+      var vm = this;
+      vm.IscheckApprovePurchaseData = false;
     }
   }
 });
