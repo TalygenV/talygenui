@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"35af78b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=25b607a8
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"48ffe3fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=c4cfe2bc
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('tg-list',{attrs:{"IsShowAction":false,"showCheckBox":true,"listType":['List'],"ModuleName":"Approval","SubModuleCode":"Approval","IdentityColumn":"APPROVALCHAINID","HeaderText":_vm.$t('Approval Chain'),"ListData":_vm.ChainData,"HeaderData":_vm.Headers,"widgets":_vm.widgets,"callbackfunction":_vm.FetchData,"HeaderButtons":_vm.listheaderbuttons,"TotalRecords":_vm.TotalRecords,"SearchFields":_vm.leftSearchFields,"RenderRowActionMethod":_vm.renderActions,"ListDataCallBackFunction":_vm.FetchData,"LegendArray":_vm.LegendArray,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"LeftsearchButtonClick":_vm.leftCommonSearch,"PagerButtonClick":_vm.pagerMethod,"HeaderButtonClick":_vm.commonHeaderButtonClick,"SortdataButtonClick":_vm.sortdata},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
 return [(data.column.COLUMN_NAME == 'STATUS')?[(data.row.SCOUNT == 0 && data.row.DCOUNT == 0)?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DropdownUpdateStatus(data.row.STATUSID, data.row.APPROVALCHAINID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',attrs:{"disabled":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]]:_vm._e(),(data.column.COLUMN_NAME == 'APPROVALCHAINNAME')?[(data.row.APPROVALCHAINNAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.APPROVALCHAINID},on:{"click":function($event){return _vm.EditChain(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.APPROVALCHAINNAME))])])]):_vm._e()]:_vm._e(),(data.column.COLUMN_NAME == 'ACTION')?[_c('td',{staticClass:"text-center single-action"},[_c('div',{staticClass:"cstm-drop-btn"},[_c('span',{attrs:{"title":"Change Order","data-toggle-tooltip":"tooltip"}},[_c('a',{on:{"click":function($event){return _vm.ChangeOrder(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-retweet text-dark action-icon"})])])])])])]:_vm._e()]}}])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=25b607a8
+// CONCATENATED MODULE: ./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=c4cfe2bc
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -192,17 +192,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -312,9 +301,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
             });
             vm.TotalRecords = response.data[0].TOTALRECORDS;
             vm.TotalPages = Math.ceil(vm.TotalRecords / vm.PageSize);
-            $("[id^='chkAll']").prop("checked", false).removeAttr('checked');
-            $('.chkItems:checkbox:checked').prop("checked", false).removeAttr('checked');
-            $("[id^='DeleteMultiple']").removeClass('enable').addClass('disabled');
             vm.CurrentPage = vm.PageNumber;
             vm.noRecord = false;
           } else {
@@ -368,12 +354,15 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
     DropdownUpdateStatus(statusId, id) {
       var vm = this;
       vm.isLoading = true;
-      vm.confirmR(vm.$t('Are you sure you want to update this record?'), true, false, function (result) {
+      vm.confirmR(vm.$t('WantToUpdateThisRecord'), true, false, function (result) {
         var url = `id=${id}&statusId=${statusId}&tablename=TALYGEN_APPROVAL_CHAIN&columnname=APPROVAL_CHAIN_ID`;
         DataService["a" /* default */].UpdateStatus(url).then(response => {
-          var status = '';
-          vm.ShowAlert(vm.$t('UpdateStatus'), "success", 'Alert');
-          vm.FetchData();
+          if (response.data == "") {
+            vm.ShowAlert(vm.$t('UpdateStatus'), "success", 'Alert');
+            vm.FetchData();
+          } else {
+            vm.ShowAlert(vm.$t('StatusChangeError'), "warning", true, vm.$t("Alert"));
+          }
           vm.isLoading = false;
         });
       });
