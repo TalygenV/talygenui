@@ -103,7 +103,7 @@ var update = add("4c2d5fdf", content, true, {"sourceMap":false,"shadowMode":fals
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/List.vue?vue&type=template&id=0c3d285d&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/List.vue?vue&type=template&id=0c3d285d&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -414,8 +414,8 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
   listActions,
   bindleftCommonSearchdropdown
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ReturnProductPopup.vue?vue&type=template&id=54834be5&
-var ReturnProductPopupvue_type_template_id_54834be5_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ReturnProductPopup.vue?vue&type=template&id=b69461b4&
+var ReturnProductPopupvue_type_template_id_b69461b4_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -490,7 +490,10 @@ var ReturnProductPopupvue_type_template_id_54834be5_render = function render() {
         value: item.quantity,
         expression: "item.quantity"
       }],
-      staticClass: "form-control",
+      class: {
+        'form-control': true,
+        'is-invalid': !_vm.isQuantityValid
+      },
       attrs: {
         "type": "decimal"
       },
@@ -515,7 +518,10 @@ var ReturnProductPopupvue_type_template_id_54834be5_render = function render() {
         value: item.quantity,
         expression: "item.quantity"
       }],
-      staticClass: "form-control",
+      class: {
+        'form-control': true,
+        'is-invalid': !_vm.isQuantityValid
+      },
       attrs: {
         "type": "decimal"
       },
@@ -633,9 +639,9 @@ var ReturnProductPopupvue_type_template_id_54834be5_render = function render() {
     staticClass: "fa fa-close pr-2"
   }), _c('span', [_vm._v(_vm._s(_vm.$t('Cancel')))])])])])])])])], 1)])])])], 1);
 };
-var ReturnProductPopupvue_type_template_id_54834be5_staticRenderFns = [];
+var ReturnProductPopupvue_type_template_id_b69461b4_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/ReturnProductPopup.vue?vue&type=template&id=54834be5&
+// CONCATENATED MODULE: ./src/components/Modal/ReturnProductPopup.vue?vue&type=template&id=b69461b4&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ReturnProductPopup.vue?vue&type=script&lang=js&
 
@@ -673,7 +679,6 @@ var ReturnProductPopupvue_type_template_id_54834be5_staticRenderFns = [];
       this.$parent.CloseReurnProductPopup();
     },
     async GetAssignmentDetailByID() {
-      debugger;
       var url = `assDetailIDs=${this.assDetailIDs}`;
       await DataService["a" /* default */].GetAssignmentDetailByID(url).then(response => {
         if (response.data != null) {
@@ -741,7 +746,7 @@ var ReturnProductPopupvue_type_template_id_54834be5_staticRenderFns = [];
     // }
     checkQuantity(item) {
       var vm = this;
-      if (item.quantity != '') {
+      if (item.quantity > 0) {
         vm.selectedItems = vm.AssignmentData.filter(ele => ele.AssetAssignmentId === item.AssetAssignmentId);
         if (item.NumberOfItemsToAssign !== 0 && item.NumberOfItemsToAssign !== null && item.NumberOfItemsToAssign !== '' && item.NumberOfItemsToAssign < parseInt(item.quantity)) {
           vm.ShowAlert(vm.$t('Please enter a quantity less than or equal to Number Of Products.'), "warning", true, vm.$t("Alert"));
@@ -749,6 +754,9 @@ var ReturnProductPopupvue_type_template_id_54834be5_staticRenderFns = [];
         } else {
           vm.isQuantityValid = true;
         }
+      } else {
+        vm.ShowAlert(vm.$t('Please enter a quantity less than or equal to Number Of Products.'), "warning", true, vm.$t("Alert"));
+        vm.isQuantityValid = false;
       }
     }
   }
@@ -768,8 +776,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_ReturnProductPopupvue_type_script_lang_js_,
-  ReturnProductPopupvue_type_template_id_54834be5_render,
-  ReturnProductPopupvue_type_template_id_54834be5_staticRenderFns,
+  ReturnProductPopupvue_type_template_id_b69461b4_render,
+  ReturnProductPopupvue_type_template_id_b69461b4_staticRenderFns,
   false,
   null,
   null,
@@ -778,7 +786,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var ReturnProductPopup = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/CommentPopUp.vue?vue&type=template&id=06833c34&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/CommentPopUp.vue?vue&type=template&id=06833c34&
 var CommentPopUpvue_type_template_id_06833c34_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -950,7 +958,7 @@ var CommentPopUp_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var CommentPopUp = (CommentPopUp_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ReturnForRequest.vue?vue&type=template&id=1e98fed0&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ReturnForRequest.vue?vue&type=template&id=1e98fed0&
 var ReturnForRequestvue_type_template_id_1e98fed0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1166,7 +1174,7 @@ var ReturnForRequest_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var ReturnForRequest = (ReturnForRequest_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/SharePopUp.vue?vue&type=template&id=f766a05a&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/SharePopUp.vue?vue&type=template&id=f766a05a&scoped=true&
 var SharePopUpvue_type_template_id_f766a05a_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1646,7 +1654,7 @@ var SharePopUp_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var SharePopUp = (SharePopUp_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NotReturnedPopup.vue?vue&type=template&id=34632f5f&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NotReturnedPopup.vue?vue&type=template&id=34632f5f&
 var NotReturnedPopupvue_type_template_id_34632f5f_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1855,8 +1863,8 @@ var NotReturnedPopup_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var NotReturnedPopup = (NotReturnedPopup_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=12fa79a6&
-var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=b80cecc2&
+var ApproveRejectPopupvue_type_template_id_b80cecc2_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1894,7 +1902,7 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
     staticClass: "modal-body"
   }, [_c('div', {
     staticClass: "listing"
-  }, [!_vm.noRecordForTab ? _c('div', {
+  }, [_c('div', {
     staticClass: "table-responsive tableborder",
     staticStyle: {
       "overflow-x": "auto"
@@ -1907,7 +1915,54 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
     attrs: {
       "id": "table-openactivities-content"
     }
-  }, [_vm._m(0), _c('tbody', [_vm._l(_vm.AssetReplacelistData, function (item, index) {
+  }, [_c('thead', {
+    staticClass: "thead-bg"
+  }, [_c('tr', [_c('th', {
+    staticClass: "text-center"
+  }, [_c('div', {
+    staticClass: "custom-control custom-checkbox",
+    on: {
+      "click": function ($event) {
+        return _vm.checkSelectedRecord();
+      }
+    }
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.SelectAll,
+      expression: "SelectAll"
+    }],
+    staticClass: "chkItems custom-control-input",
+    attrs: {
+      "type": "checkbox",
+      "id": "chkAll",
+      "name": "checkbox"
+    },
+    domProps: {
+      "checked": Array.isArray(_vm.SelectAll) ? _vm._i(_vm.SelectAll, null) > -1 : _vm.SelectAll
+    },
+    on: {
+      "change": function ($event) {
+        var $$a = _vm.SelectAll,
+          $$el = $event.target,
+          $$c = $$el.checked ? true : false;
+        if (Array.isArray($$a)) {
+          var $$v = null,
+            $$i = _vm._i($$a, $$v);
+          if ($$el.checked) {
+            $$i < 0 && (_vm.SelectAll = $$a.concat([$$v]));
+          } else {
+            $$i > -1 && (_vm.SelectAll = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+          }
+        } else {
+          _vm.SelectAll = $$c;
+        }
+      }
+    }
+  }), _c('label', {
+    staticClass: "custom-control-label universal-custom-control-label pt-1"
+  })])]), _vm._m(0), _vm._m(1), _vm._m(2), _vm._m(3), _vm._m(4), _vm._m(5), _vm._m(6), _vm._m(7), _vm._m(8), _vm._m(9), _vm._m(10), _vm._m(11), _vm._m(12), _vm._m(13), _vm._m(14)])]), _c('tbody', [_vm._l(_vm.AssetReplacelistData, function (item, index) {
     return _c('tr', {
       key: item.ASSET_ASSIGNMENT_ID,
       attrs: {
@@ -1915,65 +1970,92 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
       }
     }, [_c('td', {
       staticClass: "text-center"
-    }, [item.StatusId == 1001 && item.Quantity > 0 ? _c('input', {
+    }, [item.STATUS_ID == 1001 && item.QTY > 0 ? _c('div', {
+      staticClass: "custom-control custom-checkbox",
+      on: {
+        "click": function ($event) {
+          return _vm.singleCheckRecord(item);
+        }
+      }
+    }, [_c('input', {
       directives: [{
         name: "model",
         rawName: "v-model",
-        value: _vm.suser,
-        expression: "suser"
+        value: item.isSelectProduct,
+        expression: "item.isSelectProduct"
       }],
+      staticClass: "chkItems custom-control-input",
+      staticStyle: {
+        "display": "none"
+      },
       attrs: {
         "type": "checkbox",
-        "qty": item.Quantity,
-        "relatedInfoId": item.RelatedInfoId,
-        "AssetAssignmentDetailId": item.AssignmentDetailID,
-        "name": _vm.DeleteInputs,
-        "requestID": "item.RequestID",
-        "userID": item.UserId,
-        "uniqueName": item.UniqueName,
-        "totalDaysDue": _vm.totalDaysDue
+        "name": "checkbox"
       },
       domProps: {
-        "value": item.ASSET_ASSIGNMENT_ID,
-        "checked": Array.isArray(_vm.suser) ? _vm._i(_vm.suser, item.ASSET_ASSIGNMENT_ID) > -1 : _vm.suser
+        "checked": Array.isArray(item.isSelectProduct) ? _vm._i(item.isSelectProduct, null) > -1 : item.isSelectProduct
       },
       on: {
-        "click": function ($event) {
-          return _vm.selectSingleUser($event);
-        },
         "change": function ($event) {
-          var $$a = _vm.suser,
+          var $$a = item.isSelectProduct,
             $$el = $event.target,
             $$c = $$el.checked ? true : false;
           if (Array.isArray($$a)) {
-            var $$v = item.ASSET_ASSIGNMENT_ID,
+            var $$v = null,
               $$i = _vm._i($$a, $$v);
             if ($$el.checked) {
-              $$i < 0 && (_vm.suser = $$a.concat([$$v]));
+              $$i < 0 && _vm.$set(item, "isSelectProduct", $$a.concat([$$v]));
             } else {
-              $$i > -1 && (_vm.suser = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+              $$i > -1 && _vm.$set(item, "isSelectProduct", $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
             }
           } else {
-            _vm.suser = $$c;
+            _vm.$set(item, "isSelectProduct", $$c);
           }
         }
       }
-    }) : _vm._e(), _c('th', {
-      staticClass: "text-center",
+    }), _c('label', {
+      staticClass: "custom-control-label universal-custom-control-label pt-1"
+    })]) : _c('div', {
+      staticClass: "custom-control custom-checkbox"
+    }, [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: item.isSelectProduct,
+        expression: "item.isSelectProduct"
+      }],
+      staticClass: "chkItems custom-control-input",
       staticStyle: {
-        "width": "50px !important"
+        "display": "none"
       },
       attrs: {
-        "id": "nonresize"
-      }
-    }, [_c('input', {
-      staticClass: "chkItems",
-      attrs: {
-        "type": "checkbox"
+        "disabled": "disabled",
+        "type": "checkbox",
+        "name": "checkbox"
       },
       domProps: {
-        "value": item.ASSET_ASSIGNMENT_ID
+        "checked": Array.isArray(item.isSelectProduct) ? _vm._i(item.isSelectProduct, null) > -1 : item.isSelectProduct
+      },
+      on: {
+        "change": function ($event) {
+          var $$a = item.isSelectProduct,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false;
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v);
+            if ($$el.checked) {
+              $$i < 0 && _vm.$set(item, "isSelectProduct", $$a.concat([$$v]));
+            } else {
+              $$i > -1 && _vm.$set(item, "isSelectProduct", $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+            }
+          } else {
+            _vm.$set(item, "isSelectProduct", $$c);
+          }
+        }
       }
+    }), _c('label', {
+      staticClass: "custom-control-label universal-custom-control-label pt-1"
     })])]), _c('td', [_vm._v(_vm._s(item.USER_NAME))]), _c('td', [_vm._v(_vm._s(item.NAME))]), _c('td', [_vm._v(_vm._s(item.UNIQUE_NAME))]), _c('td', [_vm._v(_vm._s(item.RETURN_REASON_NAME))]), _c('td', [_vm._v(_vm._s(item.COMMENTS))]), _c('td', [_vm._v(_vm._s(item.APPROVAL_COMMENT))]), item.STATUS_ID == 1001 ? _c('td', {
       staticClass: "text-center single-action"
     }, [_c('em', {
@@ -2022,7 +2104,7 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
       attrs: {
         "title": "Quantity"
       }
-    }, [_vm._v(_vm._s(item.QTY))])]), _c('td', [_vm._v(_vm._s(item.ITEM_COST))]), _c('td', [_vm._v(_vm._s(item.BOOK_VALUE))]), _c('td', [item.STATUS_ID == 1001 ? _c('span', [_vm._v(_vm._s(item.totalDaysDue))]) : _c('span', [_vm._v(_vm._s(item.GraceOverdueDays))])]), _c('td', [item.StatusId == 1001 && item.QTY > 0 && item.IsPenalty == 1 ? _c('select', [_c('option')]) : _vm._e()]), _c('td', [item.STATUS_ID == 1001 ? _c('span', [_vm._v(_vm._s(_vm.totalDaysDue))]) : _c('span', [_vm._v(_vm._s(item.GRACE_OVERDUE_DAYS))])]), _c('td', [item.STATUS_ID == 1001 && item.NUMBER_OF_ITEMS > 0 && item.IS_PENALTY == 1 ? _c('select', {
+    }, [_vm._v(_vm._s(item.QTY))])]), _c('td', [_vm._v(_vm._s(item.ITEM_COST))]), _c('td', [_vm._v(_vm._s(item.BOOK_VALUE))]), _c('td', [item.STATUS_ID == 1001 ? _c('span', [_vm._v(_vm._s(item.totalDaysDue))]) : _c('span', [_vm._v(_vm._s(item.GraceOverdueDays))])]), _c('td', [item.StatusId == 1001 && item.QTY > 0 && item.IS_PENALTY == 1 ? _c('select', [_c('option')]) : _vm._e()]), _c('td', [item.STATUS_ID == 1001 ? _c('span', [_vm._v(_vm._s(_vm.totalDaysDue))]) : _c('span', [_vm._v(_vm._s(item.GRACE_OVERDUE_DAYS))])]), _c('td', [item.STATUS_ID == 1001 && item.NUMBER_OF_ITEMS > 0 && item.IS_PENALTY == 1 ? _c('select', {
       directives: [{
         name: "model",
         rawName: "v-model",
@@ -2060,15 +2142,18 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
           "value": item.value
         }
       }, [_vm._v(_vm._s(item.name))]);
-    })], 2) : item.STATUS_ID != 1001 ? _c('span', [item.PenaltyStatusType == 0 ? _c('span', [_vm._v("N/A")]) : _c('span', [_vm._v(_vm._s(item.PenaltyStatusType))])]) : _c('span', [_vm._v("N/A")])]), _c('td', [item.STATUS_ID == 1001 && item.QTY > 0 && (item.IsPenalty == 1 || _vm.isoverdue == true) ? _c('input', {
+    })], 2) : item.STATUS_ID != 1001 ? _c('span', [item.PenaltyStatusType == 0 ? _c('span', [_vm._v("N/A")]) : _c('span', [_vm._v(_vm._s(item.PenaltyStatusType))])]) : _c('span', [_vm._v("N/A")])]), _c('td', [item.STATUS_ID == 1001 && item.QTY > 0 && (item.IS_PENALTY == 1 || _vm.ISOVERDUE == true) ? _c('input', {
       staticClass: "form-control",
       attrs: {
         "type": "text"
       }
-    }) : item.STATUS_ID != 1001 ? [item.PenaltyAmount < 0 ? _c('span', [_vm._v("N/A")]) : _c('span', [_vm._v(_vm._s(item.PenaltyAmount))])] : _c('span', [_vm._v("N/A")])], 2), _c('td', [_vm._v(_vm._s(_vm.$options.filters.formatDateTime(item.ReplaceRequestDate)))])]);
-  }), _vm.noRecordForTab ? _c('div', {
-    staticClass: "text-center text-danger p-4 border no-record"
-  }, [_vm._v(_vm._s(_vm.$t('NoRecordfound')))]) : _vm._e()], 2)])]) : _vm._e()])]), _c('div', {
+    }) : item.STATUS_ID != 1001 ? [item.PENALITY_AMOUNT < 0 ? _c('span', [_vm._v("N/A")]) : _c('span', [_vm._v(_vm._s(item.PENALITY_AMOUNT))])] : _c('span', [_vm._v("N/A")])], 2), _c('td', [_vm._v(_vm._s(_vm.$options.filters.formatDateTime(item.ReplaceRequestDate)))])]);
+  }), _vm.noRecord ? _c('tr', [_c('td', {
+    staticClass: "text-center text-danger p-4 border no-record",
+    attrs: {
+      "colspan": "20"
+    }
+  }, [_vm._v(_vm._s(_vm.$t('NoRecordfound')))])]) : _vm._e()], 2)])])])]), _c('div', {
     staticClass: "form-content mt-2 p-3",
     staticStyle: {
       "width": "1200px !important"
@@ -2076,43 +2161,72 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
     attrs: {
       "id": "dvReturnStatus"
     }
-  }, [_c('Form', [_c('div', {
+  }, [_c('Form', {
+    ref: "ApproveRejectForm"
+  }, [_c('div', {
     staticClass: "collapse show py-3"
   }, [_c('div', {
     staticClass: "col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left px-0"
   }, [_c('div', {
     staticClass: "form-group"
-  }, [_c('span', [_vm._v("Status:")]), _c('select', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.txtStatus,
-      expression: "txtStatus"
-    }],
-    staticClass: "form-control",
+  }, [_c('span', [_vm._v("Status:"), _c('span', {
+    staticClass: "text-danger"
+  }, [_vm._v("*")])]), _c('Field', {
+    staticClass: "w-100",
     attrs: {
       "name": "Status",
-      "maxlength": "150"
+      "rules": {
+        'required': true
+      }
     },
-    on: {
-      "change": function ($event) {
-        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
-          return o.selected;
-        }).map(function (o) {
-          var val = "_value" in o ? o._value : o.value;
-          return val;
-        });
-        _vm.txtStatus = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function ({
+        errors
+      }) {
+        return [_c('select', {
+          directives: [{
+            name: "model",
+            rawName: "v-model",
+            value: _vm.txtStatus,
+            expression: "txtStatus"
+          }],
+          staticClass: "form-control",
+          class: {
+            'form-control': true,
+            'is-invalid': errors[0]
+          },
+          attrs: {
+            "name": "Status",
+            "maxlength": "150"
+          },
+          on: {
+            "change": function ($event) {
+              var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+                return o.selected;
+              }).map(function (o) {
+                var val = "_value" in o ? o._value : o.value;
+                return val;
+              });
+              _vm.txtStatus = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+            }
+          }
+        }, _vm._l(_vm.statusvalue, function (item, itemIndex) {
+          return _c('option', {
+            key: itemIndex,
+            domProps: {
+              "value": item.ID
+            }
+          }, [_vm._v(_vm._s(item.Text))]);
+        }), 0), errors[0] ? _c('span', {
+          staticClass: "invalid-feedback d-block",
+          attrs: {
+            "name": "Status"
+          }
+        }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()];
       }
-    }
-  }, _vm._l(_vm.statusvalue, function (item, itemIndex) {
-    return _c('option', {
-      key: itemIndex,
-      domProps: {
-        "value": item.ID
-      }
-    }, [_vm._v(_vm._s(item.Text))]);
-  }), 0)])]), _c('div', {
+    }])
+  })], 1)]), _c('div', {
     staticClass: "col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left px-0"
   }, [_c('div', {
     staticClass: "form-group"
@@ -2148,7 +2262,8 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
     attrs: {
       "href": "javascript:;",
       "type": "submit",
-      "title": _vm.$t('Save')
+      "title": _vm.$t('Save'),
+      "disabled": _vm.noRecord
     },
     on: {
       "click": function ($event) {
@@ -2178,32 +2293,71 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_render = function render() {
     staticClass: "text-danger"
   }, [_vm._v("Fields marked with an asterisk (*) are mandatory.")])])])])])])])], 1)])])])], 1);
 };
-var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function () {
+var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('thead', {
-    staticClass: "thead-bg"
-  }, [_c('tr', [_c('th', {
-    staticClass: "text-center",
-    staticStyle: {
-      "width": "50px !important"
-    },
-    attrs: {
-      "id": "nonresize"
-    }
-  }, [_c('input', {
-    staticClass: "chkItems",
-    attrs: {
-      "id": "chkAll",
-      "type": "checkbox"
-    }
-  })]), _c('th', [_c('span', [_vm._v("User Name")])]), _c('th', [_c('span', [_vm._v("Product")])]), _c('th', [_c('span', [_vm._v("Unique Name")])]), _c('th', [_c('span', [_vm._v("Reason")])]), _c('th', [_c('span', [_vm._v("Comment")])]), _c('th', [_c('span', [_vm._v("Approval Comment")])]), _c('th', [_c('span', [_vm._v("Status")])]), _c('th', [_c('span', [_vm._v("Quantity")])]), _c('th', [_c('span', [_vm._v("Product Cost")])]), _c('th', [_c('span', [_vm._v("Book Value")])]), _c('th', [_c('span', [_vm._v("Overdue days")])]), _c('th', [_c('span', [_vm._v("Penalty Status")])]), _c('th', [_c('span', [_vm._v("Penalty ")])]), _c('th', [_c('span', [_vm._v("Return Date ")])])])]);
+  return _c('th', [_c('span', [_vm._v("User Name")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Product")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Unique Name")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Reason")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Comment")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Approval Comment")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Status")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Quantity")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Product Cost")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Book Value")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Overdue days")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Penalty Status")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Penalty ")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Return Date ")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('th', [_c('span', [_vm._v("Penalty Amount")])]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=12fa79a6&
+// CONCATENATED MODULE: ./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=b80cecc2&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=script&lang=js&
-
 
 /* harmony default export */ var ApproveRejectPopupvue_type_script_lang_js_ = ({
   props: {
@@ -2214,7 +2368,6 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function 
   },
   data() {
     return {
-      noRecordForTab: false,
       isLoading: false,
       AssignmentData: [],
       txtComment: '',
@@ -2237,10 +2390,10 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function 
       searchStatus: '',
       PenaltyOnStatus: '',
       PenaltyOnOverdue: '',
-      SelectAll: Boolean,
+      SelectAll: false,
       suser: [],
       mulipleSelect: false,
-      noRecord: Boolean
+      noRecord: false
     };
   },
   created: function () {
@@ -2254,14 +2407,16 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function 
       this.CloseApproveRejectopup();
     },
     GetApproveUnApprovelist() {
-      var url = `sortBy=${this.SortBy}&sortExp=${this.SortExp}&pageSize=${this.PageSizees}&pageNum=${this.PageNumberes}&createdby=${this.CreatedBy}&relatedInfoID=${this.relatedInfoID}&username=${this.username}&searchStatus=${this.searchStatus}&PenaltyOnStatus=${this.PenaltyOnStatus}&PenaltyOnOverdue=${this.PenaltyOnOverdue}`;
-      // var url=`sortBy=${this.SortBy}&sortExp=${this.SortExp}&pageSize=${this.PageSizees}&pageNum=${this.PageNumberes}&createdby=${this.CreatedBy}&relatedInfoID=${this.assDetailIDs}&username=${this.username}&searchStatus=${this.searchStatus}&PenaltyOnStatus=${this.PenaltyOnStatus}&PenaltyOnOverdue=${this.PenaltyOnOverdue}`;
+      if (this.assDetailIDs) {
+        var url = `sortBy=${this.SortBy}&sortExp=${this.SortExp}&pageSize=${this.PageSizees}&pageNum=${this.PageNumberes}&createdby=${this.CreatedBy}&relatedInfoID=${this.assDetailIDs}&username=${this.username}&searchStatus=${this.searchStatus}&PenaltyOnStatus=${this.PenaltyOnStatus}&PenaltyOnOverdue=${this.PenaltyOnOverdue}`;
+      } else {
+        var url = `sortBy=${this.SortBy}&sortExp=${this.SortExp}&pageSize=${this.PageSizees}&pageNum=${this.PageNumberes}&createdby=${this.CreatedBy}&relatedInfoID=${this.relatedInfoID}&username=${this.username}&searchStatus=${this.searchStatus}&PenaltyOnStatus=${this.PenaltyOnStatus}&PenaltyOnOverdue=${this.PenaltyOnOverdue}`;
+      }
       DataService["a" /* default */].GetAssetReturnRequest(url).then(response => {
         if (response.data != null) {
-          if (response.data.data.length > 0) {
-            console.log('res', response.data.data);
-            this.AssetReplacelistData = response.data.data;
-            this.TotalRecordes = response.data.data[0].TOTAL_PAGES;
+          if (response.data.length > 0 && response.data != '[]') {
+            this.AssetReplacelistData = JSON.parse(response.data);
+            this.TotalRecordes = response.data[0].TOTAL_PAGES;
             this.TotalPagees = Math.ceil(this.TotalRecordses / this.PageSizees);
             this.CurrentPagees = this.PageNumberes;
             this.noRecord = false;
@@ -2273,130 +2428,116 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function 
         }
       });
     },
-    SelectAllUsers() {
+    singleCheckRecord: function (item) {
       var vm = this;
-      var val = [];
-      $(".chkItems:checkbox:checked").not("[id^='chkAll']").each(function () {
-        val.push(vm.AssetReplacelistData.filter(dealer => dealer.ASSIGNMENT_DETAIL_ID == this.value));
-      });
-      if (this.mulipleSelect == true) {
-        this.suser = [];
-        for (var i = 0; i < this.AssetReplacelistData.length; i++) {
-          console.log('new', this.suser);
-          console.log('Ids', this.AssetReplacelistData[i]['ASSET_ASSIGNMENT_ID']);
-          this.suser.push(this.AssetReplacelistData[i]['ASSET_ASSIGNMENT_ID']);
-        }
+      vm.SelectAll = true;
+      item.isSelectProduct = !item.isSelectProduct;
+      if (item.isSelectProduct) {
+        vm.AssetReplacelistData.forEach(element => {
+          if (!element.isSelectProduct) {
+            vm.SelectAll = false;
+          }
+        });
       } else {
-        this.suser = [];
+        vm.SelectAll = false;
+      }
+    },
+    checkSelectedRecord: function () {
+      var vm = this;
+      vm.SelectAll = !vm.SelectAll;
+      if (vm.SelectAll) {
+        vm.AssetReplacelistData.forEach(element => {
+          element.isSelectProduct = true;
+        });
+      } else {
+        vm.AssetReplacelistData.forEach(element => {
+          element.isSelectProduct = false;
+        });
       }
     },
     SubmitStatus() {
       var vm = this;
       var val = [];
-      var requestid = '',
-        quantity = 0,
-        returnmsg = '';
-      $(".chkItems:checkbox:checked").not("[id^='chkAll']").each(function () {
-        val.push(vm.AssetReplacelistData.filter(dealer => dealer.ASSET_ASSIGNMENT_ID == this.value));
-        for (let i in val) {
-          var requestID = val[i].requestID;
-          var userid = val[i].userID;
-          var uniqueName = val[i].requestID;
-          var statusid = 0,
-            penaltyAmt = 0,
-            graceDays = 0;
-          var statusname = "";
-        }
-      });
-      console.log(val);
-
-      // debugger;
-      // var vm = this;
-      // var val = "";
-      // $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
-      //     console.log("Checkbox value",this.value);
-
-      //     if (val.length > 0)
-      //         val += ',';
-      //     val += $(this).val();
-      // });
-      // console.log('res', val)
-
-      // vm = this.vm
-      // var obj ={
-      //  statusname:vm.txtStatus,
-      //  comment:vm.txtComment,
-      //  resp:vm.val,
-      js;
-      // }
-      // console.log('data',obj)
-
-      //var objData ={ RequestData: val,RetrunRequeststatus:vm.txtStatus,comment :vm.txtComment
-      var url = `RequestData=${val}&RetrunRequeststatus=${vm.txtStatus}&comment=${vm.txtComment}`;
-      DataService["a" /* default */].AddRejectStatus(url).then(response => {});
-      console.log('data', objData);
-    },
-    selectSingleUser() {
-      if (this.AssetReplacelistData.length == this.suser.length) {
-        this.mulipleSelect = true;
-      } else {
-        this.mulipleSelect = false;
-      }
-    },
-    ReturnProduct: function (event) {
-      var vm = this;
-      var val = "";
-      $(".chkItems:checkbox:checked").not("[id^='chkAll']").each(function () {
-        if (val.length > 0) val += ",";
-        val += $(this).val();
-      });
-      if (val == "") {
-        vm.ShowAlert(vm.$t("Minimum One Product should be selected."), "failure", vm.$t("Alert"));
-        return false;
-      } else {
-        vm.assDetailIDs = val;
-      }
-    },
-    SubmitData: function () {
-      var vm = this;
-      var detail = "",
-        realtedinfoIDs = "",
-        status = true,
-        qty = '';
-      vm.$refs.ReturnForm.validate().then(result => {
+      vm.$refs.ApproveRejectForm.validate().then(result => {
         if (result) {
-          vm.AssetReplacelistData.forEach(ele => {
-            vm.qty = ele.NumberOfItemsToAssign;
-            vm.assDetailID = ele.AssignmentDetailId;
-            vm.userid = ele.IssuedToId;
-            vm.RelatedInfoID = ele.RelatedInfoID;
-            vm.NumberOfItemsToAssign = ele.NumberOfItemsToAssign;
-            vm.UniqueName = ele.UniqueName;
-            if (detail != "") detail += "|";
-            detail += vm.assDetailID + "," + vm.qty + "," + vm.userid;
-            if (realtedinfoIDs != "") realtedinfoIDs += "|";
-            realtedinfoIDs += vm.assDetailID + "," + vm.RelatedInfoID + "," + qty + "," + vm.UniqueName;
-          });
-          if (detail == "") {
-            vm.ShowAlert(vm.$t("Minimum One Product should be selected."), "warning", vm.$t('Alert'));
-            // hideLoader();
+          if (vm.txtStatus == '' || val.length > 0) {
             return false;
           }
-          if (status == false) {
-            //  hideLoader();
-            return false;
-          }
-          var data = {
-            itemdetails: detail,
-            title: vm.txtTitle,
-            comment: vm.txtComment,
-            relatedInfoIDs: realtedinfoIDs
+          vm.isLoading = true;
+          val = vm.AssetReplacelistData.filter(element => element.isSelectProduct == true);
+          const obj = {
+            RequestData: val,
+            RetrunRequeststatus: vm.txtStatus != '' ? vm.txtStatus == 'Approve' ? 'ACCEPT' : 'REJECT' : '',
+            comment: vm.txtComment
           };
-          var jsonObj = JSON.stringify(data);
-          DataService["a" /* default */].BulkReturnItem(jsonObj).then(response => {});
+          //var url = `RequestData=${val}&RetrunRequeststatus=${vm.txtStatus}&comment=${vm.txtComment}`;
+          DataService["a" /* default */].AddRejectStatus(obj).then(response => {
+            if (response.data.result == 'ReturnedSuccessfully') {
+              if (status_name == 'approved') {
+                vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
+                vm.FeatchData();
+              } else {
+                vm.ShowAlert(vm.$t('CommonReject', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
+                vm.FeatchData();
+              }
+            } else if (response.data.result == 'NotReturnedSuccessfully') {
+              if (status_name == 'approved') {
+                vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('CRM_PRODUCTS')]), "failure", true, vm.$t("Alert"));
+              } else {
+                vm.ShowAlert(vm.$t('CommonReject', [vm.$t('CRM_PRODUCTS')]), "failure", true, vm.$t("Alert"));
+              }
+            } else {
+              vm.ShowAlert(vm.$t('ReturnError'), "warning", vm.$t('Alert'));
+              vm.isLoading = false;
+            }
+          });
         }
       });
     }
+
+    // SubmitData: function () {
+    //     var vm = this;
+    //     var detail = "",
+    //         realtedinfoIDs = "",
+    //         status = true,
+    //         qty = '';
+    //     vm.$refs.ReturnForm.validate().then(result => {
+    //         if (result) {
+    //             vm.AssetReplacelistData.forEach(ele => {
+    //                 vm.qty = ele.NumberOfItemsToAssign;
+    //                 vm.assDetailID = ele.AssignmentDetailId;
+    //                 vm.userid = ele.IssuedToId;
+    //                 vm.RelatedInfoID = ele.RelatedInfoID;
+    //                 vm.NumberOfItemsToAssign = ele.NumberOfItemsToAssign;
+    //                 vm.UniqueName = ele.UniqueName;
+    //                 if (detail != "") detail += "|";
+    //                 detail += vm.assDetailID + "," + vm.qty + "," + vm.userid;
+    //                 if (realtedinfoIDs != "") realtedinfoIDs += "|";
+    //                 realtedinfoIDs += vm.assDetailID + "," + vm.RelatedInfoID + "," + qty + "," + vm.UniqueName;
+    //             });
+    //             if (detail == "") {
+    //                 vm.ShowAlert(vm.$t("Minimum One Product should be selected."), "warning", vm.$t('Alert'));
+    //                 // hideLoader();
+    //                 return false;
+    //             }
+    //             if (status == false) {
+    //                 //  hideLoader();
+    //                 return false;
+    //             }
+    //             var data = {
+    //                 itemdetails: detail,
+    //                 title: vm.txtTitle,
+    //                 comment: vm.txtComment,
+    //                 relatedInfoIDs: realtedinfoIDs
+    //             }
+    //             var jsonObj = JSON.stringify(data);
+    //             DataService.BulkReturnItem(jsonObj).then(response => {
+
+    //             });
+
+    //         }
+    //     })
+    // }
   }
 });
 // CONCATENATED MODULE: ./src/components/Modal/ApproveRejectPopup.vue?vue&type=script&lang=js&
@@ -2411,8 +2552,8 @@ var ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns = [function 
 
 var ApproveRejectPopup_component = Object(componentNormalizer["a" /* default */])(
   Modal_ApproveRejectPopupvue_type_script_lang_js_,
-  ApproveRejectPopupvue_type_template_id_12fa79a6_render,
-  ApproveRejectPopupvue_type_template_id_12fa79a6_staticRenderFns,
+  ApproveRejectPopupvue_type_template_id_b80cecc2_render,
+  ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns,
   false,
   null,
   null,
@@ -2421,7 +2562,7 @@ var ApproveRejectPopup_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var ApproveRejectPopup = (ApproveRejectPopup_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/RequestForReturnProduct.vue?vue&type=template&id=372f6326&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/RequestForReturnProduct.vue?vue&type=template&id=372f6326&scoped=true&
 var RequestForReturnProductvue_type_template_id_372f6326_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;

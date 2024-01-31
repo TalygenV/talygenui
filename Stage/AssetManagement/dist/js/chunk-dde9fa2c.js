@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=7b3cd694&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=15436a9e&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -152,7 +152,7 @@ var render = function render() {
                 attrs: {
                   "name": "Location"
                 }
-              }, [_vm._v(_vm._s(_vm.GetLocalizedValue(_vm.$t("LocationRequired"))) + " ")]) : _vm._e()];
+              }, [_vm._v(_vm._s(_vm.GetLocalizedValue(_vm.$t("LocationIsReq"))) + " ")]) : _vm._e()];
             }
           }], null, true)
         })], 1)]) : _vm._e(), _vm.ProductType ? _c('div', {
@@ -217,7 +217,7 @@ var render = function render() {
                 attrs: {
                   "name": "AssetTypeData"
                 }
-              }, [_vm._v(" " + _vm._s(_vm.GetLocalizedValue(_vm.$t("AssetTypeDataRequired"))) + " ")]) : _vm._e()];
+              }, [_vm._v(" " + _vm._s(_vm.GetLocalizedValue(_vm.$t("AssetTypeIsReq"))) + " ")]) : _vm._e()];
             }
           }], null, true)
         })], 1)]) : _vm._e(), _vm.ProductType ? _c('div', {
@@ -291,7 +291,7 @@ var render = function render() {
           attrs: {
             "name": "Products",
             "rules": {
-              'required': true
+              'required': false
             },
             "label": "ItemName"
           },
@@ -331,12 +331,7 @@ var render = function render() {
                     _vm.itemname = $event.target.value;
                   }
                 }
-              }), errors[0] ? _c('span', {
-                staticClass: "invalid-feedback d-block",
-                attrs: {
-                  "name": "Products"
-                }
-              }, [_vm._v(_vm._s(errors[0]))]) : _vm._e(), _c('div', {
+              }), _c('div', {
                 staticClass: "unique_dynamicdatalist"
               }, _vm._l(_vm.ProductsArray, function (item, index) {
                 return _c('ul', {
@@ -373,7 +368,12 @@ var render = function render() {
                 }
               }, [_c('em', {
                 staticClass: "dropdown-toggle float-right"
-              })])])];
+              })]), errors[0] ? _c('span', {
+                staticClass: "invalid-feedback d-block",
+                attrs: {
+                  "name": "Products"
+                }
+              }, [_vm._v(_vm._s(errors[0]))]) : _vm._e()])];
             }
           }], null, true)
         })], 1)]) : _vm._e(), _vm.BarCodeSerailNoRFID ? _c('div', {
@@ -752,7 +752,7 @@ var render = function render() {
             "width": "50px !important"
           }
         }, [_c('input', {
-          staticClass: "chkItems",
+          staticClass: "chkItems CheckAll",
           attrs: {
             "type": "checkbox",
             "id": "chkAll",
@@ -923,7 +923,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=7b3cd694&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=15436a9e&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1085,7 +1085,6 @@ var vue_treeselect = __webpack_require__("542c");
       var vm = this;
       DataService["a" /* default */].GetLocationByuserId().then(response => {
         // this.LocationData = response.data.data;
-
         vm.FindalLocationArray = [];
         response.data.data.forEach(value => {
           var CheckIfExist = vm.FindalLocationArray.filter(function (el) {
@@ -1103,7 +1102,6 @@ var vue_treeselect = __webpack_require__("542c");
       });
     },
     checkboxAddToList: function (itm, type) {
-      debugger;
       var vm = this;
       if (type == 'all') {
         if ($('#chkAll_0').prop('checked')) {
@@ -1120,8 +1118,8 @@ var vue_treeselect = __webpack_require__("542c");
         if (itm.ischecked) {
           $('#chkAll_1').prop('checked', true);
           vm.AddToListArray.forEach(item => {
-            if (!item.ischecked) {
-              $('#chkAll_1').prop('checked', false);
+            if (item.ischecked) {
+              $('#chkAll_1').prop('checked', true);
             }
           });
         } else {
@@ -1135,7 +1133,6 @@ var vue_treeselect = __webpack_require__("542c");
       }
     },
     checkboxChecked: function (itm, type) {
-      debugger;
       var vm = this;
       if (type == 'all') {
         if ($('#chkAll_0').prop('checked')) {
@@ -1166,7 +1163,6 @@ var vue_treeselect = __webpack_require__("542c");
       }
     },
     NumbersOnly(evt) {
-      //debugger
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
       if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46) {
@@ -1177,31 +1173,40 @@ var vue_treeselect = __webpack_require__("542c");
       }
     },
     async AddToList() {
-      debugger;
       var vm = this;
       var msg = "";
       var count = 1;
       var chk = true;
       var chkExistName = "";
       var tempArray = [];
-      ////debugger
       var isItem = vm.searchData.filter(x => x.ischecked);
       if (isItem.length > 0) {
-        vm.searchData.forEach(value => {
-          //RelatedInfoId
+        vm.searchData.forEach((value, index) => {
+          // RelatedInfoId
           vm.AddToListArray.forEach(itm => {
-            if (itm.RelatedInfoId == value.RelatedInfoId) {
+            if (itm.RelatedInfoId === value.RelatedInfoId) {
               chkExistName += itm.AssetUniqueName;
+              const indexToRemove = vm.searchData.findIndex(item => item.RelatedInfoId === value.RelatedInfoId);
+              // Use splice to remove the element at the found index
+              if (indexToRemove !== -1) {
+                vm.searchData.splice(indexToRemove, 1);
+              }
             }
           });
           if (value.ischecked) {
-            if (value.qty == '') {
+            if (value.qty === '') {
               vm.ShowAlert(vm.$t('CorrectHighlightedErrors'), "warning", true, vm.$t('Alert'));
               chk = false;
             } else {
               // value.isCheckedAddtolist = false;
-              //value.qtyAddtolist = '';
+              // value.qtyAddtolist = '';
               tempArray.push(value);
+
+              // If value is pushed to tempArray, remove it from vm.searchData
+              const indexToRemove = vm.searchData.findIndex(item => item.RelatedInfoId === value.RelatedInfoId);
+              if (indexToRemove !== -1) {
+                vm.searchData.splice(indexToRemove, 1);
+              }
             }
           }
         });
@@ -1214,7 +1219,8 @@ var vue_treeselect = __webpack_require__("542c");
         chk = false;
       }
       if (chk) {
-        vm.searchData = [];
+        // vm.searchData = [];
+        vm.firstListArray = [];
         tempArray.forEach(value => {
           vm.AddToListArray.push(value);
           vm.txtLocation = null;
@@ -1226,18 +1232,21 @@ var vue_treeselect = __webpack_require__("542c");
         });
         setTimeout(function () {
           vm.ResponsiveDataTable('tbltransferiteminfoList');
+          vm.isLocationInvalid = false;
         }, 500);
+        setTimeout(function () {
+          vm.CheckBoxBootstrap();
+          $('.CheckAll').prop('checked', true);
+        }, 100);
       }
     },
     async DeleteRow(index) {
-      //debugger
       var vm = this;
       vm.confirmR(vm.$t("ConfirmDelete"), true, vm.$t("Delete") + "  " + vm.$t("ASSET_CATALOGUE_ID"), function () {
         vm.AddToListArray.splice(index, 1);
       });
     },
     async ShowsearchData() {
-      debugger;
       let vm = this;
       var url = null;
       vm.isLoading = true;
@@ -1294,7 +1303,9 @@ var vue_treeselect = __webpack_require__("542c");
     async SearchRecord(type) {
       var vm = this;
       var tempArrayList = [];
-      debugger;
+      if (typeof type == 'undefined') {
+        return false;
+      }
       if (type == 'code') {
         vm.searchData = vm.firstListArray.filter(item => {
           return item.ItemCode.toLowerCase().indexOf(vm.itemCodeAutoSearch.toLowerCase()) > -1;
@@ -1304,7 +1315,6 @@ var vue_treeselect = __webpack_require__("542c");
           return item.AssetCatalogName.toLowerCase().indexOf(vm.itemNameAutoSearch.toLowerCase()) > -1;
         });
       } else {
-        //unique name
         vm.searchData = vm.firstListArray.filter(item => {
           return item.AssetUniqueName.toLowerCase().indexOf(vm.uniqueNameAutoSearch.toLowerCase()) > -1;
         });
@@ -1317,7 +1327,6 @@ var vue_treeselect = __webpack_require__("542c");
       }, 100);
     },
     async ClearFilter() {
-      // debugger
       var vm = this;
       vm.itemCodeAutoSearch = '';
       vm.itemNameAutoSearch = '';
@@ -1325,7 +1334,6 @@ var vue_treeselect = __webpack_require__("542c");
       vm.SearchRecord();
     },
     onSubmit: async function (formfields) {
-      debugger;
       var vm = this;
       vm.isLoading = true;
       var msg = "";
@@ -1343,8 +1351,7 @@ var vue_treeselect = __webpack_require__("542c");
               assetCatId = value.AssetCatalogueId;
             }
             var rid = value.RelatedInfoId;
-            var qty = value.qty; // item.qtyAddtolist;
-            //validation
+            var qty = value.qty; // item.qtyAddtolist;                        //validation
             if (qty == 0) {
               msg += "no";
             }
@@ -1397,7 +1404,6 @@ var vue_treeselect = __webpack_require__("542c");
     },
     async checkBoxClick(singleItem, type, searchcheck_all, tabletype) {
       var vm = this;
-      //debugger
       if (tabletype == 'searchtbl') {
         //singleItem.ischecked = !singleItem.ischecked;
         if (type == "single") {
@@ -1418,7 +1424,6 @@ var vue_treeselect = __webpack_require__("542c");
           }
         }
       } else {
-        //debugger
         //singleItem.ischecked = !singleItem.ischecked;
         if (type == "single") {
           vm.AddToListArray.forEach(value => {
@@ -1476,38 +1481,42 @@ var vue_treeselect = __webpack_require__("542c");
       return retrunArray;
     },
     BindItemTypeByUserId: function (ths) {
-      this.isLoading = true;
-      let url = `type=ITEMCODE&issueTo=${this.UserId}&locationId=${ths}&requestType=ASSIGN&requestFrom=WriteOff`;
-      DataService["a" /* default */].AssignGetAssetType(url).then(response => {
-        this.AssetTypeData = response.data;
-        this.isLoading = false;
+      if (typeof ths == 'undefined' || ths == '') {
+        return false;
+      } else {
+        this.isLoading = true;
+        let url = `type=ITEMCODE&issueTo=${this.UserId}&locationId=${ths}&requestType=ASSIGN&requestFrom=WriteOff`;
+        DataService["a" /* default */].AssignGetAssetType(url).then(response => {
+          this.AssetTypeData = response.data;
+          this.isLoading = false;
+          this.isLocationInvalid = this.txtLocation == '' || this.txtLocation == null ? true : false;
+        });
         this.isLocationInvalid = this.txtLocation == '' || this.txtLocation == null ? true : false;
-      });
-      this.isLocationInvalid = this.txtLocation == '' || this.txtLocation == null ? true : false;
-      this.isLoading = false;
+        this.isLoading = false;
+      }
     },
     GetCompanyAssestCatalogs: function (ths) {
-      //debugger
-      this.isLoading = true;
-      let url = `id=${ths}&issueTo=${this.UserId}&locationId=${this.txtLocation}&requestFrom=assetassignment`;
-      DataService["a" /* default */].GetCompanyAssestCatalogs(url).then(response => {
-        //debugger
-        this.ProducttData = response.data;
-        this.isLoading = false;
+      if (typeof ths == 'undefined' || ths == '') {
+        return false;
+      } else {
+        this.isLoading = true;
+        let url = `id=${ths}&issueTo=${this.UserId}&locationId=${this.txtLocation}&requestFrom=assetassignment`;
+        DataService["a" /* default */].GetCompanyAssestCatalogs(url).then(response => {
+          this.ProducttData = response.data;
+          this.isLoading = false;
+          this.isAssetTypeInvalid = this.txtAssetType == '' ? true : false;
+        });
         this.isAssetTypeInvalid = this.txtAssetType == '' ? true : false;
-      });
-      this.isAssetTypeInvalid = this.txtAssetType == '' ? true : false;
-      this.isLoading = false;
+        this.isLoading = false;
+      }
     },
     productNameDDLChange: function () {
-      //debugger
       var vm = this;
       setTimeout(() => {
         vm.istxtProductInvalid = vm.txtProduct == '' ? true : false;
       }, 200);
     },
     setProductsName: function (event) {
-      //debugger
       var vm = this;
       vm.iselectVal = event.Value;
       vm.itemname = event.Name;
@@ -1516,21 +1525,28 @@ var vue_treeselect = __webpack_require__("542c");
     ItemListOnclick: function () {
       var url = `assetCatalogId=${this.txtProduct}&name=&issueTo=${this.UserId}&locationId=${this.txtLocation}&requestFrom=assetassignment&assetType=`;
       DataService["a" /* default */].GetUniqueAssetItems(url).then(response => {
-        //debugger
         this.ProductsArray = response.data;
         this.showProductDropdown = true;
       });
     },
-    //Dropdown End
-
     TextfiledType(IsActive) {
-      //debugger
+      var vm = this;
       if (IsActive == 1) {
-        this.ProductType = false;
-        this.BarCodeSerailNoRFID = true;
+        vm.ProductType = false;
+        vm.BarCodeSerailNoRFID = true;
+        vm.firstListArray = [];
+        vm.AddToListArray = [];
+        vm.searchData = [];
+        vm.isLocationInvalid = false;
+        vm.searchcheck_all = false;
       } else if (IsActive == 0) {
-        this.ProductType = true;
-        this.BarCodeSerailNoRFID = false;
+        vm.ProductType = true;
+        vm.BarCodeSerailNoRFID = false;
+        vm.firstListArray = [];
+        vm.AddToListArray = [];
+        vm.searchData = [];
+        vm.isLocationInvalid = false;
+        vm.searchcheck_all = false;
       }
     },
     currentPageMethod: function (value) {
@@ -1610,7 +1626,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Common/Pager.vue?vue&type=template&id=39f52799&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Common/Pager.vue?vue&type=template&id=39f52799&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;

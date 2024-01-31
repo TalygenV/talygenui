@@ -5,7 +5,7 @@
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=3b0c14b7&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationPopup.vue?vue&type=template&id=3b0c14b7&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -636,7 +636,7 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=template&id=392a5a18&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddRelationListing.vue?vue&type=template&id=392a5a18&
 var AddRelationListingvue_type_template_id_392a5a18_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1560,7 +1560,7 @@ var AddRelationPopup_component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=29589ea5&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/NewAssetRequisitionListing.vue?vue&type=template&id=29589ea5&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1713,8 +1713,8 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
 // EXTERNAL MODULE: ./src/components/Modal/AddRelationPopup.vue + 9 modules
 var AddRelationPopup = __webpack_require__("f9bd");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=53161ea5&
-var NewRequisitionViewModelvue_type_template_id_53161ea5_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=549773ce&
+var NewRequisitionViewModelvue_type_template_id_549773ce_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1843,9 +1843,9 @@ var NewRequisitionViewModelvue_type_template_id_53161ea5_render = function rende
     }])
   })], 1)])])])])], 1);
 };
-var NewRequisitionViewModelvue_type_template_id_53161ea5_staticRenderFns = [];
+var NewRequisitionViewModelvue_type_template_id_549773ce_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=53161ea5&
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewModel.vue?vue&type=template&id=549773ce&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewModel.vue?vue&type=script&lang=js&
 
@@ -1888,7 +1888,7 @@ var NewRequisitionViewModelvue_type_template_id_53161ea5_staticRenderFns = [];
         "DATA_TYPE": "image",
         "SORTABLE": false,
         "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("TotalPrice"),
+        "DISPLAY_NAME": this.$t("total_price"),
         "DISPLAY_ORDER": 4
       }, {
         "COLUMN_NAME": "quote",
@@ -2021,8 +2021,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_NewRequisitionViewModelvue_type_script_lang_js_,
-  NewRequisitionViewModelvue_type_template_id_53161ea5_render,
-  NewRequisitionViewModelvue_type_template_id_53161ea5_staticRenderFns,
+  NewRequisitionViewModelvue_type_template_id_549773ce_render,
+  NewRequisitionViewModelvue_type_template_id_549773ce_staticRenderFns,
   false,
   null,
   null,
@@ -2031,8 +2031,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var NewRequisitionViewModel = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=6321451b&
-var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=415b3c68&
+var NewRequisitionViewPurchaseModelvue_type_template_id_415b3c68_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -2161,9 +2161,9 @@ var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_render = functi
     }])
   })], 1)])])])])], 1);
 };
-var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns = [];
+var NewRequisitionViewPurchaseModelvue_type_template_id_415b3c68_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=6321451b&
+// CONCATENATED MODULE: ./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=template&id=415b3c68&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/NewRequisitionViewPurchaseModel.vue?vue&type=script&lang=js&
 
@@ -2206,7 +2206,7 @@ var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns
         "DATA_TYPE": "image",
         "SORTABLE": false,
         "VISIBLE": true,
-        "DISPLAY_NAME": this.$t("TotalPrice"),
+        "DISPLAY_NAME": this.$t("total_price"),
         "DISPLAY_ORDER": 4
       }, {
         "COLUMN_NAME": "purchaseLink",
@@ -2337,8 +2337,8 @@ var NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns
 
 var NewRequisitionViewPurchaseModel_component = Object(componentNormalizer["a" /* default */])(
   Modal_NewRequisitionViewPurchaseModelvue_type_script_lang_js_,
-  NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_render,
-  NewRequisitionViewPurchaseModelvue_type_template_id_6321451b_staticRenderFns,
+  NewRequisitionViewPurchaseModelvue_type_template_id_415b3c68_render,
+  NewRequisitionViewPurchaseModelvue_type_template_id_415b3c68_staticRenderFns,
   false,
   null,
   null,
