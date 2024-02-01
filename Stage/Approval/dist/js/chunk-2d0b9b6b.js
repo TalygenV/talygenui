@@ -7,10 +7,10 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"48ffe3fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=670589cd
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"48ffe3fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=f7174ef8
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit},scopedSlots:_vm._u([{key:"tgslot-Approval",fn:function(ref){
 var data = ref.data;
-return [_c('div',{staticClass:"input-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.fieldInfo.value),expression:"data.fieldInfo.value"}],staticClass:"form-control",class:data.error != '' ? 'form-control is-invalid' : 'form-control',attrs:{"maxlength":5,"step":"any"},domProps:{"value":_vm.inputValue},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.fieldInfo, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":""}},[_vm._v("Select Approval Chain")]),_vm._l((_vm.ApprovalChainList),function(item){return _c('option',{domProps:{"value":item.APPROVAL_CHAIN_ID}},[_vm._v(_vm._s(item.APPROVAL_CHAIN_NAME))])})],2),_c('span',{staticClass:"input-group-append"},[_c('a',{staticClass:"input-group-text",attrs:{"id":"spnOutOF"},on:{"click":function($event){return _vm.ShowGroupPopup(data.fieldInfo.value)}}},[_c('i',{staticClass:"fa fa-eye"})])]),(data.error != '')?_c('span',{staticClass:"invalid-feedback d-block",attrs:{"name":"Location"}},[_vm._v(_vm._s(data.error))]):_vm._e()])]}},{key:"tgslot-LimitedDuration1",fn:function(ref){
+return [_c('div',{staticClass:"input-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.fieldInfo.value),expression:"data.fieldInfo.value"}],staticClass:"form-control",class:data.error != '' ? 'form-control is-invalid' : 'form-control',attrs:{"maxlength":5,"step":"any"},domProps:{"value":_vm.inputValue},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.fieldInfo, "value", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":""}},[_vm._v("Select Approval Chain")]),_vm._l((_vm.ApprovalChainList),function(item){return _c('option',{key:item.APPROVAL_CHAIN_ID,domProps:{"value":item.APPROVAL_CHAIN_ID}},[_vm._v(_vm._s(item.APPROVAL_CHAIN_NAME))])})],2),_c('span',{staticClass:"input-group-append"},[_c('a',{staticClass:"input-group-text",attrs:{"id":"spnOutOF"},on:{"click":function($event){return _vm.ShowGroupPopup(data.fieldInfo.value)}}},[_c('i',{staticClass:"fa fa-eye"})])]),(data.error != '')?_c('span',{staticClass:"invalid-feedback d-block",attrs:{"name":"Location"}},[_vm._v(_vm._s(data.error))]):_vm._e()])]}},{key:"tgslot-LimitedDuration1",fn:function(ref){
 var data = ref.data;
 return [_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-sm-12 col-md-6 col-lg-6 col-xl-6 float-left mb-2"},[_c('div',{staticClass:"input-group"},[_c('v-date-picker',{staticClass:"timedate  input-group",attrs:{"popover":_vm.popover,"name":_vm.fromDateValue,"minute-increment":5},scopedSlots:_vm._u([{key:"default",fn:function(ref){
 var inputValue = ref.inputValue;
@@ -22,7 +22,7 @@ return [_c('input',{class:data.error != '' ? 'form-control is-invalid' : 'form-c
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=670589cd
+// CONCATENATED MODULE: ./src/views/ApprovalRule/AddApprovalRule.vue?vue&type=template&id=f7174ef8
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -693,6 +693,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
   methods: {
     onSubmit: function (formfields) {
+      this.isLoading = true;
       if (formfields.Approvaltype == 1) {
         var approvaltype = "ApprovalChain";
       } else if (formfields.Approvaltype == 2) {
@@ -725,7 +726,11 @@ var component = Object(componentNormalizer["a" /* default */])(
       };
       var poststring = JSON.stringify(jsonobj);
       DataService["a" /* default */].AddRule(poststring).then(response => {
-        if (response.data == '-1') {
+        if (response.data == '0') {
+          vm.ShowAlert(vm.$t('SomethingwentWrong'), "failure", true, vm.$t("Alert"));
+          vm.onCancel();
+        }
+        if (response.data == '2') {
           vm.ShowAlert(vm.$t('AlreadyExists'), "warning", true, vm.$t("Alert"));
           vm.onCancel();
         } else {
@@ -733,6 +738,7 @@ var component = Object(componentNormalizer["a" /* default */])(
           vm.onCancel();
         }
       });
+      this.isLoading = false;
     },
     ManageRule: async function () {
       var vm = this;
@@ -848,6 +854,8 @@ var component = Object(componentNormalizer["a" /* default */])(
               value: `${item.USER_ID}`
             });
           });
+          vm.FormSchema[0].Data[4].value = '';
+          vm.FormSchema[0].Data[4].validationRules.required = false;
         }
         if (field != undefined) {
           this.GetClientbyProject(e, field);
@@ -967,6 +975,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       return retrunArray;
     },
     async OnDeploymentType(event, field) {
+      debugger;
       var vm = this;
       //field.value = event.target.getAttribute('data-value');
       if (field != undefined ? field.value == 2 : event == 2) {
@@ -1038,8 +1047,9 @@ var component = Object(componentNormalizer["a" /* default */])(
       if (field != undefined ? field.value == 1 : event == 1) {
         vm.FormSchema[0].Data[8].visibility = true;
         vm.FormSchema[0].Data[9].visibility = false;
-        vm.FormSchema[0].Data[6].config.options = [];
+        //vm.FormSchema[0].Data[6].config.options = [];
       }
+
       if (field != undefined ? field.value == 2 : event == 2) {
         vm.FormSchema[0].Data[8].visibility = false;
         vm.FormSchema[0].Data[9].visibility = true;
