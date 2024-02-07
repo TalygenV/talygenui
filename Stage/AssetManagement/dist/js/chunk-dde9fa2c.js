@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=15436a9e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=0151f07a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -923,7 +923,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=15436a9e&
+// CONCATENATED MODULE: ./src/views/AssetCatalog/ItemWriteOff.vue?vue&type=template&id=0151f07a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1082,6 +1082,7 @@ var vue_treeselect = __webpack_require__("542c");
   methods: {
     // 1. Dropdowns start
     GetLocationByuserId: function () {
+      debugger;
       var vm = this;
       DataService["a" /* default */].GetLocationByuserId().then(response => {
         // this.LocationData = response.data.data;
@@ -1380,7 +1381,7 @@ var vue_treeselect = __webpack_require__("542c");
           MoveToInfo: MoveToInfo,
           ParentLocationId: 0
         };
-        var Jsondata = JSON.stringify(RaiseData);
+        //var Jsondata = JSON.stringify(RaiseData);
         await DataService["a" /* default */].UpdateWriteOffSave(RaiseData).then(response => {
           if (response.data.result == 'success') {
             vm.ShowAlert(vm.$t('WriteOffSuccessfully'), "success", vm.$t('Alert'));
@@ -1482,7 +1483,8 @@ var vue_treeselect = __webpack_require__("542c");
     },
     BindItemTypeByUserId: function (ths) {
       if (typeof ths == 'undefined' || ths == '') {
-        return false;
+        this.isLocationInvalid = true;
+        return;
       } else {
         this.isLoading = true;
         let url = `type=ITEMCODE&issueTo=${this.UserId}&locationId=${ths}&requestType=ASSIGN&requestFrom=WriteOff`;
@@ -1497,7 +1499,8 @@ var vue_treeselect = __webpack_require__("542c");
     },
     GetCompanyAssestCatalogs: function (ths) {
       if (typeof ths == 'undefined' || ths == '') {
-        return false;
+        this.isAssetTypeInvalid = true;
+        return;
       } else {
         this.isLoading = true;
         let url = `id=${ths}&issueTo=${this.UserId}&locationId=${this.txtLocation}&requestFrom=assetassignment`;
@@ -1626,7 +1629,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"083900f4-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Common/Pager.vue?vue&type=template&id=39f52799&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Common/Pager.vue?vue&type=template&id=39f52799&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
