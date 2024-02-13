@@ -89,7 +89,7 @@ var update = add("826526e8", content, true, {"sourceMap":false,"shadowMode":fals
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/Index.vue?vue&type=template&id=d7a7873a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/Index.vue?vue&type=template&id=d7a7873a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -308,7 +308,7 @@ var staticRenderFns = [function () {
 
 // CONCATENATED MODULE: ./src/views/AssetReport/Index.vue?vue&type=template&id=d7a7873a&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductAssignmentReports.vue?vue&type=template&id=9e865ed0&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductAssignmentReports.vue?vue&type=template&id=9e865ed0&
 var ProductAssignmentReportsvue_type_template_id_9e865ed0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -342,7 +342,7 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ReportViewer.vue?vue&type=template&id=4e3dc17e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ReportViewer.vue?vue&type=template&id=4e3dc17e&
 var ReportViewervue_type_template_id_4e3dc17e_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -745,7 +745,7 @@ var ProductAssignmentReports_component = Object(componentNormalizer["a" /* defau
 )
 
 /* harmony default export */ var ProductAssignmentReports = (ProductAssignmentReports_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=18edcd80&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=18edcd80&
 var AuditLogReportvue_type_template_id_18edcd80_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1016,8 +1016,8 @@ var AuditLogReport_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var AuditLogReport = (AuditLogReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=77be0f9c&lang=en&
-var ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=c0a39d02&lang=en&
+var ProductBarcodeReportvue_type_template_id_c0a39d02_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_vm.DataLoaded ? _c('dynamic-form', {
@@ -1040,9 +1040,9 @@ var ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_render = function 
     }
   }) : _vm._e()], 1)])], 1);
 };
-var ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_staticRenderFns = [];
+var ProductBarcodeReportvue_type_template_id_c0a39d02_lang_en_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=77be0f9c&lang=en&
+// CONCATENATED MODULE: ./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=c0a39d02&lang=en&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=script&lang=js&
 
@@ -1083,6 +1083,9 @@ var ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_staticRenderFns = 
           config: {
             options: [],
             onChange: this.onChangeDropdown
+          },
+          validationRules: {
+            "required": true
           }
         }, {
           astype: "SelectField",
@@ -1260,8 +1263,8 @@ var ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_staticRenderFns = 
 
 var ProductBarcodeReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_ProductBarcodeReportvue_type_script_lang_js_,
-  ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_render,
-  ProductBarcodeReportvue_type_template_id_77be0f9c_lang_en_staticRenderFns,
+  ProductBarcodeReportvue_type_template_id_c0a39d02_lang_en_render,
+  ProductBarcodeReportvue_type_template_id_c0a39d02_lang_en_staticRenderFns,
   false,
   null,
   null,
@@ -1270,7 +1273,7 @@ var ProductBarcodeReport_component = Object(componentNormalizer["a" /* default *
 )
 
 /* harmony default export */ var ProductBarcodeReport = (ProductBarcodeReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=5205cccd&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=5205cccd&
 var ItemLogHistoryReportvue_type_template_id_5205cccd_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1550,7 +1553,7 @@ var ItemLogHistoryReport_component = Object(componentNormalizer["a" /* default *
 )
 
 /* harmony default export */ var ItemLogHistoryReport = (ItemLogHistoryReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=731a4c0a&lang=en&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=731a4c0a&lang=en&
 var ProductCountReportvue_type_template_id_731a4c0a_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1801,7 +1804,7 @@ var ProductCountReport_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var ProductCountReport = (ProductCountReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7603b6da-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductReport.vue?vue&type=template&id=26a9eb36&lang=en&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductReport.vue?vue&type=template&id=26a9eb36&lang=en&
 var ProductReportvue_type_template_id_26a9eb36_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
