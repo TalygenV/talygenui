@@ -7,12 +7,12 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76b4e4ac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/AddApprovalChain.vue?vue&type=template&id=25049d4f&lang=en
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"10686283-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/AddApprovalChain.vue?vue&type=template&id=6d93435d&lang=en
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12 padding-t_8"},[_c('div',{staticClass:"theme-primary partition-full"},[_c('span',{staticClass:"p-name text-white"},[_vm._v(_vm._s(_vm.$t('AddApprovalChain')))])])])])]),_c('div',{staticClass:"border p-3"},[_c('dynamic-form',{attrs:{"lang":"en","buttons":_vm.buttons,"schema":_vm.FormSchema},on:{"OnSubmit":_vm.onSubmit}}),_c('small',{staticClass:"text-danger"},[_vm._v("Fields marked with an asterisk (*) are mandatory.")])],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalChain/AddApprovalChain.vue?vue&type=template&id=25049d4f&lang=en
+// CONCATENATED MODULE: ./src/views/ApprovalChain/AddApprovalChain.vue?vue&type=template&id=6d93435d&lang=en
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -59,6 +59,9 @@ var DataService = __webpack_require__("1115");
           name: "ApprovalChainName",
           value: "",
           placeholder: "",
+          config: {
+            onChange: this.checkName
+          },
           validationRules: {
             "required": true
           }
@@ -66,10 +69,10 @@ var DataService = __webpack_require__("1115");
           astype: "SelectField",
           label: this.$t('Status'),
           name: "Status",
-          value: "",
+          value: 1001,
           placeholder: "",
           validationRules: {
-            "required": false
+            "required": true
           },
           config: {
             options: [{
@@ -77,7 +80,7 @@ var DataService = __webpack_require__("1115");
               name: 'Active'
             }, {
               value: "1002",
-              name: 'InActive'
+              name: 'Inactive'
             }]
           }
         }, {
@@ -103,7 +106,7 @@ var DataService = __webpack_require__("1115");
           value: "",
           placeholder: "",
           validationRules: {
-            "required": true
+            "required": false
           }
         }]
       }],
@@ -123,7 +126,7 @@ var DataService = __webpack_require__("1115");
     await this.GetApprovalGroups();
     if (this.$route.params.id != null) {
       this.ApprovalChainId = this.$route.params.id;
-      await this.GetApprovalGroups();
+      //await this.GetApprovalGroups();
       await this.ManageChain();
     }
     this.DataLoaded = 1;
@@ -149,10 +152,10 @@ var DataService = __webpack_require__("1115");
           vm.ShowAlert(vm.$t('AlreadyExists'), "warning", true, vm.$t("Alert"));
           vm.onCancel();
         } else if (response.data == '-3') {
-          vm.ShowAlert(vm.$t("Something went Wrong"), "failure", true, vm.$t('Alert'));
+          vm.ShowAlert(vm.$t("SomethingwentWrong"), "failure", true, vm.$t('Alert'));
           vm.onCancel();
         } else {
-          vm.ShowAlert(vm.$t("ApprovalChainSuccessfullyAdded"), "Success", true, vm.$t('Alert'));
+          vm.ShowAlert(vm.$t("ApprovalChainSuccessfullyAdded"), "success", true, vm.$t('Alert'));
           vm.onCancel();
         }
       });
@@ -168,12 +171,12 @@ var DataService = __webpack_require__("1115");
               value: `${item.APPROVAL_GROUP_ID}`
             });
           });
-          return vm.LeadStatusList;
         }
       });
     },
     ManageChain: async function () {
       var vm = this;
+      vm.isLoading = true;
       var url = `id=${this.$route.params.id}`;
       await DataService["a" /* default */].GetByChainId(url).then(response => {
         var chainData = JSON.parse(response.data);
@@ -186,7 +189,6 @@ var DataService = __webpack_require__("1115");
             UserList.push(vm.groupList[i]);
           }
           UserList.forEach(item => {
-            debugger;
             var obj = vm.FormSchema[0].Data[2].config.options.find(x => x.value == item);
             if (obj != undefined) {
               vm.TagsSelectedArray.push({
@@ -199,10 +201,23 @@ var DataService = __webpack_require__("1115");
           this.FormSchema[1].Data[0].value = chainData[0].description;
         }
       });
+      vm.isLoading = false;
     },
     onCancel: function () {
       this.$router.push({
         name: 'Approval Chain'
+      });
+    },
+    checkName(e, Fields) {
+      var vm = this;
+      var chainName = Fields.value;
+      var url = `ApprovalChainName=${chainName}`;
+      DataService["a" /* default */].CheckDuplicate(url).then(response => {
+        if (response.data == true && vm.FormSchema[0].Data[0].value) {
+          vm.FormSchema[0].Data[0].value = '';
+          vm.ShowAlert(vm.$t('ChainExist'), "warning", true, vm.$t("Alert"));
+          vm.FormSchema[0].Data[0].validationRules.required = true;
+        }
       });
     }
   }

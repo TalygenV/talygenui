@@ -7,14 +7,14 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"76b4e4ac-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=0d4ead18
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"10686283-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=6644c1e0
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('loader',{attrs:{"is-visible":_vm.isLoading}}),_c('tg-list',{attrs:{"IsShowAction":false,"showCheckBox":true,"listType":['List'],"ModuleName":"Approval","SubModuleCode":"Approval","IdentityColumn":"APPROVALCHAINID","HeaderText":_vm.$t('Approval Chain'),"ListData":_vm.ChainData,"HeaderData":_vm.Headers,"widgets":_vm.widgets,"callbackfunction":_vm.FetchData,"HeaderButtons":_vm.listheaderbuttons,"TotalRecords":_vm.TotalRecords,"SearchFields":_vm.leftSearchFields,"RenderRowActionMethod":_vm.renderActions,"ListDataCallBackFunction":_vm.FetchData,"LegendArray":_vm.LegendArray,"SortExp":_vm.SortExp,"SortBy":_vm.SortBy,"NorecordfoundText":_vm.$t('NoRecordfound')},on:{"LeftsearchButtonClick":_vm.leftCommonSearch,"PagerButtonClick":_vm.pagerMethod,"HeaderButtonClick":_vm.commonHeaderButtonClick,"SortdataButtonClick":_vm.sortdata},scopedSlots:_vm._u([{key:"slotdata",fn:function(ref){
 var data = ref.data;
-return [(data.column.COLUMN_NAME == 'STATUS')?[(data.row.SCOUNT == 0 && data.row.DCOUNT == 0)?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DropdownUpdateStatus(data.row.STATUSID, data.row.APPROVALCHAINID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',attrs:{"disabled":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]]:_vm._e(),(data.column.COLUMN_NAME == 'APPROVALCHAINNAME')?[(data.row.APPROVALCHAINNAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.APPROVALCHAINID},on:{"click":function($event){return _vm.EditChain(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.APPROVALCHAINNAME))])])]):_vm._e()]:_vm._e(),(data.column.COLUMN_NAME == 'ACTION')?[_c('td',{staticClass:"text-center single-action"},[_c('div',{staticClass:"cstm-drop-btn"},[_c('span',[_c('a',{on:{"click":function($event){return _vm.ChangeOrder(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-retweet text-dark action-icon"})])])])])])]:_vm._e()]}}])})],1)}
+return [(data.column.COLUMN_NAME == 'STATUS')?[(data.row.SCOUNT == 0 && data.row.DCOUNT == 0)?[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',on:{"change":[function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])},function($event){return _vm.DropdownUpdateStatus(data.row.STATUSID, data.row.APPROVALCHAINID);}]}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]:[_c('td',{staticClass:"text-center single-action",attrs:{"title":data.row.STATUSID == 1001 ? 'Active' : 'Inactive'}},[_c('div',{staticClass:"cstm-drop-btn"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(data.row.STATUSID),expression:"data.row.STATUSID"}],class:data.row.STATUSID == 1001 ? 'ddlupdatestatus w-80 btn-success' : 'ddlupdatestatus w-80 btn-danger',attrs:{"disabled":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(data.row, "STATUSID", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"value":"1001","selected":"selected"}},[_vm._v("Active")]),_c('option',{attrs:{"value":"1002"}},[_vm._v("Inactive")])])])])]]:_vm._e(),(data.column.COLUMN_NAME == 'APPROVALCHAINNAME')?[(data.row.APPROVALCHAINNAME)?_c('span',{staticClass:"text-dark"},[_c('a',{attrs:{"href":"javascript:;","id":data.row.APPROVALCHAINID},on:{"click":function($event){return _vm.EditChain(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_vm._v(_vm._s(data.row.APPROVALCHAINNAME))])])]):_vm._e()]:_vm._e(),(data.column.COLUMN_NAME == 'ACTION')?[_c('td',{staticClass:"text-center single-action"},[_c('div',{staticClass:"cstm-drop-btn"},[_c('span',{attrs:{"title":"Change Order","data-toggle-tooltip":"tooltip"}},[_c('a',{on:{"click":function($event){return _vm.ChangeOrder(data.row.APPROVALCHAINID)}}},[_c('em',{staticClass:"text-primary",attrs:{"aria-hidden":"true"}},[_c('i',{staticClass:"fa fa-retweet text-dark action-icon"})])])])])])]:_vm._e()]}}])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=0d4ead18
+// CONCATENATED MODULE: ./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=template&id=6644c1e0
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -58,7 +58,7 @@ let leftsearchSchema = [{
   fieldIcon: "fa fa-chain",
   paramName: "chainName",
   fieldSearchConditionName: [''],
-  value: null,
+  value: "",
   listOptions: []
 }, {
   fieldName: 'APPROVAL GROUP',
@@ -70,7 +70,7 @@ let leftsearchSchema = [{
   value: "",
   listOptions: []
 }, {
-  fieldName: 'USERS',
+  fieldName: 'User',
   fieldType: "ddl-check",
   fieldIcon: "fa fa-users",
   paramName: "userIds",
@@ -96,37 +96,40 @@ let leftsearchSchema = [{
 }];
 function bindleftCommonSearchdropdown(instance, modulename, filtername) {
   var vm = instance;
-  if (filtername == "APPROVAL GROUP") {
+  var TagData = [];
+  if (filtername == 'APPROVALGROUP') {
+    let obj = {};
     DataService["a" /* default */].GetApprovalGroupByCompanyId().then(response => {
       var json = response.data;
       if (json != null) {
         json.forEach(function (item, index) {
-          let obj = {
+          obj = {
             name: item.APPROVAL_GROUP_NAME,
             value: `${item.APPROVAL_GROUP_ID}`
           };
-          vm.leftSearchFields[1].listOptions.push(obj);
+          TagData.push(obj);
         });
-        return vm.LeadStatusList;
+        vm.leftSearchFields[1].listOptions = TagData;
       }
     });
   }
-  if (filtername == "APPROVALRULE") {
+  if (filtername == 'APPROVALRULE') {
+    let obj = {};
     var url = `isIncludeLoginUserId=1&approvalGroupIds=&approvalChainIds=&moduleName=${filtername}&DepartmentIds`;
+    DataService["a" /* default */].LoadUsersByCompanyId(url).then(response => {
+      var json = response.data;
+      if (json != null) {
+        json.forEach(function (item, index) {
+          obj = {
+            name: item.USERNAME,
+            value: `${item.USER_ID}`
+          };
+          TagData.push(obj);
+        });
+        vm.leftSearchFields[2].listOptions = TagData;
+      }
+    });
   }
-  DataService["a" /* default */].LoadUsersByCompanyId(url).then(response => {
-    var json = response.data;
-    if (json != null) {
-      json.forEach(function (item, index) {
-        let obj = {
-          name: item.USERNAME,
-          value: `${item.USER_ID}`
-        };
-        vm.leftSearchFields[2].listOptions.push(obj);
-      });
-      return vm.LeadStatusList;
-    }
-  });
 }
 /* harmony default export */ var ApprovalChainSchema = ({
   buttons,
@@ -135,13 +138,6 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ApprovalChain/ApprovalChainList.vue?vue&type=script&lang=js
 
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -213,6 +209,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
       TotalRecords: 0,
       SortBy: '',
       SortExp: '',
+      searchCondition: '',
       isLoading: false,
       noRecord: true,
       CurrentPage: 1,
@@ -272,52 +269,69 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
       }],
       search: '',
       isPartial: 0,
-      ChainData: []
+      ChainData: [],
+      LegendArray: [],
+      widgets: []
     };
   },
+  mounted: function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  },
   created() {
-    this.FetchData();
-    ApprovalChainSchema.bindleftCommonSearchdropdown(this, "Approval", "APPROVAL GROUP");
-    ApprovalChainSchema.bindleftCommonSearchdropdown(this, 'Approval', 'APPROVALRULE');
+    var vm = this;
+    vm.FetchData();
+    ApprovalChainSchema.bindleftCommonSearchdropdown(vm, "Approval", "APPROVALGROUP");
+    ApprovalChainSchema.bindleftCommonSearchdropdown(vm, "Approval", "APPROVALRULE");
   },
   methods: {
     async FetchData() {
-      var vueObj = this;
-      var url = `${vueObj.searchCondition}&userIds=${this.userIds}&approvalGroupIds=${this.approvalGroupIds}&statusIds=${this.statusIds}&sortBy=${vueObj.SortBy}&sortExp=${vueObj.SortExp}&pageSize=${vueObj.PageSize}&pageNum=${vueObj.PageNumber}&isPartial=${vueObj.isPartial}`;
+      var vm = this;
+      var url = `sortBy=${vm.SortBy}&sortExp=${vm.SortExp}&pageSize=${vm.PageSize}&pageNum=${vm.PageNumber}&isPartial=${vm.isPartial}&${vm.searchCondition}`;
       await DataService["a" /* default */].ApprovalChainListing(url).then(response => {
         if (response.data != null) {
           if (response.data.length > 0) {
-            vueObj.ChainData = response.data;
-            vueObj.ChainData.forEach(row => {
-              row.isCheckBoxDisabled = false;
+            vm.ChainData = response.data;
+            vm.ChainData.forEach(row => {
               if (row.DCOUNT == 0 && row.SCOUNT == 0) {
                 row.isCheckBoxDisabled = false;
               } else {
                 row.isCheckBoxDisabled = true;
               }
+              let groups = row.GROUPS;
+              let CommaIndex = groups.lastIndexOf(', ');
+              if (CommaIndex !== -1) {
+                groups = groups.substring(0, CommaIndex) + groups.substring(CommaIndex + 2);
+              }
+              row.GROUPS = groups;
+              var data = row.USERS;
+              let lastCommaIndex = data.lastIndexOf(',');
+              if (lastCommaIndex !== -1) {
+                data = data.substring(0, lastCommaIndex) + data.substring(lastCommaIndex + 1);
+              }
+              row.USERS = data;
             });
-            vueObj.TotalRecords = response.data[0].TOTALRECORDS;
-            vueObj.TotalPages = Math.ceil(vueObj.TotalRecords / vueObj.PageSize);
-            vueObj.CurrentPage = vueObj.PageNumber;
-            vueObj.noRecord = false;
+            vm.TotalRecords = response.data[0].TOTALRECORDS;
+            vm.TotalPages = Math.ceil(vm.TotalRecords / vm.PageSize);
+            vm.CurrentPage = vm.PageNumber;
+            vm.noRecord = false;
           } else {
-            vueObj.ChainData = [];
-            vueObj.noRecord = true;
-            vueObj.TotalRecords = 0;
+            vm.ChainData = [];
+            vm.noRecord = true;
+            vm.TotalRecords = 0;
           }
         } else {
-          vueObj.noRecord = true;
-          vueObj.ChainData = [];
-          vueObj.TotalRecords = 0;
+          vm.noRecord = true;
+          vm.ChainData = [];
+          vm.TotalRecords = 0;
         }
         setTimeout(function () {
-          vueObj.CheckBoxBootstrap();
+          vm.CheckBoxBootstrap();
         }, 100);
         setTimeout(function () {
-          vueObj.ResponsiveDataTable('tablelistingdata');
+          vm.ResponsiveDataTable('tablelistingdata');
         }, 500);
       });
-      vueObj.isLoading = false;
+      vm.isLoading = false;
     },
     DeleteApprovalChain() {
       var vm = this;
@@ -325,6 +339,9 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
       $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
         if (val.length > 0) val += ',';
         val += $(this).val();
+        if (val != "") {
+          $("[id^='DeleteMultiple']").removeClass('enable').addClass('disabled');
+        }
       });
       if (val.length > 0) {
         vm.confirmR(vm.$t("ConfirmDelete"), true, vm.$t("Delete") + "  ", function () {
@@ -334,12 +351,12 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
             if (response.data) {
               $("[id^='chkAll']").prop("checked", false).removeAttr('checked');
               $('.chkItems:checkbox:checked').prop("checked", false).removeAttr('checked');
-              $("[id^='DeleteMultiple']").removeClass('enable').addClass('disabled');
+              //$("[id^='DeleteMultiple']").removeClass('enable').addClass('disabled');
               vm.ShowAlert(vm.$t('DeletedSuccess', [vm.$t('ApprovalChain')]), "Success", true, vm.$t('Alert'));
-              vm.FetchData();
             } else {
               vm.ShowAlert(vm.$t('DeletedError', [vm.$t('ApprovalChain')]), "failure", true, vm.$t('Alert'));
             }
+            vm.FetchData();
             vm.isLoading = false;
           });
         });
@@ -348,12 +365,15 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
     DropdownUpdateStatus(statusId, id) {
       var vm = this;
       vm.isLoading = true;
-      vm.confirmR(vm.$t('Are you sure you want to update this record?'), true, false, function (result) {
+      vm.confirmR(vm.$t('WantToUpdateThisRecord'), true, false, function (result) {
         var url = `id=${id}&statusId=${statusId}&tablename=TALYGEN_APPROVAL_CHAIN&columnname=APPROVAL_CHAIN_ID`;
         DataService["a" /* default */].UpdateStatus(url).then(response => {
-          var status = '';
-          vm.ShowAlert(vm.$t('UpdateStatus'), "success", 'Alert');
-          vm.FetchData();
+          if (response.data == "") {
+            vm.ShowAlert(vm.$t('UpdateStatus'), "success", 'Alert');
+            vm.FetchData();
+          } else {
+            vm.ShowAlert(vm.$t('StatusChangeError'), "warning", true, vm.$t("Alert"));
+          }
           vm.isLoading = false;
         });
       });
@@ -363,7 +383,7 @@ function bindleftCommonSearchdropdown(instance, modulename, filtername) {
     commonHeaderButtonClick(event) {
       switch (event.callbackfunction) {
         case "Delete":
-          this.DeleteChain();
+          this.DeleteApprovalChain();
           break;
         case "setTourGuideSteps":
           this.setTourGuideSteps(0);

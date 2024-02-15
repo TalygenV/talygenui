@@ -1,8 +1,1375 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d22dbe3"],{f993:function(e,t,n){
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-2d22dbe3"],{
+
+/***/ "f993":
+/***/ (function(module, exports, __webpack_require__) {
+
 /*!
  * vue-fullcalendar v1.0.9
  * (c) 2017 Sunny Wang <sunnywang0104@163.com> 
  * @license MIT
  */
-(function(t,n){e.exports=n()})(0,(function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var a=t[r]={exports:{},id:r,loaded:!1};return e[r].call(a.exports,a,a.exports,n),a.loaded=!0,a.exports}return n.m=e,n.c=t,n.p="",n(0)}([function(e,t,n){"use strict";var r=n(1),a=o(r);function o(e){return e&&e.__esModule?e:{default:e}}var s=a.default;e.exports=s},function(e,t,n){var r,a;n(2),r=n(6);var o=n(19);a=r=r||{},"object"!==typeof r.default&&"function"!==typeof r.default||(Object.keys(r).some((function(e){return"default"!==e&&"__esModule"!==e}))&&console.error("named exports are not supported in *.vue files."),a=r=r.default),"function"===typeof a&&(a=a.options),a.__file="/Users/SunnyWang/code/vue-fullcalendar/src/fullCalendar.vue",a.render=o.render,a.staticRenderFns=o.staticRenderFns,a.functional&&console.error("[vue-loader] fullCalendar.vue: functional components are not supported and should be defined in plain js files using render functions."),e.exports=r},function(e,t,n){var r=n(3);"string"===typeof r&&(r=[[e.id,r,""]]);n(5)(r,{});r.locals&&(e.exports=r.locals)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,"\n.comp-full-calendar {\n  padding: 20px;\n  background: #fff;\n  max-width: 960px;\n  margin: 0 auto;\n}\n.comp-full-calendar ul, .comp-full-calendar p {\n    margin: 0;\n    padding: 0;\n    font-size: 14px;\n}\n",""])},function(e,t){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],t=0;t<this.length;t++){var n=this[t];n[2]?e.push("@media "+n[2]+"{"+n[1]+"}"):e.push(n[1])}return e.join("")},e.i=function(t,n){"string"===typeof t&&(t=[[null,t,""]]);for(var r={},a=0;a<this.length;a++){var o=this[a][0];"number"===typeof o&&(r[o]=!0)}for(a=0;a<t.length;a++){var s=t[a];"number"===typeof s[0]&&r[s[0]]||(n&&!s[2]?s[2]=n:n&&(s[2]="("+s[2]+") and ("+n+")"),e.push(s))}},e}},function(e,t,n){var r={},a=function(e){var t;return function(){return"undefined"===typeof t&&(t=e.apply(this,arguments)),t}},o=a((function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())})),s=a((function(){return document.head||document.getElementsByTagName("head")[0]})),i=null,l=0,d=[];function c(e,t){for(var n=0;n<e.length;n++){var a=e[n],o=r[a.id];if(o){o.refs++;for(var s=0;s<o.parts.length;s++)o.parts[s](a.parts[s]);for(;s<a.parts.length;s++)o.parts.push(m(a.parts[s],t))}else{var i=[];for(s=0;s<a.parts.length;s++)i.push(m(a.parts[s],t));r[a.id]={id:a.id,refs:1,parts:i}}}}function u(e){for(var t=[],n={},r=0;r<e.length;r++){var a=e[r],o=a[0],s=a[1],i=a[2],l=a[3],d={css:s,media:i,sourceMap:l};n[o]?n[o].parts.push(d):t.push(n[o]={id:o,parts:[d]})}return t}function f(e,t){var n=s(),r=d[d.length-1];if("top"===e.insertAt)r?r.nextSibling?n.insertBefore(t,r.nextSibling):n.appendChild(t):n.insertBefore(t,n.firstChild),d.push(t);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");n.appendChild(t)}}function p(e){e.parentNode.removeChild(e);var t=d.indexOf(e);t>=0&&d.splice(t,1)}function h(e){var t=document.createElement("style");return t.type="text/css",f(e,t),t}function v(e){var t=document.createElement("link");return t.rel="stylesheet",f(e,t),t}function m(e,t){var n,r,a;if(t.singleton){var o=l++;n=i||(i=h(t)),r=g.bind(null,n,o,!1),a=g.bind(null,n,o,!0)}else e.sourceMap&&"function"===typeof URL&&"function"===typeof URL.createObjectURL&&"function"===typeof URL.revokeObjectURL&&"function"===typeof Blob&&"function"===typeof btoa?(n=v(t),r=x.bind(null,n),a=function(){p(n),n.href&&URL.revokeObjectURL(n.href)}):(n=h(t),r=b.bind(null,n),a=function(){p(n)});return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else a()}}e.exports=function(e,t){t=t||{},"undefined"===typeof t.singleton&&(t.singleton=o()),"undefined"===typeof t.insertAt&&(t.insertAt="bottom");var n=u(e);return c(n,t),function(e){for(var a=[],o=0;o<n.length;o++){var s=n[o],i=r[s.id];i.refs--,a.push(i)}if(e){var l=u(e);c(l,t)}for(o=0;o<a.length;o++){i=a[o];if(0===i.refs){for(var d=0;d<i.parts.length;d++)i.parts[d]();delete r[i.id]}}}};var y=function(){var e=[];return function(t,n){return e[t]=n,e.filter(Boolean).join("\n")}}();function g(e,t,n,r){var a=n?"":r.css;if(e.styleSheet)e.styleSheet.cssText=y(t,a);else{var o=document.createTextNode(a),s=e.childNodes;s[t]&&e.removeChild(s[t]),s.length?e.insertBefore(o,s[t]):e.appendChild(o)}}function b(e,t){var n=t.css,r=t.media;if(r&&e.setAttribute("media",r),e.styleSheet)e.styleSheet.cssText=n;else{while(e.firstChild)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}function x(e,t){var n=t.css,r=t.sourceMap;r&&(n+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(r))))+" */");var a=new Blob([n],{type:"text/css"}),o=e.href;e.href=URL.createObjectURL(a),o&&URL.revokeObjectURL(o)}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(7),a=o(r);function o(e){return e&&e.__esModule?e:{default:e}}t.default={props:{events:{type:Array,default:[]},lang:{type:String,default:"en"},firstDay:{type:Number|String,validator:function(e){var t=parseInt(e);return t>=0&&t<=6},default:0},titleFormat:{type:String,default:function(){return a.default[this.lang].titleFormat}},monthNames:{type:Array,default:function(){return a.default[this.lang].monthNames}},weekNames:{type:Array,default:function(){var e=a.default[this.lang].weekNames;return e.slice(this.firstDay).concat(e.slice(0,this.firstDay))}}},data:function(){return{currentDate:new Date}},methods:{emitChangeMonth:function(e,t,n,r){console.log("currentDate 2",this.currentDate),this.currentDate=r,console.log("currentDate 3",this.currentDate),this.$emit("changeMonth",e,t,n)},emitEventClick:function(e,t,n){this.$emit("eventClick",e,t,n)},emitDayClick:function(e,t){this.$emit("dayClick",e,t)},emitMoreClick:function(e,t,n){this.$emit("moreClick",e,event,n)}},components:{"fc-body":n(8),"fc-header":n(14)}}},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={en:{weekNames:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],monthNames:["January","February","March","April","May","June","July","August","September","October","November","December"],titleFormat:"MMMM yyyy"},zh:{weekNames:["周日","周一","周二","周三","周四","周五","周六"],monthNames:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],titleFormat:"yyyy年MM月"},fr:{weekNames:["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"],monthNames:["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"],titleFormat:"MMMM yyyy"}}},function(e,t,n){var r,a;n(9),r=n(11);var o=n(13);a=r=r||{},"object"!==typeof r.default&&"function"!==typeof r.default||(Object.keys(r).some((function(e){return"default"!==e&&"__esModule"!==e}))&&console.error("named exports are not supported in *.vue files."),a=r=r.default),"function"===typeof a&&(a=a.options),a.__file="/Users/SunnyWang/code/vue-fullcalendar/src/components/body.vue",a.render=o.render,a.staticRenderFns=o.staticRenderFns,a.functional&&console.error("[vue-loader] body.vue: functional components are not supported and should be defined in plain js files using render functions."),e.exports=r},function(e,t,n){var r=n(10);"string"===typeof r&&(r=[[e.id,r,""]]);n(5)(r,{});r.locals&&(e.exports=r.locals)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,"\n.full-calendar-body {\n  margin-top: 20px;\n}\n.full-calendar-body .weeks {\n    display: flex;\n    border-top: 1px solid #e0e0e0;\n    border-bottom: 1px solid #e0e0e0;\n    border-left: 1px solid #e0e0e0;\n}\n.full-calendar-body .weeks .week {\n      flex: 1;\n      text-align: center;\n      border-right: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates {\n    position: relative;\n}\n.full-calendar-body .dates .week-row {\n      border-left: 1px solid #e0e0e0;\n      display: flex;\n}\n.full-calendar-body .dates .week-row .day-cell {\n        flex: 1;\n        min-height: 100px;\n        padding: 4px;\n        border-right: 1px solid #e0e0e0;\n        border-bottom: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates .week-row .day-cell .day-number {\n          text-align: right;\n}\n.full-calendar-body .dates .week-row .day-cell.today {\n          background-color: #fcf8e3;\n}\n.full-calendar-body .dates .week-row .day-cell.not-cur-month .day-number {\n          color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events {\n      position: absolute;\n      top: 0;\n      left: 0;\n      z-index: 1;\n      width: 100%;\n}\n.full-calendar-body .dates .dates-events .events-week {\n        display: flex;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day {\n          cursor: pointer;\n          flex: 1;\n          min-height: 109px;\n          overflow: hidden;\n          text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .day-number {\n            text-align: right;\n            padding: 4px 5px 4px 4px;\n            opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day.not-cur-month .day-number {\n            color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start {\n              margin-left: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-end {\n              margin-right: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-opacity {\n              opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .more-link {\n            cursor: pointer;\n            padding-left: 8px;\n            padding-right: 2px;\n            color: rgba(0, 0, 0, 0.38);\n            font-size: 14px;\n}\n.full-calendar-body .dates .more-events {\n      position: absolute;\n      width: 150px;\n      z-index: 2;\n      border: 1px solid #eee;\n      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n}\n.full-calendar-body .dates .more-events .more-header {\n        background-color: #eee;\n        padding: 5px;\n        display: flex;\n        align-items: center;\n        font-size: 14px;\n}\n.full-calendar-body .dates .more-events .more-header .title {\n          flex: 1;\n}\n.full-calendar-body .dates .more-events .more-header .close {\n          margin-right: 2px;\n          cursor: pointer;\n          font-size: 16px;\n}\n.full-calendar-body .dates .more-events .more-body {\n        height: 140px;\n        overflow: hidden;\n}\n.full-calendar-body .dates .more-events .more-body .body-list {\n          height: 120px;\n          padding: 5px;\n          overflow: auto;\n          background-color: #fff;\n}\n.full-calendar-body .dates .more-events .more-body .body-list .body-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n",""])},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(12),a=o(r);function o(e){return e&&e.__esModule?e:{default:e}}t.default={props:{currentDate:{},events:{},weekNames:{type:Array,default:[]},monthNames:{},firstDay:{}},created:function(){this.events.forEach((function(e,t){e._id=e.id||t,e.end=e.end||e.start}))},data:function(){return{weekMask:[1,2,3,4,5,6,7],isLismit:!0,eventLimit:3,showMore:!1,morePos:{top:0,left:0},selectDay:{}}},watch:{weekNames:function(e){console.log("watch weekNames",e)}},computed:{currentDates:function(){return this.getCalendar()}},methods:{isBegin:function(e,t,n){var r=new Date(e.start);return 0==n||r.toDateString()==t.toDateString()?e.title:"　"},moreTitle:function(e){var t=new Date(e);return this.weekNames[t.getDay()]+", "+this.monthNames[t.getMonth()]+t.getDate()},classNames:function(e){return e?"string"==typeof e?e:Array.isArray(e)?e.join(" "):"":""},getCalendar:function(){var e=new Date,t=new Date(this.currentDate),n=a.default.getStartDate(t),r=n.getDay(),o=parseInt(this.firstDay)-r;o=o>0?o-7:o,n.setDate(n.getDate()+o);for(var s=[],i=0;i<6;i++){for(var l=[],d=0;d<7;d++)l.push({monthDay:n.getDate(),isToday:e.toDateString()==n.toDateString(),isCurMonth:n.getMonth()==t.getMonth(),weekDay:d,date:new Date(n),events:this.slotEvents(n)}),n.setDate(n.getDate()+1);s.push(l)}return s},slotEvents:function(e){var t=this.events.filter((function(t){var n=new Date(t.start),r=new Date(n.getFullYear(),n.getMonth(),n.getDate()),a=t.end?new Date(t.end):r;return e>=r&&e<=a}));t.sort((function(e,t){return e.cellIndex?t.cellIndex?e.cellIndex-t.cellIndex:-1:1}));for(var n=0;n<t.length;n++)t[n].cellIndex=t[n].cellIndex||n+1,t[n].isShow=!0,t[n].cellIndex==n+1||n>2||t.splice(n,0,{title:"holder",cellIndex:n+1,start:a.default.format(e,"yyyy-MM-dd"),end:a.default.format(e,"yyyy-MM-dd"),isShow:!1});return t},isStart:function(e,t){var n=new Date(e);return n.toDateString()==t.toDateString()},isEnd:function(e,t){var n=new Date(e);return n.toDateString()==t.toDateString()},selectThisDay:function(e,t){this.selectDay=e,this.showMore=!0,this.morePos=this.computePos(event.target),this.morePos.top-=100;var n=e.events.filter((function(e){return 1==e.isShow}));this.$emit("moreclick",e.date,n,t)},computePos:function(e){var t=e.getBoundingClientRect(),n=this.$refs.dates.getBoundingClientRect();return{left:t.left-n.left,top:t.top+t.height-n.top}},dayClick:function(e,t){this.$emit("dayclick",e,t)},eventClick:function(e,t){if(e.isShow){t.stopPropagation();var n=this.computePos(t.target);this.$emit("eventclick",e,t,n)}}}}},function(e,t){"use strict";var n=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],r=["January","February","March","April","May","June","July","August","September","October","November","December"],a={getDuration:function(e){var t=new Date(e);t.getMonth();return t.setMonth(t.getMonth()+1),t.setDate(0),t.getDate()},changeDay:function(e,t){var n=new Date(e);return new Date(n.setDate(n.getDate()+t))},getStartDate:function(e){return new Date(e.getFullYear(),e.getMonth(),1)},getEndDate:function(e){var t=new Date(e.getFullYear(),e.getMonth()+1,1);return new Date(t.setDate(t.getDate()-1))},format:function(e,t,a){a=a||r,e="string"===typeof e?new Date(e.replace(/-/g,"/")):new Date(e);var o={M:e.getMonth()+1,d:e.getDate(),h:e.getHours(),m:e.getMinutes(),s:e.getSeconds(),q:Math.floor((e.getMonth()+3)/3),S:e.getMilliseconds()};return t=t.replace(/([yMdhmsqS])+/g,(function(t,r){var s=o[r];return void 0!==s?"MMMM"===t?a[s-1]:"MMM"===t?n[s-1]:(t.length>1&&(s="0"+s,s=s.substr(s.length-2)),s):"y"===r?String(e.getFullYear()).substr(4-t.length):t})),t}};e.exports=a},function(e,t,n){e.exports={render:function(){var e=this,t=(e.$createElement,e._c);return t("div",{staticClass:"full-calendar-body"},[t("div",{staticClass:"weeks"},e._l(e.weekNames,(function(n){return t("strong",{staticClass:"week"},[e._v(e._s(n))])}))),e._v(" "),t("div",{ref:"dates",staticClass:"dates"},[t("div",{staticClass:"dates-bg"},e._l(e.currentDates,(function(n){return t("div",{staticClass:"week-row"},e._l(n,(function(n){return t("div",{staticClass:"day-cell",class:{today:n.isToday,"not-cur-month":!n.isCurMonth}},[t("p",{staticClass:"day-number"},[e._v(e._s(n.monthDay))])])})))}))),e._v(" "),t("div",{staticClass:"dates-events"},e._l(e.currentDates,(function(n){return t("div",{staticClass:"events-week"},e._l(n,(function(n){return t("div",{staticClass:"events-day",class:{today:n.isToday,"not-cur-month":!n.isCurMonth},attrs:{"track-by":"$index"},on:{click:function(t){t.stopPropagation(),e.dayClick(n.date,t)}}},[t("p",{staticClass:"day-number"},[e._v(e._s(n.monthDay))]),e._v(" "),t("div",{staticClass:"event-box"},[e._l(n.events,(function(r){return t("p",{directives:[{name:"show",rawName:"v-show",value:r.cellIndex<=e.eventLimit,expression:"event.cellIndex <= eventLimit"}],staticClass:"event-item",class:[e.classNames(r.cssClass),{"is-start":e.isStart(r.start,n.date),"is-end":e.isEnd(r.end,n.date),"is-opacity":!r.isShow}],on:{click:function(t){e.eventClick(r,t)}}},[e._v("\n              "+e._s(e.isBegin(r,n.date,n.weekDay))+"\n            ")])})),e._v(" "),n.events.length>e.eventLimit?t("p",{staticClass:"more-link",on:{click:function(t){t.stopPropagation(),e.selectThisDay(n,t)}}},[e._v("\n              + "+e._s(n.events[n.events.length-1].cellIndex-e.eventLimit)+" more\n            ")]):e._e()],2)])})))}))),e._v(" "),t("div",{directives:[{name:"show",rawName:"v-show",value:e.showMore,expression:"showMore"}],staticClass:"more-events",style:{left:e.morePos.left+"px",top:e.morePos.top+"px"}},[t("div",{staticClass:"more-header"},[t("span",{staticClass:"title"},[e._v(e._s(e.moreTitle(e.selectDay.date)))]),e._v(" "),t("span",{staticClass:"close",on:{click:function(t){t.stopPropagation(),e.showMore=!1}}},[e._v("x")])]),e._v(" "),t("div",{staticClass:"more-body"},[t("ul",{staticClass:"body-list"},e._l(e.selectDay.events,(function(n){return t("li",{directives:[{name:"show",rawName:"v-show",value:n.isShow,expression:"event.isShow"}],staticClass:"body-item",on:{click:function(t){e.eventClick(n,t)}}},[e._v("\n            "+e._s(n.title)+"\n          ")])})))])]),e._v(" "),e._t("body-card")],2)])},staticRenderFns:[]},e.exports.render._withStripped=!0},function(e,t,n){var r,a;n(15),r=n(17);var o=n(18);a=r=r||{},"object"!==typeof r.default&&"function"!==typeof r.default||(Object.keys(r).some((function(e){return"default"!==e&&"__esModule"!==e}))&&console.error("named exports are not supported in *.vue files."),a=r=r.default),"function"===typeof a&&(a=a.options),a.__file="/Users/SunnyWang/code/vue-fullcalendar/src/components/header.vue",a.render=o.render,a.staticRenderFns=o.staticRenderFns,a.functional&&console.error("[vue-loader] header.vue: functional components are not supported and should be defined in plain js files using render functions."),e.exports=r},function(e,t,n){var r=n(16);"string"===typeof r&&(r=[[e.id,r,""]]);n(5)(r,{});r.locals&&(e.exports=r.locals)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,"\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n",""])},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(12),a=o(r);function o(e){return e&&e.__esModule?e:{default:e}}t.default={created:function(){this.dispatchEvent()},props:{currentDate:{},titleFormat:{},firstDay:{},monthNames:{}},data:function(){return{title:"",leftArrow:"<",rightArrow:">",headDate:new Date}},watch:{currentDate:function(e){e&&(this.headDate=e,console.log("currentDate",e))}},methods:{goPrev:function(){this.headDate=this.changeMonth(this.headDate,-1),this.dispatchEvent()},goNext:function(){this.headDate=this.changeMonth(this.headDate,1),this.dispatchEvent()},changeMonth:function(e,t){var n=new Date(e);return new Date(n.setMonth(n.getMonth()+t))},dispatchEvent:function(){this.title=a.default.format(this.headDate,this.titleFormat,this.monthNames);var e=a.default.getStartDate(this.headDate),t=e.getDay(),n=parseInt(this.firstDay)-t;n&&(n-=7),e.setDate(e.getDate()+n);var r=a.default.changeDay(e,41),o=a.default.getStartDate(this.headDate);this.$emit("change",a.default.format(e,"yyyy-MM-dd"),a.default.format(r,"yyyy-MM-dd"),a.default.format(o,"yyyy-MM-dd"),this.headDate)}}}},function(e,t,n){e.exports={render:function(){var e=this,t=(e.$createElement,e._c);return t("div",{staticClass:"full-calendar-header"},[t("div",{staticClass:"header-left"},[e._t("header-left")],2),e._v(" "),t("div",{staticClass:"header-center"},[t("span",{staticClass:"prev-month",on:{click:function(t){t.stopPropagation(),e.goPrev(t)}}},[e._v(e._s(e.leftArrow))]),e._v(" "),t("span",{staticClass:"title"},[e._v(e._s(e.title))]),e._v(" "),t("span",{staticClass:"next-month",on:{click:function(t){t.stopPropagation(),e.goNext(t)}}},[e._v(e._s(e.rightArrow))])]),e._v(" "),t("div",{staticClass:"header-right"},[e._t("header-right")],2)])},staticRenderFns:[]},e.exports.render._withStripped=!0},function(e,t,n){e.exports={render:function(){var e=this,t=(e.$createElement,e._c);return t("div",{staticClass:"comp-full-calendar"},[t("fc-header",{attrs:{"current-date":e.currentDate,"title-format":e.titleFormat,"first-day":e.firstDay,"month-names":e.monthNames},on:{change:e.emitChangeMonth}},[t("div",{slot:"header-left"},[e._t("fc-header-left")],2),e._v(" "),t("div",{slot:"header-right"},[e._t("fc-header-right")],2)]),e._v(" "),t("fc-body",{attrs:{"current-date":e.currentDate,events:e.events,"month-names":e.monthNames,"week-names":e.weekNames,"first-day":e.firstDay},on:{eventclick:e.emitEventClick,dayclick:e.emitDayClick,moreclick:e.emitMoreClick}},[t("div",{slot:"body-card"},[e._t("fc-body-card")],2)])],1)},staticRenderFns:[]},e.exports.render._withStripped=!0}])}))}}]);
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _fullCalendar = __webpack_require__(1);
+
+	var _fullCalendar2 = _interopRequireDefault(_fullCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var fc = _fullCalendar2.default;
+
+	module.exports = fc;
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* styles */
+	__webpack_require__(2)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(6)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(19)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/fullCalendar.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {}
+	if (__vue_options__.functional) {console.error("[vue-loader] fullCalendar.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(3);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.comp-full-calendar {\n  padding: 20px;\n  background: #fff;\n  max-width: 960px;\n  margin: 0 auto;\n}\n.comp-full-calendar ul, .comp-full-calendar p {\n    margin: 0;\n    padding: 0;\n    font-size: 14px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		var blob = new Blob([css], { type: "text/css" });
+
+		var oldSrc = linkElement.href;
+
+		linkElement.href = URL.createObjectURL(blob);
+
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _langSets = __webpack_require__(7);
+
+	var _langSets2 = _interopRequireDefault(_langSets);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  props: {
+	    events: { // events will be displayed on calendar
+	      type: Array,
+	      default: []
+	    },
+	    lang: {
+	      type: String,
+	      default: 'en'
+	    },
+	    firstDay: {
+	      type: Number | String,
+	      validator: function validator(val) {
+	        var res = parseInt(val);
+	        return res >= 0 && res <= 6;
+	      },
+
+	      default: 0
+	    },
+	    titleFormat: {
+	      type: String,
+	      default: function _default() {
+	        return _langSets2.default[this.lang].titleFormat;
+	      }
+	    },
+	    monthNames: {
+	      type: Array,
+	      default: function _default() {
+	        return _langSets2.default[this.lang].monthNames;
+	      }
+	    },
+	    weekNames: {
+	      type: Array,
+	      default: function _default() {
+	        var arr = _langSets2.default[this.lang].weekNames;
+	        return arr.slice(this.firstDay).concat(arr.slice(0, this.firstDay));
+	      }
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      currentDate: new Date()
+	    };
+	  },
+
+	  methods: {
+	    emitChangeMonth: function emitChangeMonth(start, end, currentStart, current) {
+	      console.log('currentDate 2', this.currentDate);
+	      this.currentDate = current;
+	      console.log('currentDate 3', this.currentDate);
+	      this.$emit('changeMonth', start, end, currentStart);
+	    },
+	    emitEventClick: function emitEventClick(event, jsEvent, pos) {
+	      this.$emit('eventClick', event, jsEvent, pos);
+	    },
+	    emitDayClick: function emitDayClick(day, jsEvent) {
+	      this.$emit('dayClick', day, jsEvent);
+	    },
+	    emitMoreClick: function emitMoreClick(day, events, jsEvent) {
+	      this.$emit('moreClick', day, event, jsEvent);
+	    }
+	  },
+	  components: {
+	    'fc-body': __webpack_require__(8),
+	    'fc-header': __webpack_require__(14)
+	  }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  en: {
+	    weekNames: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+	    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	    titleFormat: 'MMMM yyyy'
+	  },
+	  zh: {
+	    weekNames: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+	    monthNames: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+	    titleFormat: 'yyyy年MM月'
+	  },
+	  fr: {
+	    weekNames: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+	    monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+	    titleFormat: 'MMMM yyyy'
+	  }
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* styles */
+	__webpack_require__(9)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(11)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(13)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/components/body.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {}
+	if (__vue_options__.functional) {console.error("[vue-loader] body.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(10);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {}
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.full-calendar-body {\n  margin-top: 20px;\n}\n.full-calendar-body .weeks {\n    display: flex;\n    border-top: 1px solid #e0e0e0;\n    border-bottom: 1px solid #e0e0e0;\n    border-left: 1px solid #e0e0e0;\n}\n.full-calendar-body .weeks .week {\n      flex: 1;\n      text-align: center;\n      border-right: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates {\n    position: relative;\n}\n.full-calendar-body .dates .week-row {\n      border-left: 1px solid #e0e0e0;\n      display: flex;\n}\n.full-calendar-body .dates .week-row .day-cell {\n        flex: 1;\n        min-height: 100px;\n        padding: 4px;\n        border-right: 1px solid #e0e0e0;\n        border-bottom: 1px solid #e0e0e0;\n}\n.full-calendar-body .dates .week-row .day-cell .day-number {\n          text-align: right;\n}\n.full-calendar-body .dates .week-row .day-cell.today {\n          background-color: #fcf8e3;\n}\n.full-calendar-body .dates .week-row .day-cell.not-cur-month .day-number {\n          color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events {\n      position: absolute;\n      top: 0;\n      left: 0;\n      z-index: 1;\n      width: 100%;\n}\n.full-calendar-body .dates .dates-events .events-week {\n        display: flex;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day {\n          cursor: pointer;\n          flex: 1;\n          min-height: 109px;\n          overflow: hidden;\n          text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .day-number {\n            text-align: right;\n            padding: 4px 5px 4px 4px;\n            opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day.not-cur-month .day-number {\n            color: rgba(0, 0, 0, 0.24);\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start {\n              margin-left: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-end {\n              margin-right: 4px;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-opacity {\n              opacity: 0;\n}\n.full-calendar-body .dates .dates-events .events-week .events-day .event-box .more-link {\n            cursor: pointer;\n            padding-left: 8px;\n            padding-right: 2px;\n            color: rgba(0, 0, 0, 0.38);\n            font-size: 14px;\n}\n.full-calendar-body .dates .more-events {\n      position: absolute;\n      width: 150px;\n      z-index: 2;\n      border: 1px solid #eee;\n      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);\n}\n.full-calendar-body .dates .more-events .more-header {\n        background-color: #eee;\n        padding: 5px;\n        display: flex;\n        align-items: center;\n        font-size: 14px;\n}\n.full-calendar-body .dates .more-events .more-header .title {\n          flex: 1;\n}\n.full-calendar-body .dates .more-events .more-header .close {\n          margin-right: 2px;\n          cursor: pointer;\n          font-size: 16px;\n}\n.full-calendar-body .dates .more-events .more-body {\n        height: 140px;\n        overflow: hidden;\n}\n.full-calendar-body .dates .more-events .more-body .body-list {\n          height: 120px;\n          padding: 5px;\n          overflow: auto;\n          background-color: #fff;\n}\n.full-calendar-body .dates .more-events .more-body .body-list .body-item {\n            cursor: pointer;\n            font-size: 12px;\n            background-color: #C7E6FD;\n            margin-bottom: 2px;\n            color: rgba(0, 0, 0, 0.87);\n            padding: 0 0 0 4px;\n            height: 18px;\n            line-height: 18px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _dateFunc = __webpack_require__(12);
+
+	var _dateFunc2 = _interopRequireDefault(_dateFunc);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  props: {
+	    currentDate: {},
+	    events: {},
+	    weekNames: {
+	      type: Array,
+	      default: []
+	    },
+	    monthNames: {},
+	    firstDay: {}
+	  },
+	  created: function created() {
+	    this.events.forEach(function (item, index) {
+	      item._id = item.id || index;
+	      item.end = item.end || item.start;
+	    });
+	    // this.events = events
+	  },
+	  data: function data() {
+	    return {
+	      // weekNames : DAY_NAMES,
+	      weekMask: [1, 2, 3, 4, 5, 6, 7],
+	      // events : [],
+	      isLismit: true,
+	      eventLimit: 3,
+	      showMore: false,
+	      morePos: {
+	        top: 0,
+	        left: 0
+	      },
+	      selectDay: {}
+	    };
+	  },
+
+	  watch: {
+	    weekNames: function weekNames(val) {
+	      console.log('watch weekNames', val);
+	    }
+	  },
+	  computed: {
+	    currentDates: function currentDates() {
+	      return this.getCalendar();
+	    }
+	  },
+	  methods: {
+	    isBegin: function isBegin(event, date, index) {
+	      var st = new Date(event.start);
+
+	      if (index == 0 || st.toDateString() == date.toDateString()) {
+	        return event.title;
+	      }
+	      return '　';
+	    },
+	    moreTitle: function moreTitle(date) {
+	      var dt = new Date(date);
+	      return this.weekNames[dt.getDay()] + ', ' + this.monthNames[dt.getMonth()] + dt.getDate();
+	    },
+	    classNames: function classNames(cssClass) {
+	      if (!cssClass) return '';
+	      // string  
+	      if (typeof cssClass == 'string') return cssClass;
+
+	      // Array
+	      if (Array.isArray(cssClass)) return cssClass.join(' ');
+
+	      // else
+	      return '';
+	    },
+	    getCalendar: function getCalendar() {
+	      // calculate 2d-array of each month
+	      // first day of this month
+	      var now = new Date(); // today
+	      var current = new Date(this.currentDate);
+
+	      var startDate = _dateFunc2.default.getStartDate(current); // 1st day of this month
+
+	      var curWeekDay = startDate.getDay();
+
+	      // begin date of this table may be some day of last month
+	      var diff = parseInt(this.firstDay) - curWeekDay;
+	      diff = diff > 0 ? diff - 7 : diff;
+
+	      startDate.setDate(startDate.getDate() + diff);
+	      var calendar = [];
+
+	      for (var perWeek = 0; perWeek < 6; perWeek++) {
+
+	        var week = [];
+
+	        for (var perDay = 0; perDay < 7; perDay++) {
+	          week.push({
+	            monthDay: startDate.getDate(),
+	            isToday: now.toDateString() == startDate.toDateString(),
+	            isCurMonth: startDate.getMonth() == current.getMonth(),
+	            weekDay: perDay,
+	            date: new Date(startDate),
+	            events: this.slotEvents(startDate)
+	          });
+
+	          startDate.setDate(startDate.getDate() + 1);
+	          // if (startDate.toDateString() == endDate.toDateString()) {
+	          //   isFinal = true
+	          //   break
+	          // }
+	        }
+	        calendar.push(week);
+	        // if (isFinal) break
+	      }
+	      return calendar;
+	    },
+	    slotEvents: function slotEvents(date) {
+
+	      // find all events start from this date
+	      var cellIndexArr = [];
+	      var thisDayEvents = this.events.filter(function (day) {
+	        var dt = new Date(day.start);
+	        var st = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate());
+	        var ed = day.end ? new Date(day.end) : st;
+	        // console.log('slotEvt', st, ed, date)
+	        return date >= st && date <= ed;
+	      });
+
+	      // sort by duration
+	      thisDayEvents.sort(function (a, b) {
+	        if (!a.cellIndex) return 1;
+	        if (!b.cellIndex) return -1;
+	        return a.cellIndex - b.cellIndex;
+	      });
+
+	      // mark cellIndex and place holder
+	      for (var i = 0; i < thisDayEvents.length; i++) {
+	        thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || i + 1;
+	        thisDayEvents[i].isShow = true;
+	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) continue;
+	        thisDayEvents.splice(i, 0, {
+	          title: 'holder',
+	          cellIndex: i + 1,
+	          start: _dateFunc2.default.format(date, 'yyyy-MM-dd'),
+	          end: _dateFunc2.default.format(date, 'yyyy-MM-dd'),
+	          isShow: false
+	        });
+	      }
+
+	      return thisDayEvents;
+	    },
+	    isStart: function isStart(eventDate, date) {
+	      var st = new Date(eventDate);
+	      return st.toDateString() == date.toDateString();
+	    },
+	    isEnd: function isEnd(eventDate, date) {
+	      var ed = new Date(eventDate);
+	      return ed.toDateString() == date.toDateString();
+	    },
+	    selectThisDay: function selectThisDay(day, jsEvent) {
+	      this.selectDay = day;
+	      this.showMore = true;
+	      this.morePos = this.computePos(event.target);
+	      this.morePos.top -= 100;
+	      var events = day.events.filter(function (item) {
+	        return item.isShow == true;
+	      });
+	      this.$emit('moreclick', day.date, events, jsEvent);
+	    },
+	    computePos: function computePos(target) {
+	      var eventRect = target.getBoundingClientRect();
+	      var pageRect = this.$refs.dates.getBoundingClientRect();
+	      return {
+	        left: eventRect.left - pageRect.left,
+	        top: eventRect.top + eventRect.height - pageRect.top
+	      };
+	    },
+	    dayClick: function dayClick(day, jsEvent) {
+	      this.$emit('dayclick', day, jsEvent);
+	    },
+	    eventClick: function eventClick(event, jsEvent) {
+	      if (!event.isShow) {
+	        return;
+	      }
+	      jsEvent.stopPropagation();
+	      var pos = this.computePos(jsEvent.target);
+	      this.$emit('eventclick', event, jsEvent, pos);
+	    }
+	  }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var shortMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	var defMonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+	var dateFunc = {
+	    getDuration: function getDuration(date) {
+	        // how many days of this month
+	        var dt = new Date(date);
+	        var month = dt.getMonth();
+	        dt.setMonth(dt.getMonth() + 1);
+	        dt.setDate(0);
+	        return dt.getDate();
+	    },
+	    changeDay: function changeDay(date, num) {
+	        var dt = new Date(date);
+	        return new Date(dt.setDate(dt.getDate() + num));
+	    },
+	    getStartDate: function getStartDate(date) {
+	        // return first day of this month
+	        return new Date(date.getFullYear(), date.getMonth(), 1);
+	    },
+	    getEndDate: function getEndDate(date) {
+	        // get last day of this month
+	        var dt = new Date(date.getFullYear(), date.getMonth() + 1, 1); // 1st day of next month
+	        return new Date(dt.setDate(dt.getDate() - 1)); // last day of this month
+	    },
+	    format: function format(date, _format, monthNames) {
+	        monthNames = monthNames || defMonthNames;
+	        if (typeof date === 'string') {
+	            date = new Date(date.replace(/-/g, '/'));
+	        } else {
+	            date = new Date(date);
+	        }
+
+	        var map = {
+	            'M': date.getMonth() + 1,
+	            'd': date.getDate(),
+	            'h': date.getHours(),
+	            'm': date.getMinutes(),
+	            's': date.getSeconds(),
+	            'q': Math.floor((date.getMonth() + 3) / 3),
+	            'S': date.getMilliseconds()
+	        };
+
+	        _format = _format.replace(/([yMdhmsqS])+/g, function (all, t) {
+	            var v = map[t];
+	            if (v !== undefined) {
+	                if (all === 'MMMM') {
+	                    return monthNames[v - 1];
+	                }
+	                if (all === 'MMM') {
+	                    return shortMonth[v - 1];
+	                }
+	                if (all.length > 1) {
+	                    v = '0' + v;
+	                    v = v.substr(v.length - 2);
+	                }
+	                return v;
+	            } else if (t === 'y') {
+	                return String(date.getFullYear()).substr(4 - all.length);
+	            }
+	            return all;
+	        });
+	        return _format;
+	    }
+	};
+
+	module.exports = dateFunc;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
+	    staticClass: "full-calendar-body"
+	  }, [_c('div', {
+	    staticClass: "weeks"
+	  }, _vm._l((_vm.weekNames), function(week) {
+	    return _c('strong', {
+	      staticClass: "week"
+	    }, [_vm._v(_vm._s(week))])
+	  })), _vm._v(" "), _c('div', {
+	    ref: "dates",
+	    staticClass: "dates"
+	  }, [_c('div', {
+	    staticClass: "dates-bg"
+	  }, _vm._l((_vm.currentDates), function(week) {
+	    return _c('div', {
+	      staticClass: "week-row"
+	    }, _vm._l((week), function(day) {
+	      return _c('div', {
+	        staticClass: "day-cell",
+	        class: {
+	          'today': day.isToday,
+	            'not-cur-month': !day.isCurMonth
+	        }
+	      }, [_c('p', {
+	        staticClass: "day-number"
+	      }, [_vm._v(_vm._s(day.monthDay))])])
+	    }))
+	  })), _vm._v(" "), _c('div', {
+	    staticClass: "dates-events"
+	  }, _vm._l((_vm.currentDates), function(week) {
+	    return _c('div', {
+	      staticClass: "events-week"
+	    }, _vm._l((week), function(day) {
+	      return _c('div', {
+	        staticClass: "events-day",
+	        class: {
+	          'today': day.isToday,
+	            'not-cur-month': !day.isCurMonth
+	        },
+	        attrs: {
+	          "track-by": "$index"
+	        },
+	        on: {
+	          "click": function($event) {
+	            $event.stopPropagation();
+	            _vm.dayClick(day.date, $event)
+	          }
+	        }
+	      }, [_c('p', {
+	        staticClass: "day-number"
+	      }, [_vm._v(_vm._s(day.monthDay))]), _vm._v(" "), _c('div', {
+	        staticClass: "event-box"
+	      }, [_vm._l((day.events), function(event) {
+	        return _c('p', {
+	          directives: [{
+	            name: "show",
+	            rawName: "v-show",
+	            value: (event.cellIndex <= _vm.eventLimit),
+	            expression: "event.cellIndex <= eventLimit"
+	          }],
+	          staticClass: "event-item",
+	          class: [_vm.classNames(event.cssClass), {
+	            'is-start': _vm.isStart(event.start, day.date),
+	            'is-end': _vm.isEnd(event.end, day.date),
+	            'is-opacity': !event.isShow
+	          }],
+	          on: {
+	            "click": function($event) {
+	              _vm.eventClick(event, $event)
+	            }
+	          }
+	        }, [_vm._v("\n              " + _vm._s(_vm.isBegin(event, day.date, day.weekDay)) + "\n            ")])
+	      }), _vm._v(" "), (day.events.length > _vm.eventLimit) ? _c('p', {
+	        staticClass: "more-link",
+	        on: {
+	          "click": function($event) {
+	            $event.stopPropagation();
+	            _vm.selectThisDay(day, $event)
+	          }
+	        }
+	      }, [_vm._v("\n              + " + _vm._s(day.events[day.events.length - 1].cellIndex - _vm.eventLimit) + " more\n            ")]) : _vm._e()], 2)])
+	    }))
+	  })), _vm._v(" "), _c('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (_vm.showMore),
+	      expression: "showMore"
+	    }],
+	    staticClass: "more-events",
+	    style: ({
+	      left: _vm.morePos.left + 'px',
+	      top: _vm.morePos.top + 'px'
+	    })
+	  }, [_c('div', {
+	    staticClass: "more-header"
+	  }, [_c('span', {
+	    staticClass: "title"
+	  }, [_vm._v(_vm._s(_vm.moreTitle(_vm.selectDay.date)))]), _vm._v(" "), _c('span', {
+	    staticClass: "close",
+	    on: {
+	      "click": function($event) {
+	        $event.stopPropagation();
+	        _vm.showMore = false
+	      }
+	    }
+	  }, [_vm._v("x")])]), _vm._v(" "), _c('div', {
+	    staticClass: "more-body"
+	  }, [_c('ul', {
+	    staticClass: "body-list"
+	  }, _vm._l((_vm.selectDay.events), function(event) {
+	    return _c('li', {
+	      directives: [{
+	        name: "show",
+	        rawName: "v-show",
+	        value: (event.isShow),
+	        expression: "event.isShow"
+	      }],
+	      staticClass: "body-item",
+	      on: {
+	        "click": function($event) {
+	          _vm.eventClick(event, $event)
+	        }
+	      }
+	    }, [_vm._v("\n            " + _vm._s(event.title) + "\n          ")])
+	  }))])]), _vm._v(" "), _vm._t("body-card")], 2)])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {}
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* styles */
+	__webpack_require__(15)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(17)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(18)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/SunnyWang/code/vue-fullcalendar/src/components/header.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {}
+	if (__vue_options__.functional) {console.error("[vue-loader] header.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(16);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _dateFunc = __webpack_require__(12);
+
+	var _dateFunc2 = _interopRequireDefault(_dateFunc);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  created: function created() {
+	    this.dispatchEvent();
+	  },
+
+	  props: {
+	    currentDate: {},
+	    titleFormat: {},
+	    firstDay: {},
+	    monthNames: {}
+	  },
+	  data: function data() {
+	    return {
+	      title: '',
+	      leftArrow: '<',
+	      rightArrow: '>',
+	      headDate: new Date()
+	    };
+	  },
+
+	  watch: {
+	    currentDate: function currentDate(val) {
+	      if (!val) return;
+	      this.headDate = val;
+	      console.log('currentDate', val);
+	      // this.headDate = JSON.parse(JSON.stringify(val))
+	    }
+	  },
+	  methods: {
+	    goPrev: function goPrev() {
+	      this.headDate = this.changeMonth(this.headDate, -1);
+	      this.dispatchEvent();
+	    },
+	    goNext: function goNext() {
+	      this.headDate = this.changeMonth(this.headDate, 1);
+	      this.dispatchEvent();
+	    },
+	    changeMonth: function changeMonth(date, num) {
+	      var dt = new Date(date);
+	      return new Date(dt.setMonth(dt.getMonth() + num));
+	    },
+	    dispatchEvent: function dispatchEvent() {
+	      this.title = _dateFunc2.default.format(this.headDate, this.titleFormat, this.monthNames);
+
+	      var startDate = _dateFunc2.default.getStartDate(this.headDate);
+	      var curWeekDay = startDate.getDay();
+
+	      // 1st day of this monthView
+	      var diff = parseInt(this.firstDay) - curWeekDay;
+	      if (diff) diff -= 7;
+	      startDate.setDate(startDate.getDate() + diff);
+
+	      // the month view is 6*7
+	      var endDate = _dateFunc2.default.changeDay(startDate, 41);
+
+	      // 1st day of current month
+	      var currentDate = _dateFunc2.default.getStartDate(this.headDate);
+
+	      this.$emit('change', _dateFunc2.default.format(startDate, 'yyyy-MM-dd'), _dateFunc2.default.format(endDate, 'yyyy-MM-dd'), _dateFunc2.default.format(currentDate, 'yyyy-MM-dd'), this.headDate);
+	    }
+	  }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
+	    staticClass: "full-calendar-header"
+	  }, [_c('div', {
+	    staticClass: "header-left"
+	  }, [_vm._t("header-left")], 2), _vm._v(" "), _c('div', {
+	    staticClass: "header-center"
+	  }, [_c('span', {
+	    staticClass: "prev-month",
+	    on: {
+	      "click": function($event) {
+	        $event.stopPropagation();
+	        _vm.goPrev($event)
+	      }
+	    }
+	  }, [_vm._v(_vm._s(_vm.leftArrow))]), _vm._v(" "), _c('span', {
+	    staticClass: "title"
+	  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('span', {
+	    staticClass: "next-month",
+	    on: {
+	      "click": function($event) {
+	        $event.stopPropagation();
+	        _vm.goNext($event)
+	      }
+	    }
+	  }, [_vm._v(_vm._s(_vm.rightArrow))])]), _vm._v(" "), _c('div', {
+	    staticClass: "header-right"
+	  }, [_vm._t("header-right")], 2)])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
+	    staticClass: "comp-full-calendar"
+	  }, [_c('fc-header', {
+	    attrs: {
+	      "current-date": _vm.currentDate,
+	      "title-format": _vm.titleFormat,
+	      "first-day": _vm.firstDay,
+	      "month-names": _vm.monthNames
+	    },
+	    on: {
+	      "change": _vm.emitChangeMonth
+	    }
+	  }, [_c('div', {
+	    slot: "header-left"
+	  }, [_vm._t("fc-header-left")], 2), _vm._v(" "), _c('div', {
+	    slot: "header-right"
+	  }, [_vm._t("fc-header-right")], 2)]), _vm._v(" "), _c('fc-body', {
+	    attrs: {
+	      "current-date": _vm.currentDate,
+	      "events": _vm.events,
+	      "month-names": _vm.monthNames,
+	      "week-names": _vm.weekNames,
+	      "first-day": _vm.firstDay
+	    },
+	    on: {
+	      "eventclick": _vm.emitEventClick,
+	      "dayclick": _vm.emitDayClick,
+	      "moreclick": _vm.emitMoreClick
+	    }
+	  }, [_c('div', {
+	    slot: "body-card"
+	  }, [_vm._t("fc-body-card")], 2)])], 1)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {}
+
+/***/ }
+/******/ ])
+});
+;
+
+/***/ })
+
+}]);
 //# sourceMappingURL=chunk-2d22dbe3.js.map
