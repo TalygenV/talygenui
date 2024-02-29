@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/Manage.vue?vue&type=template&id=068ef161&lang=en&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/ProductAssignment/Manage.vue?vue&type=template&id=1a730963&lang=en&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -46,7 +46,8 @@ var render = function render() {
     }
   }, [_c('Form', {
     ref: "ProductAssignmentForm"
-  }, [_vm.DataLoaded ? _c('dynamic-form', {
+  }, [_c('dynamic-form', {
+    ref: "FieldUpdate",
     attrs: {
       "lang": "en",
       "buttons": _vm.buttons,
@@ -171,8 +172,8 @@ var render = function render() {
           }
         })], 1)];
       }
-    }], null, false, 2807110943)
-  }) : _vm._e()], 1), _vm.DataLoaded ? _c('SearchAsset', {
+    }])
+  })], 1), _vm.DataLoaded ? _c('SearchAsset', {
     attrs: {
       "GetParentDetails": _vm.GetParentDetails
     },
@@ -218,7 +219,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/ProductAssignment/Manage.vue?vue&type=template&id=068ef161&lang=en&
+// CONCATENATED MODULE: ./src/views/ProductAssignment/Manage.vue?vue&type=template&id=1a730963&lang=en&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -270,18 +271,21 @@ var luxon = __webpack_require__("1315");
       buttons: [],
       pendingItem: '',
       checkAvailability: '',
+      dept_ids: '',
       FormSchema: [{
         layoutType: "four",
         Data: [{
-          astype: "SelectField",
+          astype: "MultiSelectField",
           label: this.$t('Departments'),
           name: "Departments",
+          mode: "tag",
           value: "",
           placeholder: "",
           disabled: false,
           config: {
             options: [],
-            onChange: this.GetCompanyUsers
+            onChange: this.GetCompanyUsers,
+            onRemove: this.removeRecord
           },
           validationRules: {
             "required": false
@@ -380,7 +384,9 @@ var luxon = __webpack_require__("1315");
           }
         }]
       }],
-      Timezone: ''
+      Timezone: '',
+      departmentData: [],
+      TagsSelectedArray: []
     };
   },
   created: async function () {
@@ -398,11 +404,19 @@ var luxon = __webpack_require__("1315");
     if (this.$route.params.reqForm == 'myitems') {
       this.FormSchema[0].Data[2].value = this.UserId;
     } else if (this.$route.params.reqForm == 'pendingRequest') {
-      // debugger          
+      debugger;
       this.pendingItem = this.$route.params.items;
       if (this.pendingItem != null && this.pendingItem != '' && this.pendingItem != 'undefined') {
         this.FormSchema[0].Data[2].value = this.pendingItem.USER_ID;
-        this.FormSchema[0].Data[0].value = this.pendingItem.DEPARTMENT_ID;
+
+        //(this.FormSchema)[0].Data[0].value = this.pendingItem.DEPARTMENT_ID;
+
+        let obj = this.departmentData.find(x => x.department_id == this.pendingItem.DEPARTMENT_ID);
+        this.TagsSelectedArray.push({
+          label: obj.department_name,
+          value: obj.department_id
+        });
+        this.FormSchema[0].Data[0].value = this.TagsSelectedArray;
         this.DateofAssignment = this.pendingItem.FROM_TIME;
         this.DateofAssignmentTill = this.pendingItem.TO_TIME;
       }
@@ -453,9 +467,11 @@ var luxon = __webpack_require__("1315");
       }
     },
     GetDepartment: async function () {
+      var vm = this;
       let url = `includeInactiveStatus=true&isTicketHandler=false`;
       await DataService["a" /* default */].GetDepartment(url).then(response => {
-        response.data.forEach(item => {
+        vm.departmentData = response.data;
+        vm.departmentData.forEach(item => {
           this.FormSchema[0].Data[0].config.options.push({
             name: `${item.department_name}`,
             value: `${item.department_id}`
@@ -478,7 +494,19 @@ var luxon = __webpack_require__("1315");
       var vm = this;
       vm.FormSchema[0].Data[2].config.options = [];
       vm.isLoading = true;
-      var department_ids = vm.FormSchema[0].Data[0].value;
+      var department_ids = ''; // (vm.FormSchema)[0].Data[0].value;
+
+      if (vm.FormSchema[0].Data[0].value.length > 0) {
+        vm.FormSchema[0].Data[0].value.forEach(item => {
+          department_ids += item.value + ',';
+        });
+      }
+      this.FormSchema[0].Data[0].config.options.forEach(item => {
+        if (event.currentTarget.textContent == item.name) {
+          department_ids += item.value;
+        }
+      });
+      vm.dept_ids = department_ids;
       let url = `moduleName=ASSETASSIGNMENT&department_ids=${department_ids}`;
       await DataService["a" /* default */].GetCompanyUsers(url).then(response => {
         this.UsersData = response.data;
@@ -488,6 +516,35 @@ var luxon = __webpack_require__("1315");
             value: `${item.USER_ID}`
           });
           vm.isLoading = false;
+          this.$refs.FieldUpdate.UpdateKeyValue();
+        });
+        if (response.data.length <= 0) {
+          this.FormSchema[0].Data[2].config.options = [];
+          vm.isLoading = false;
+        }
+      });
+    },
+    removeRecord: async function (event, field, meta) {
+      var vm = this;
+      vm.isLoading = true;
+      const department_ids = [];
+      vm.FormSchema[0].Data[0].value.forEach(item => {
+        debugger;
+        if (item.value != event.value) {
+          department_ids.push(item.value);
+        }
+      });
+      let url = `moduleName=ASSETASSIGNMENT&department_ids=${department_ids.toString()}`;
+      await DataService["a" /* default */].GetCompanyUsers(url).then(response => {
+        this.UsersData = response.data;
+        this.FormSchema[0].Data[2].config.options = [];
+        response.data.forEach(item => {
+          this.FormSchema[0].Data[2].config.options.push({
+            name: `${item.USERNAME}`,
+            value: `${item.USER_ID}`
+          });
+          vm.isLoading = false;
+          this.$refs.FieldUpdate.UpdateKeyValue();
         });
         if (response.data.length <= 0) {
           this.FormSchema[0].Data[2].config.options = [];
@@ -527,11 +584,16 @@ var luxon = __webpack_require__("1315");
       this.dataArray = AssestArrayData;
     },
     SubmitData: function () {
+      var _vm$$children$;
       debugger;
       var vm = this;
-      //var RequstionList=vm.$children[1].$children[1].$children[3].GetRequstionList;
-      var RequstionList = vm.$children[2].$children[3].GetRequstionList;
-      //debugger   
+      var DateAssignment = new Date(Date.parse(vm.DateofAssignment));
+      var DateTill = new Date(Date.parse(vm.DateofAssignmentTill));
+      if (!(DateAssignment <= DateTill)) {
+        vm.ShowAlert(vm.$t("DateAssignTillMsg"), "failure", vm.$t('Alert'));
+        return false;
+      }
+      var RequstionList = (_vm$$children$ = vm.$children[2]) === null || _vm$$children$ === void 0 || (_vm$$children$ = _vm$$children$.$children[3]) === null || _vm$$children$ === void 0 ? void 0 : _vm$$children$.GetRequstionList;
       if (vm.FormSchema[0].Data[1].value == 'Client') {
         vm.$refs.ProductAssignmentForm.fields.Departments.failed = false;
         vm.FormSchema[0].Data[0].validationRules.required = false;
@@ -574,19 +636,22 @@ var luxon = __webpack_require__("1315");
             return false;
           }
           //debugger
-          RequstionList.forEach(itm => {
-            var obj = {
-              "AssetCatalogUniqueId": itm.ChildUniqueId,
-              "RequestFromRequsition": 1,
-              "IsGroup": null,
-              "ParentAssetCatalogUniqueId": itm.ChildUniqueId,
-              "AssetQuantity": itm.RequestQuantity,
-              "RequestQuantity": itm.RequestQuantity,
-              "BatchId": itm.RequisitionBatchId,
-              "AssetUniqueName": itm.ChildUniqueName
-            };
-            vm.dataArray.push(obj);
-          });
+
+          if (RequstionList != undefined) {
+            RequstionList.forEach(itm => {
+              var obj = {
+                "AssetCatalogUniqueId": itm.ChildUniqueId,
+                "RequestFromRequsition": 1,
+                "IsGroup": null,
+                "ParentAssetCatalogUniqueId": itm.ChildUniqueId,
+                "AssetQuantity": itm.RequestQuantity,
+                "RequestQuantity": itm.RequestQuantity,
+                "BatchId": itm.RequisitionBatchId,
+                "AssetUniqueName": itm.ChildUniqueName
+              };
+              vm.dataArray.push(obj);
+            });
+          }
           var mainObj = {
             UserId: vm.FormSchema[0].Data[1].value == 'Client' ? vm.FormSchema[0].Data[3].value : vm.FormSchema[0].Data[2].value,
             DepartmentId: vm.FormSchema[0].Data[0].value,
