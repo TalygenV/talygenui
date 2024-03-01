@@ -114,7 +114,7 @@ var update = add("ddc80d10", content, true, {"sourceMap":false,"shadowMode":fals
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/Dashboard.vue?vue&type=template&id=7d4924fe&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/Dashboard.vue?vue&type=template&id=7d4924fe&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -327,7 +327,7 @@ var staticRenderFns = [function () {
 // EXTERNAL MODULE: ./src/service/DataService.js + 1 modules
 var DataService = __webpack_require__("1115");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/WidgetReport.vue?vue&type=template&id=69792375&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/WidgetReport.vue?vue&type=template&id=69792375&
 var WidgetReportvue_type_template_id_69792375_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -447,7 +447,7 @@ var WidgetReportvue_type_template_id_69792375_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/views/Asset/Dashboard/WidgetReport.vue?vue&type=template&id=69792375&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/BarChart.vue?vue&type=template&id=84fd00bc&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/BarChart.vue?vue&type=template&id=84fd00bc&
 var BarChartvue_type_template_id_84fd00bc_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -684,7 +684,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var BarChart = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/PieChart.vue?vue&type=template&id=1fdba839&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/PieChart.vue?vue&type=template&id=1fdba839&
 var PieChartvue_type_template_id_1fdba839_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -895,8 +895,8 @@ var PieChart_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var PieChart = (PieChart_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/Reports.vue?vue&type=template&id=29ab7732&
-var Reportsvue_type_template_id_29ab7732_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/Reports.vue?vue&type=template&id=382494e7&
+var Reportsvue_type_template_id_382494e7_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('transition', {
@@ -1025,9 +1025,9 @@ var Reportsvue_type_template_id_29ab7732_render = function render() {
     }
   }, [_vm._v("Close")])])])])])]);
 };
-var Reportsvue_type_template_id_29ab7732_staticRenderFns = [];
+var Reportsvue_type_template_id_382494e7_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/Asset/Dashboard/Reports.vue?vue&type=template&id=29ab7732&
+// CONCATENATED MODULE: ./src/views/Asset/Dashboard/Reports.vue?vue&type=template&id=382494e7&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/Reports.vue?vue&type=script&lang=js&
 
@@ -1058,7 +1058,14 @@ var Reportsvue_type_template_id_29ab7732_staticRenderFns = [];
       vm.isLoading = true;
       DataService["a" /* default */].GetReports('moduleName=' + vm.moduleName).then(function (response) {
         vm.isLoading = false;
+        //debugger
         vm.widgets = response.data.list;
+        $('.checkAllClass').attr("checked", true);
+        vm.widgets.forEach(evt => {
+          if (evt.isselected == 0) {
+            $('.checkAllClass').attr("checked", false);
+          }
+        });
       });
     },
     onChange() {},
@@ -1120,8 +1127,8 @@ var Reportsvue_type_template_id_29ab7732_staticRenderFns = [];
 
 var Reports_component = Object(componentNormalizer["a" /* default */])(
   Dashboard_Reportsvue_type_script_lang_js_,
-  Reportsvue_type_template_id_29ab7732_render,
-  Reportsvue_type_template_id_29ab7732_staticRenderFns,
+  Reportsvue_type_template_id_382494e7_render,
+  Reportsvue_type_template_id_382494e7_staticRenderFns,
   false,
   null,
   null,
@@ -1130,7 +1137,7 @@ var Reports_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Reports = (Reports_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/DateRange.vue?vue&type=template&id=a3b0e6fa&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/Dashboard/DateRange.vue?vue&type=template&id=a3b0e6fa&
 var DateRangevue_type_template_id_a3b0e6fa_render = function render() {
   var _vm = this,
     _c = _vm._self._c;

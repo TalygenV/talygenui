@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0406b7ca-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/AssetGroupingList.vue?vue&type=template&id=4d382e5a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d9d9c84c-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Asset/AssetGroupingList.vue?vue&type=template&id=79192586&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -93,7 +93,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/Asset/AssetGroupingList.vue?vue&type=template&id=4d382e5a&
+// CONCATENATED MODULE: ./src/views/Asset/AssetGroupingList.vue?vue&type=template&id=79192586&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -320,6 +320,8 @@ async function bindleftCommonSearchdropdown(instance, modulename, filtername) {
             vm.TotalPages = Math.ceil(vm.TotalRecords / vm.PageSize);
             vm.CurrentPage = vm.PageNumber;
             vm.noRecord = false;
+            $("[id^='chkAll']").prop("checked", false).removeAttr('checked');
+            $('.chkItems:checkbox:checked').prop("checked", false).removeAttr('checked');
           } else {
             vm.noRecord = true;
             vm.AssetGroupingList = [];
@@ -458,7 +460,6 @@ async function bindleftCommonSearchdropdown(instance, modulename, filtername) {
     },
     actionButtonClick() {},
     DeleteContainer: function () {
-      debugger;
       var vm = this;
       var val = "";
       $('.chkItems:checkbox:checked').not("[id^='chkAll']").each(function () {
