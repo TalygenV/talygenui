@@ -765,8 +765,8 @@ var MoadalAdvanceSetupvue_type_template_id_5c56bf65_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/views/AdvancedSetup/MoadalAdvanceSetup.vue?vue&type=template&id=5c56bf65&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=f011c002&
-var Configurationvue_type_template_id_f011c002_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=ffac8456&
+var Configurationvue_type_template_id_ffac8456_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1683,7 +1683,7 @@ var Configurationvue_type_template_id_f011c002_render = function render() {
     }], null, false, 4000512832)
   })], 1)])])]), _vm._m(3)])])])]) : _vm._e()])]);
 };
-var Configurationvue_type_template_id_f011c002_staticRenderFns = [function () {
+var Configurationvue_type_template_id_ffac8456_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1734,7 +1734,7 @@ var Configurationvue_type_template_id_f011c002_staticRenderFns = [function () {
   })])]);
 }];
 
-// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=f011c002&
+// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=ffac8456&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1819,6 +1819,7 @@ var DataService = __webpack_require__("1115");
   },
   created: function () {
     var vm = this;
+    vm.containerName = vm.GetUserInfo.ContainerName;
     vm.GetConfigurationData();
     vm.GetTimeZone();
     vm.GetCurrency();
@@ -2034,8 +2035,8 @@ var DataService = __webpack_require__("1115");
       vm.objData = [];
       let imgObj = {};
       var textValues = $('div#ulKeysContainer input:text,div#ulKeysContainer select,div#ulKeysContainer textarea,div#ulKeysContainer input:password'); //get all textboxes,textarea and drop down list from config list
-      var checkBoxValues = $('div#radios').find("input[type='radio']"); //get all div contains checkboxes from config list
-      var checkBoxValues = $('div#ulKeysContainer div[type="checkbox"], div#ulKeysContainer div[type="radiobutton"]');
+      // var checkBoxValues = $('div#radios').find("input[type='radio']"); //get all div contains checkboxes from config list
+      // var checkBoxValues = $('div#ulKeysContainer div[type="checkbox"], div#ulKeysContainer div[type="radiobutton"]');
       var imageControl = $('#flFile').val();
       if (imageControl != undefined) {
         var splitimage = imageControl.split('\\')[2];
@@ -2054,7 +2055,7 @@ var DataService = __webpack_require__("1115");
         vm.objData.push(imgObj);
       }
       for (var i = 0; i < textValues.length; i++) {
-        if ($(textValues[i]).attr('keys') != undefined) {
+        if ($(textValues[i]).attr('keys') != undefined && $(textValues[i]).val() != '') {
           var textValue = $(textValues[i]).val().trim();
           if ($(textValues[i]).val().trim() == '') {
             if ($(textValues[i]).attr("class").indexOf("notrequired") == -1) {
@@ -2071,23 +2072,24 @@ var DataService = __webpack_require__("1115");
           vm.objData.push(objStorageConfigData);
         }
       }
-      for (var i = 0; i < checkBoxValues.length; i++) {
-        var getSelectedvalues = '';
-        if ($(checkBoxValues[i]).attr('keys') != undefined && $(checkBoxValues[i]).attr('keys') != 'undefined') {
-          if ($(checkBoxValues[i]).attr('type') == 'radiobutton') {
-            var combinedName = "config" + i;
-            //getSelectedvalues = $("input[name='"+combinedName+"']:checked").val();
-            getSelectedvalues = $(checkBoxValues[i]).find('input:radio:checked').val();
-          }
-          let radioConfigDatas = {
-            DataId: $(checkBoxValues[i]).attr('keys'),
-            DataValue: getSelectedvalues
-          };
-          vm.objData.push(radioConfigDatas);
-          let jsonObject = vm.objData.map(JSON.stringify);
-          let uniqueSet = new Set(jsonObject);
-        }
-      }
+      // for (var i = 0; i < checkBoxValues.length; i++) {
+      //   var getSelectedvalues = '';
+      //   if ($(checkBoxValues[i]).attr('keys') != undefined && $(checkBoxValues[i]).attr('keys') != 'undefined') {
+      //     if ($(checkBoxValues[i]).attr('type') == 'radiobutton') {
+      //       var combinedName = ("config" + i);
+      //       //getSelectedvalues = $("input[name='"+combinedName+"']:checked").val();
+      //       getSelectedvalues = $(checkBoxValues[i]).find('input:radio:checked').val();
+      //     }
+      //     let radioConfigDatas = {
+      //       DataId: $(checkBoxValues[i]).attr('keys'),
+      //       DataValue: getSelectedvalues
+      //     }
+      //     vm.objData.push(radioConfigDatas);
+      //     let jsonObject = vm.objData.map(JSON.stringify);
+      //     let uniqueSet = new Set(jsonObject);
+      //   }
+
+      // }
       vm.allConfigObject = JSON.stringify(vm.objData);
       var error = $('.is-invalid');
       const formdata = new FormData();
@@ -2109,6 +2111,7 @@ var DataService = __webpack_require__("1115");
           vm.isLoading = true;
           if (response.data == 1) {
             vm.ShowAlert("Record(s) has been successfully saved.");
+            vm.GetProductConfigData();
             vm.attachmentDiv = '';
             vm.isLoading = false;
             vm.GetConfigurationData();
@@ -2127,14 +2130,15 @@ var DataService = __webpack_require__("1115");
       this.arrayGetFileDetails = e.target.files[0];
     },
     GetBlobUrl: function () {
+      var vm = this;
       DataService["a" /* default */].GetBlobUrl().then(response => {
         var url = response.data[0].CONFIG_DATA_VALUE;
         var usertype = this.UserType;
-        if (this.imgPath == "COMPANY-LOGO.JPG") {
-          this.blobUrl = "/Content/images/DefaultImages/company-logo.jpg";
+        if (vm.imgPath.toUpperCase() == "COMPANY-LOGO.JPG") {
+          vm.blobUrl = 'http://localhost:9000/' + '/Content/images/DefaultImages/company-logo.jpg';
         }
-        if (usertype == "CA" && this.imgPath != "COMPANY-LOGO.JPG") {
-          this.blobUrl = url + '/' + this.containerName + '/' + 'Upload' + '/' + 'CompanyLogo' + '/' + this.imgPath;
+        if (usertype == "CA" && this.imgPath.toUpperCase() != "COMPANY-LOGO.JPG") {
+          vm.blobUrl = url + '/' + this.containerName + '/' + 'Upload' + '/' + 'CompanyLogo' + '/' + vm.imgPath;
         }
       });
     },
@@ -2171,8 +2175,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   AdvancedSetup_Configurationvue_type_script_lang_js_,
-  Configurationvue_type_template_id_f011c002_render,
-  Configurationvue_type_template_id_f011c002_staticRenderFns,
+  Configurationvue_type_template_id_ffac8456_render,
+  Configurationvue_type_template_id_ffac8456_staticRenderFns,
   false,
   null,
   null,
