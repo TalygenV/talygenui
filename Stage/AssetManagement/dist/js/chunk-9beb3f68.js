@@ -765,8 +765,8 @@ var MoadalAdvanceSetupvue_type_template_id_5c56bf65_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/views/AdvancedSetup/MoadalAdvanceSetup.vue?vue&type=template&id=5c56bf65&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=ffac8456&
-var Configurationvue_type_template_id_ffac8456_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=267bc600&
+var Configurationvue_type_template_id_267bc600_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1683,7 +1683,7 @@ var Configurationvue_type_template_id_ffac8456_render = function render() {
     }], null, false, 4000512832)
   })], 1)])])]), _vm._m(3)])])])]) : _vm._e()])]);
 };
-var Configurationvue_type_template_id_ffac8456_staticRenderFns = [function () {
+var Configurationvue_type_template_id_267bc600_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1734,7 +1734,7 @@ var Configurationvue_type_template_id_ffac8456_staticRenderFns = [function () {
   })])]);
 }];
 
-// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=ffac8456&
+// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=267bc600&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -2031,17 +2031,18 @@ var DataService = __webpack_require__("1115");
       });
     },
     SaveConfiguration: async function (values, error) {
+      debugger;
       var vm = this;
       vm.objData = [];
       let imgObj = {};
       var textValues = $('div#ulKeysContainer input:text,div#ulKeysContainer select,div#ulKeysContainer textarea,div#ulKeysContainer input:password'); //get all textboxes,textarea and drop down list from config list
-      // var checkBoxValues = $('div#radios').find("input[type='radio']"); //get all div contains checkboxes from config list
-      // var checkBoxValues = $('div#ulKeysContainer div[type="checkbox"], div#ulKeysContainer div[type="radiobutton"]');
+      var checkBoxValues = $('div#radios').find("input[type='radio']"); //get all div contains checkboxes from config list
+      var checkBoxValues = $('div#ulKeysContainer div[type="checkbox"], div#ulKeysContainer div[type="radiobutton"]');
       var imageControl = $('#flFile').val();
       if (imageControl != undefined) {
         var splitimage = imageControl.split('\\')[2];
       }
-      if (splitimage != undefined && vm.defaultCompanyLogo == null) {
+      if (splitimage != undefined && (vm.defaultCompanyLogo == null || vm.defaultCompanyLogo == 'COMPANY-LOGO.JPG')) {
         imgObj = {
           DataId: vm.CompanyLogoCoreConfigId,
           DataValue: splitimage == undefined ? this.imgPath : splitimage
@@ -2072,24 +2073,23 @@ var DataService = __webpack_require__("1115");
           vm.objData.push(objStorageConfigData);
         }
       }
-      // for (var i = 0; i < checkBoxValues.length; i++) {
-      //   var getSelectedvalues = '';
-      //   if ($(checkBoxValues[i]).attr('keys') != undefined && $(checkBoxValues[i]).attr('keys') != 'undefined') {
-      //     if ($(checkBoxValues[i]).attr('type') == 'radiobutton') {
-      //       var combinedName = ("config" + i);
-      //       //getSelectedvalues = $("input[name='"+combinedName+"']:checked").val();
-      //       getSelectedvalues = $(checkBoxValues[i]).find('input:radio:checked').val();
-      //     }
-      //     let radioConfigDatas = {
-      //       DataId: $(checkBoxValues[i]).attr('keys'),
-      //       DataValue: getSelectedvalues
-      //     }
-      //     vm.objData.push(radioConfigDatas);
-      //     let jsonObject = vm.objData.map(JSON.stringify);
-      //     let uniqueSet = new Set(jsonObject);
-      //   }
-
-      // }
+      for (var i = 0; i < checkBoxValues.length; i++) {
+        var getSelectedvalues = '';
+        if ($(checkBoxValues[i]).attr('keys') != undefined && $(checkBoxValues[i]).attr('keys') != 'undefined') {
+          if ($(checkBoxValues[i]).attr('type') == 'radiobutton') {
+            var combinedName = "config" + i;
+            //getSelectedvalues = $("input[name='"+combinedName+"']:checked").val();
+            getSelectedvalues = $(checkBoxValues[i]).find('input:radio:checked').val();
+          }
+          let radioConfigDatas = {
+            DataId: $(checkBoxValues[i]).attr('keys'),
+            DataValue: getSelectedvalues
+          };
+          vm.objData.push(radioConfigDatas);
+          let jsonObject = vm.objData.map(JSON.stringify);
+          let uniqueSet = new Set(jsonObject);
+        }
+      }
       vm.allConfigObject = JSON.stringify(vm.objData);
       var error = $('.is-invalid');
       const formdata = new FormData();
@@ -2112,7 +2112,6 @@ var DataService = __webpack_require__("1115");
           if (response.data == 1) {
             vm.ShowAlert("Record(s) has been successfully saved.");
             vm.GetProductConfigData();
-            vm.attachmentDiv = '';
             vm.isLoading = false;
             vm.GetConfigurationData();
           } else {
@@ -2151,8 +2150,11 @@ var DataService = __webpack_require__("1115");
       return options;
     },
     ClearImage: function () {
-      this.blobUrl = "/Content/images/DefaultImages/company-logo.jpg";
+      debugger;
+      this.blobUrl = 'http://localhost:9000/' + '/Content/images/DefaultImages/company-logo.jpg';
       this.defaultCompanyLogo = 'COMPANY-LOGO.JPG';
+      // ShowAlert("This image will not be deleted. Please upload a new image: " + this.defaultCompanyLogo, "warning", true, "Alert");
+      this.ShowAlert('this image will not be deleted, please upload new image: ', "warning", true, "Alert");
     },
     Clearimagevalue: function () {
       var vm = this;
@@ -2175,8 +2177,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   AdvancedSetup_Configurationvue_type_script_lang_js_,
-  Configurationvue_type_template_id_ffac8456_render,
-  Configurationvue_type_template_id_ffac8456_staticRenderFns,
+  Configurationvue_type_template_id_267bc600_render,
+  Configurationvue_type_template_id_267bc600_staticRenderFns,
   false,
   null,
   null,
