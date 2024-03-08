@@ -1041,8 +1041,8 @@ var AuditLogReport_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var AuditLogReport = (AuditLogReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=38fc053e&lang=en&
-var ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=8c1874da&lang=en&
+var ProductBarcodeReportvue_type_template_id_8c1874da_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('loader', {
@@ -1070,9 +1070,9 @@ var ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_render = function 
     }
   }) : _vm._e()], 1)])], 1);
 };
-var ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_staticRenderFns = [];
+var ProductBarcodeReportvue_type_template_id_8c1874da_lang_en_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=38fc053e&lang=en&
+// CONCATENATED MODULE: ./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=template&id=8c1874da&lang=en&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductBarcodeReport.vue?vue&type=script&lang=js&
 
@@ -1289,9 +1289,11 @@ var ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_staticRenderFns = 
       // });
     },
 
-    async onSubmit() {
+    async onSubmit(e) {
       var vm = this;
       vm.isLoading = true;
+      vm.reportPath = '';
+      vm.parameter = [];
       const valuesArray = vm.FormSchema[0].Data[1].value.length > 0 ? vm.FormSchema[0].Data[1].value.map(item => item.value) : vm.FormSchema[0].Data[1].value;
       const commaSeparatedValues = valuesArray.length > 1 ? valuesArray.join(',') : valuesArray.length > 0 ? valuesArray[0] : '';
       let myObj = {
@@ -1329,8 +1331,8 @@ var ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_staticRenderFns = 
 
 var ProductBarcodeReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_ProductBarcodeReportvue_type_script_lang_js_,
-  ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_render,
-  ProductBarcodeReportvue_type_template_id_38fc053e_lang_en_staticRenderFns,
+  ProductBarcodeReportvue_type_template_id_8c1874da_lang_en_render,
+  ProductBarcodeReportvue_type_template_id_8c1874da_lang_en_staticRenderFns,
   false,
   null,
   null,

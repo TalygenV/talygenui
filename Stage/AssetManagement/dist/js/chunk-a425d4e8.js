@@ -866,8 +866,8 @@ function getChildLocation(locationId, currentItem, data) {
   listActions,
   bindleftCommonSearchdropdown
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/DeployProductpopup.vue?vue&type=template&id=52a89fe7&
-var DeployProductpopupvue_type_template_id_52a89fe7_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/DeployProductpopup.vue?vue&type=template&id=11a1be00&
+var DeployProductpopupvue_type_template_id_11a1be00_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('section', [_c('loader', {
@@ -912,7 +912,16 @@ var DeployProductpopupvue_type_template_id_52a89fe7_render = function render() {
     }
   }, [_vm._v(_vm._s(_vm.$t("AddDeployProduct")))]), _c('span', {
     staticClass: "user-guide"
-  }, [_vm._m(0), _c('div', {
+  }, [_c('a', {
+    staticClass: "ancuserguide",
+    attrs: {
+      "data-toggle": "collapse",
+      "href": "#collapseReplyUG",
+      "role": "button",
+      "aria-expanded": "false",
+      "aria-controls": "collapseExample"
+    }
+  }, [_vm._v("User Guide")]), _c('div', {
     staticClass: "divancuserguide collapse overflow-auto",
     attrs: {
       "id": "collapseReplyUG"
@@ -1028,28 +1037,13 @@ var DeployProductpopupvue_type_template_id_52a89fe7_render = function render() {
         })])];
       }
     }], null, false, 385383551)
-  }) : _vm._e()], 1), _vm._m(1)])])]), _vm.Addlocation ? _c('AddproducLocation', {
+  }) : _vm._e()], 1), _vm._m(0)])])]), _vm.Addlocation ? _c('AddproducLocation', {
     on: {
       "closepopup": _vm.closepopup
     }
   }) : _vm._e()], 1)], 1);
 };
-var DeployProductpopupvue_type_template_id_52a89fe7_staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c('a', {
-    staticClass: "ancuserguide",
-    attrs: {
-      "data-toggle": "collapse",
-      "href": "#collapseReplyUG",
-      "role": "button",
-      "aria-expanded": "false",
-      "aria-controls": "collapseExample"
-    }
-  }, [_c('em', {
-    staticClass: "fa fa-files-o pr-2"
-  }), _vm._v("User Guide")]);
-}, function () {
+var DeployProductpopupvue_type_template_id_11a1be00_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1061,7 +1055,7 @@ var DeployProductpopupvue_type_template_id_52a89fe7_staticRenderFns = [function 
   }, [_vm._v("Fields marked with an asterisk (*) are mandatory.")])])]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/DeployProductpopup.vue?vue&type=template&id=52a89fe7&
+// CONCATENATED MODULE: ./src/components/Modal/DeployProductpopup.vue?vue&type=template&id=11a1be00&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddproducLocation.vue?vue&type=template&id=721a6e14&
 var AddproducLocationvue_type_template_id_721a6e14_render = function render() {
@@ -1795,8 +1789,8 @@ var myLib_common = __webpack_require__("240d");
 
 var DeployProductpopup_component = Object(componentNormalizer["a" /* default */])(
   Modal_DeployProductpopupvue_type_script_lang_js_,
-  DeployProductpopupvue_type_template_id_52a89fe7_render,
-  DeployProductpopupvue_type_template_id_52a89fe7_staticRenderFns,
+  DeployProductpopupvue_type_template_id_11a1be00_render,
+  DeployProductpopupvue_type_template_id_11a1be00_staticRenderFns,
   false,
   null,
   null,

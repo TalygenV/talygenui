@@ -1852,8 +1852,8 @@ var NotReturnedPopup_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var NotReturnedPopup = (NotReturnedPopup_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=b80cecc2&
-var ApproveRejectPopupvue_type_template_id_b80cecc2_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=5a3fe2e5&
+var ApproveRejectPopupvue_type_template_id_5a3fe2e5_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -2282,7 +2282,7 @@ var ApproveRejectPopupvue_type_template_id_b80cecc2_render = function render() {
     staticClass: "text-danger"
   }, [_vm._v("Fields marked with an asterisk (*) are mandatory.")])])])])])])])], 1)])])])], 1);
 };
-var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function () {
+var ApproveRejectPopupvue_type_template_id_5a3fe2e5_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('th', [_c('span', [_vm._v("User Name")])]);
@@ -2344,7 +2344,7 @@ var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function 
   return _c('th', [_c('span', [_vm._v("Penalty Amount")])]);
 }];
 
-// CONCATENATED MODULE: ./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=b80cecc2&
+// CONCATENATED MODULE: ./src/components/Modal/ApproveRejectPopup.vue?vue&type=template&id=5a3fe2e5&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveRejectPopup.vue?vue&type=script&lang=js&
 
@@ -2447,6 +2447,7 @@ var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function 
     SubmitStatus() {
       var vm = this;
       var val = [];
+      //debugger
       vm.$refs.ApproveRejectForm.validate().then(result => {
         if (result) {
           if (vm.txtStatus == '' || val.length > 0) {
@@ -2459,21 +2460,44 @@ var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function 
             RetrunRequeststatus: vm.txtStatus != '' ? vm.txtStatus == 'Approve' ? 'ACCEPT' : 'REJECT' : '',
             comment: vm.txtComment
           };
+          if (obj == null || obj.RequestData.length == 0) {
+            vm.ShowAlert(vm.$t('PleaseSelectAtleastOneProduct'), "failure", true, vm.$t("Alert"));
+            vm.isLoading = false;
+            return false;
+          }
+
           //var url = `RequestData=${val}&RetrunRequeststatus=${vm.txtStatus}&comment=${vm.txtComment}`;
           DataService["a" /* default */].AddRejectStatus(obj).then(response => {
-            if (response.data.result == 'ReturnedSuccessfully') {
-              if (status_name == 'approved') {
+            debugger;
+            if (response.data.msg == 'ReturnedSuccessfully') {
+              if (vm.txtStatus == 'Approve') {
                 vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
-                vm.FeatchData();
+                vm.isLoading = false;
+                vm.$parent.FetchData();
               } else {
                 vm.ShowAlert(vm.$t('CommonReject', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
-                vm.FeatchData();
+                vm.isLoading = false;
+                vm.$parent.FetchData();
+              }
+            } else if (response.data.msg == 'RejectedSuccessfully') {
+              if (vm.txtStatus == 'Approve') {
+                vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
+                vm.isLoading = false;
+                vm.$parent.FetchData();
+              } else {
+                vm.ShowAlert(vm.$t('CommonReject', [vm.$t('CRM_PRODUCTS')]), "success", true, vm.$t("Alert"));
+                vm.isLoading = false;
+                vm.$parent.FetchData();
               }
             } else if (response.data.result == 'NotReturnedSuccessfully') {
-              if (status_name == 'approved') {
+              if (vm.txtStatus == 'Approve') {
+                vm.isLoading = false;
                 vm.ShowAlert(vm.$t('CommonApprove', [vm.$t('CRM_PRODUCTS')]), "failure", true, vm.$t("Alert"));
+                vm.$parent.FetchData();
               } else {
+                vm.isLoading = false;
                 vm.ShowAlert(vm.$t('CommonReject', [vm.$t('CRM_PRODUCTS')]), "failure", true, vm.$t("Alert"));
+                vm.$parent.FetchData();
               }
             } else {
               vm.ShowAlert(vm.$t('ReturnError'), "warning", vm.$t('Alert'));
@@ -2541,8 +2565,8 @@ var ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns = [function 
 
 var ApproveRejectPopup_component = Object(componentNormalizer["a" /* default */])(
   Modal_ApproveRejectPopupvue_type_script_lang_js_,
-  ApproveRejectPopupvue_type_template_id_b80cecc2_render,
-  ApproveRejectPopupvue_type_template_id_b80cecc2_staticRenderFns,
+  ApproveRejectPopupvue_type_template_id_5a3fe2e5_render,
+  ApproveRejectPopupvue_type_template_id_5a3fe2e5_staticRenderFns,
   false,
   null,
   null,

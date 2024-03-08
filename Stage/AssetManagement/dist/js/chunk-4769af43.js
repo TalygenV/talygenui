@@ -1140,8 +1140,8 @@ var RepairRequest_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var RepairRequest = (RepairRequest_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveReject.vue?vue&type=template&id=2806167c&
-var ApproveRejectvue_type_template_id_2806167c_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveReject.vue?vue&type=template&id=c6dd45e8&
+var ApproveRejectvue_type_template_id_c6dd45e8_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1186,9 +1186,9 @@ var ApproveRejectvue_type_template_id_2806167c_render = function render() {
     }
   })], 1)])])])], 1);
 };
-var ApproveRejectvue_type_template_id_2806167c_staticRenderFns = [];
+var ApproveRejectvue_type_template_id_c6dd45e8_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/ApproveReject.vue?vue&type=template&id=2806167c&
+// CONCATENATED MODULE: ./src/components/Modal/ApproveReject.vue?vue&type=template&id=c6dd45e8&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/ApproveReject.vue?vue&type=script&lang=js&
 
@@ -1271,15 +1271,11 @@ var ApproveRejectvue_type_template_id_2806167c_staticRenderFns = [];
           GraceOverDueDays: item.GRACE_OVERDUE_DAYS
         };
         debugger;
-
-        // vm.$refs.RejectForm.validate().then(result => {
-        //     if (result) {
-        //     vm.ApprovesData.forEach(item => {
-        //var url = `requestID=${item.REQUEST_ID}&AssetAssignmentDetailId=${item.ASSIGNMENT_DETAIL_ID}&statusCode=${vm.OptionsNames}&noOfItems=${item.QTY}&Title=${item.NAME}&comment=${vm.Remarks}&Userids=${item.USER_ID}&PenalityAmount=${item.PENALITY_AMOUNT}&ReturnPenalityStatusID=${item.PENALITY_STATUS_ID}&GraceOverDueDays=${item.GRACE_OVERDUE_DAYS}`;
-        DataService["a" /* default */].SetReturnedStaus(ApproveRejectData).then(response => {
+        var Jsondata = JSON.stringify(item);
+        DataService["a" /* default */].ApprovedReject(Jsondata).then(response => {
           if (response.data != null) {
-            if (response.data.length > 0) {
-              vm.ShowAlert(vm.$t(response.data), "success", vm.$t('Alert'));
+            if (response.data.msg) {
+              vm.ShowAlert(vm.$t(response.data.msg), "success", vm.$t('Alert'));
               vm.isLoading = false;
               vm.$parent.GetAssetReturnRequestList();
               vm.$parent.ClosePopUpApproveReject();
@@ -1318,8 +1314,8 @@ var ApproveRejectvue_type_template_id_2806167c_staticRenderFns = [];
 
 var ApproveReject_component = Object(componentNormalizer["a" /* default */])(
   Modal_ApproveRejectvue_type_script_lang_js_,
-  ApproveRejectvue_type_template_id_2806167c_render,
-  ApproveRejectvue_type_template_id_2806167c_staticRenderFns,
+  ApproveRejectvue_type_template_id_c6dd45e8_render,
+  ApproveRejectvue_type_template_id_c6dd45e8_staticRenderFns,
   false,
   null,
   null,
