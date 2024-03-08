@@ -761,8 +761,8 @@ var ProductAssignmentReports_component = Object(componentNormalizer["a" /* defau
 )
 
 /* harmony default export */ var ProductAssignmentReports = (ProductAssignmentReports_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=296722ae&
-var AuditLogReportvue_type_template_id_296722ae_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=81b651a4&
+var AuditLogReportvue_type_template_id_81b651a4_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('loader', {
@@ -789,9 +789,9 @@ var AuditLogReportvue_type_template_id_296722ae_render = function render() {
     }
   }) : _vm._e()], 1)])], 1);
 };
-var AuditLogReportvue_type_template_id_296722ae_staticRenderFns = [];
+var AuditLogReportvue_type_template_id_81b651a4_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=296722ae&
+// CONCATENATED MODULE: ./src/views/AssetReport/AuditLogReport.vue?vue&type=template&id=81b651a4&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/AuditLogReport.vue?vue&type=script&lang=js&
 
@@ -989,6 +989,8 @@ var AuditLogReportvue_type_template_id_296722ae_staticRenderFns = [];
     async onSubmit() {
       var vm = this;
       vm.isLoading = true;
+      vm.reportPath = '';
+      vm.parameter = [];
       const valuesArray = vm.FormSchema[0].Data[1].value.length > 0 ? vm.FormSchema[0].Data[1].value.map(item => item.value) : vm.FormSchema[0].Data[1].value;
       const commaSeparatedValues = valuesArray.length > 1 ? valuesArray.join(',') : valuesArray.length > 0 ? valuesArray[0] : '';
       let myObj = {
@@ -1031,8 +1033,8 @@ var AuditLogReportvue_type_template_id_296722ae_staticRenderFns = [];
 
 var AuditLogReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_AuditLogReportvue_type_script_lang_js_,
-  AuditLogReportvue_type_template_id_296722ae_render,
-  AuditLogReportvue_type_template_id_296722ae_staticRenderFns,
+  AuditLogReportvue_type_template_id_81b651a4_render,
+  AuditLogReportvue_type_template_id_81b651a4_staticRenderFns,
   false,
   null,
   null,
@@ -1341,8 +1343,8 @@ var ProductBarcodeReport_component = Object(componentNormalizer["a" /* default *
 )
 
 /* harmony default export */ var ProductBarcodeReport = (ProductBarcodeReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=3234eba8&lang=en&
-var ItemLogHistoryReportvue_type_template_id_3234eba8_lang_en_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=ff972998&lang=en&
+var ItemLogHistoryReportvue_type_template_id_ff972998_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('loader', {
@@ -1370,9 +1372,9 @@ var ItemLogHistoryReportvue_type_template_id_3234eba8_lang_en_render = function 
     }
   }) : _vm._e()], 1)])], 1);
 };
-var ItemLogHistoryReportvue_type_template_id_3234eba8_lang_en_staticRenderFns = [];
+var ItemLogHistoryReportvue_type_template_id_ff972998_lang_en_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=3234eba8&lang=en&
+// CONCATENATED MODULE: ./src/views/AssetReport/ItemLogHistoryReport.vue?vue&type=template&id=ff972998&lang=en&
 
 // EXTERNAL MODULE: ./src/localization/en.js
 var en = __webpack_require__("0597");
@@ -1618,6 +1620,8 @@ var en = __webpack_require__("0597");
     async onSubmit() {
       var vm = this;
       vm.isLoading = true;
+      vm.reportPath = '';
+      vm.parameter = [];
       var ArrayData = {};
       const valuesArray = vm.FormSchema[0].Data[1].value.length > 0 ? vm.FormSchema[0].Data[1].value.map(item => item.value) : vm.FormSchema[0].Data[1].value;
       const commaSeparatedValues = valuesArray.length > 1 ? valuesArray.join(',') : valuesArray.length > 0 ? valuesArray[0] : '';
@@ -1663,8 +1667,8 @@ var en = __webpack_require__("0597");
 
 var ItemLogHistoryReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_ItemLogHistoryReportvue_type_script_lang_js_,
-  ItemLogHistoryReportvue_type_template_id_3234eba8_lang_en_render,
-  ItemLogHistoryReportvue_type_template_id_3234eba8_lang_en_staticRenderFns,
+  ItemLogHistoryReportvue_type_template_id_ff972998_lang_en_render,
+  ItemLogHistoryReportvue_type_template_id_ff972998_lang_en_staticRenderFns,
   false,
   null,
   null,
@@ -1673,8 +1677,8 @@ var ItemLogHistoryReport_component = Object(componentNormalizer["a" /* default *
 )
 
 /* harmony default export */ var ItemLogHistoryReport = (ItemLogHistoryReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=514b602d&lang=en&
-var ProductCountReportvue_type_template_id_514b602d_lang_en_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=54384687&lang=en&
+var ProductCountReportvue_type_template_id_54384687_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('loader', {
@@ -1701,9 +1705,9 @@ var ProductCountReportvue_type_template_id_514b602d_lang_en_render = function re
     }
   }) : _vm._e()], 1)])], 1);
 };
-var ProductCountReportvue_type_template_id_514b602d_lang_en_staticRenderFns = [];
+var ProductCountReportvue_type_template_id_54384687_lang_en_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=514b602d&lang=en&
+// CONCATENATED MODULE: ./src/views/AssetReport/ProductCountReport.vue?vue&type=template&id=54384687&lang=en&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductCountReport.vue?vue&type=script&lang=js&
 
@@ -1885,6 +1889,8 @@ var ProductCountReportvue_type_template_id_514b602d_lang_en_staticRenderFns = []
     async onSubmit() {
       var vm = this;
       vm.isLoading = true;
+      vm.reportPath = '';
+      vm.parameter = [];
       let myObj = {
         reportName: "assetcountreport",
         Location: vm.FormSchema[0].Data[0].value,
@@ -1923,8 +1929,8 @@ var ProductCountReportvue_type_template_id_514b602d_lang_en_staticRenderFns = []
 
 var ProductCountReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_ProductCountReportvue_type_script_lang_js_,
-  ProductCountReportvue_type_template_id_514b602d_lang_en_render,
-  ProductCountReportvue_type_template_id_514b602d_lang_en_staticRenderFns,
+  ProductCountReportvue_type_template_id_54384687_lang_en_render,
+  ProductCountReportvue_type_template_id_54384687_lang_en_staticRenderFns,
   false,
   null,
   null,
@@ -1933,8 +1939,8 @@ var ProductCountReport_component = Object(componentNormalizer["a" /* default */]
 )
 
 /* harmony default export */ var ProductCountReport = (ProductCountReport_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductReport.vue?vue&type=template&id=c4092d0e&lang=en&
-var ProductReportvue_type_template_id_c4092d0e_lang_en_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductReport.vue?vue&type=template&id=1b341de1&lang=en&
+var ProductReportvue_type_template_id_1b341de1_lang_en_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('loader', {
@@ -1961,9 +1967,9 @@ var ProductReportvue_type_template_id_c4092d0e_lang_en_render = function render(
     }
   }) : _vm._e()], 1)])], 1);
 };
-var ProductReportvue_type_template_id_c4092d0e_lang_en_staticRenderFns = [];
+var ProductReportvue_type_template_id_1b341de1_lang_en_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetReport/ProductReport.vue?vue&type=template&id=c4092d0e&lang=en&
+// CONCATENATED MODULE: ./src/views/AssetReport/ProductReport.vue?vue&type=template&id=1b341de1&lang=en&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetReport/ProductReport.vue?vue&type=script&lang=js&
 
@@ -2169,6 +2175,8 @@ var ProductReportvue_type_template_id_c4092d0e_lang_en_staticRenderFns = [];
     async onSubmit() {
       var vm = this;
       vm.isLoading = true;
+      vm.reportPath = '';
+      vm.parameter = [];
       let myObj = {
         reportName: "productreport",
         TagTypes: vm.FormSchema[0].Data[0].value,
@@ -2208,8 +2216,8 @@ var ProductReportvue_type_template_id_c4092d0e_lang_en_staticRenderFns = [];
 
 var ProductReport_component = Object(componentNormalizer["a" /* default */])(
   AssetReport_ProductReportvue_type_script_lang_js_,
-  ProductReportvue_type_template_id_c4092d0e_lang_en_render,
-  ProductReportvue_type_template_id_c4092d0e_lang_en_staticRenderFns,
+  ProductReportvue_type_template_id_1b341de1_lang_en_render,
+  ProductReportvue_type_template_id_1b341de1_lang_en_staticRenderFns,
   false,
   null,
   null,
