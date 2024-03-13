@@ -765,8 +765,8 @@ var MoadalAdvanceSetupvue_type_template_id_5c56bf65_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/views/AdvancedSetup/MoadalAdvanceSetup.vue?vue&type=template&id=5c56bf65&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=267bc600&
-var Configurationvue_type_template_id_267bc600_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=11ec3507&
+var Configurationvue_type_template_id_11ec3507_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1148,7 +1148,9 @@ var Configurationvue_type_template_id_267bc600_render = function render() {
             "href": "javascript:;"
           },
           on: {
-            "click": _vm.ClearImage
+            "click": function ($event) {
+              return _vm.ClearImage(_vm.blobUrl);
+            }
           }
         }, [_c('i', {
           staticClass: "fa fa-times",
@@ -1329,7 +1331,7 @@ var Configurationvue_type_template_id_267bc600_render = function render() {
           staticClass: "fa fa-save pr-2"
         }), _vm._v("Save")])])])])];
       }
-    }], null, false, 1368402418)
+    }], null, false, 118507580)
   })], 1)])])]), _vm._m(0)])])])]) : _vm._e(), _vm.CurrentTab == 2 ? _c('div', {
     staticClass: "tab-pane call-detail fade border pb-3 active show",
     attrs: {
@@ -1683,7 +1685,7 @@ var Configurationvue_type_template_id_267bc600_render = function render() {
     }], null, false, 4000512832)
   })], 1)])])]), _vm._m(3)])])])]) : _vm._e()])]);
 };
-var Configurationvue_type_template_id_267bc600_staticRenderFns = [function () {
+var Configurationvue_type_template_id_11ec3507_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1734,7 +1736,7 @@ var Configurationvue_type_template_id_267bc600_staticRenderFns = [function () {
   })])]);
 }];
 
-// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=267bc600&
+// CONCATENATED MODULE: ./src/views/AdvancedSetup/Configuration.vue?vue&type=template&id=11ec3507&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -2149,13 +2151,20 @@ var DataService = __webpack_require__("1115");
       });
       return options;
     },
-    ClearImage: function () {
-      debugger;
+    ClearImage: function (event) {
       this.blobUrl = 'http://localhost:9000/' + '/Content/images/DefaultImages/company-logo.jpg';
       this.defaultCompanyLogo = 'COMPANY-LOGO.JPG';
+      if (event != this.blobUrl) {
+        this.attachmentDiv = [];
+        this.fileName = '';
+        this.arrayGetFileDetails = [];
+        return;
+      } else {
+        this.ShowAlert('this image will not be deleted, please upload new image: ', "warning", true, "Alert");
+      }
       // ShowAlert("This image will not be deleted. Please upload a new image: " + this.defaultCompanyLogo, "warning", true, "Alert");
-      this.ShowAlert('this image will not be deleted, please upload new image: ', "warning", true, "Alert");
     },
+
     Clearimagevalue: function () {
       var vm = this;
       vm.attachmentDiv = '';
@@ -2177,8 +2186,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   AdvancedSetup_Configurationvue_type_script_lang_js_,
-  Configurationvue_type_template_id_267bc600_render,
-  Configurationvue_type_template_id_267bc600_staticRenderFns,
+  Configurationvue_type_template_id_11ec3507_render,
+  Configurationvue_type_template_id_11ec3507_staticRenderFns,
   false,
   null,
   null,
