@@ -905,8 +905,8 @@ var staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/views/AssetCatalog/DeployProducts.vue?vue&type=template&id=25259c00&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=62f775d6&
-var AddDeployProductpopvue_type_template_id_62f775d6_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=276a1a5c&
+var AddDeployProductpopvue_type_template_id_276a1a5c_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -1083,9 +1083,9 @@ var AddDeployProductpopvue_type_template_id_62f775d6_render = function render() 
     staticClass: "fa fa-close pr-2"
   }), _c('span', [_vm._v(_vm._s(_vm.$t('Cancel')))])])])])]) : _vm._e()])])])]);
 };
-var AddDeployProductpopvue_type_template_id_62f775d6_staticRenderFns = [];
+var AddDeployProductpopvue_type_template_id_276a1a5c_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=62f775d6&
+// CONCATENATED MODULE: ./src/components/Modal/AddDeployProductpop.vue?vue&type=template&id=276a1a5c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -1547,7 +1547,10 @@ var myLib_common = __webpack_require__("240d");
         };
         ArrayData.push(myObj);
       }
-      var JsonObj = JSON.stringify(ArrayData);
+      if (myObj.UnitPrice <= parseFloat(myObj.SalvageCost)) {
+        return vm.ShowAlert(vm.$t("Salvage Cost must be less than Unit Price."), "warning", vm.$t("Alert"));
+      }
+      //var JsonObj = JSON.stringify(ArrayData);
       await DataService["a" /* default */].SaveDeploy(ArrayData).then(function (response) {
         if (response.data.msg == 'DeployedSuccessfully') {
           vm.ClosePopup();
@@ -1616,8 +1619,8 @@ var componentNormalizer = __webpack_require__("2877");
 
 var component = Object(componentNormalizer["a" /* default */])(
   Modal_AddDeployProductpopvue_type_script_lang_js_,
-  AddDeployProductpopvue_type_template_id_62f775d6_render,
-  AddDeployProductpopvue_type_template_id_62f775d6_staticRenderFns,
+  AddDeployProductpopvue_type_template_id_276a1a5c_render,
+  AddDeployProductpopvue_type_template_id_276a1a5c_staticRenderFns,
   false,
   null,
   null,
