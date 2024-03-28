@@ -7,7 +7,7 @@
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/MyRequisitionsList.vue?vue&type=template&id=0b1eb59c&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"779621b6-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/AssetRequisition/MyRequisitionsList.vue?vue&type=template&id=ddfa1870&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -107,7 +107,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/views/AssetRequisition/MyRequisitionsList.vue?vue&type=template&id=0b1eb59c&
+// CONCATENATED MODULE: ./src/views/AssetRequisition/MyRequisitionsList.vue?vue&type=template&id=ddfa1870&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -489,6 +489,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       });
     },
     getClickEvent: function () {
+      //  this.leftSearchFields[1].listOptions = [];
       var assetCatId = this.leftSearchFields[0].value;
       MyRequisitionsListSchema.bindleftCommonSearchdropdown(this, 'AssetRequisition', 'Unique Name', assetCatId);
     },
@@ -498,6 +499,7 @@ var component = Object(componentNormalizer["a" /* default */])(
       var params = `LocationId=&pageSize=${vueObj.PageSize}&pageNumber=${vueObj.PageNumber}&sortBy=${vueObj.SortBy}&sortExp=${vueObj.SortExp}&${vueObj.searchCondition}`;
       DataService["a" /* default */].GetMyRequisitions(params).then(response => {
         vueObj.isLoading = false;
+        vueObj.leftSearchFields[1].listOptions = [];
         if (response.data != null) {
           if (response.data.length > 0) {
             vueObj.ProductData = response.data;
