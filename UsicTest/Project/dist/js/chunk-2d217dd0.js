@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d217dd0"],{c915:function(n,e,t){"use strict";t.r(e);var c=function(){var n=this;n._self._c;return n._m(0)},r=[function(){var n=this,e=n._self._c;return e("section",[e("h1",[n._v("hello")])])}],u={name:"CreateInvoice",data(){return{}},methods:{}},o=u,s=t("2877"),a=Object(s["a"])(o,c,r,!1,null,null,null);e["default"]=a.exports}}]);
+//# sourceMappingURL=chunk-2d217dd0.js.map
